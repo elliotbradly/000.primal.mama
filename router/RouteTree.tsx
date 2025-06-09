@@ -1,0 +1,111 @@
+import IndexPage from '../src/page/000.index/page';
+import TitlePage from '../src/page/001.title/page';
+import ScenePage from '../src/page/002.scene/page';
+import TestPage from '../src/page/003.test/000.index/page';
+import TestBabylonPage from '../src/page/003.test/002.babylon-test/page';
+import TestSurfacePage from '../src/page/003.test/001.surface-test/page';
+
+
+import {
+    Link,
+    Outlet,
+    RouterProvider,
+    createRootRoute,
+    createRoute,
+    createRouter,
+} from '@tanstack/react-router'
+
+import React from "react";
+
+import NavBar from "./NavBar"
+
+
+const rootRoute = createRootRoute({
+    component: () => (
+        <>
+
+            <div >
+
+                <NavBar />
+
+                <div style={{ position: 'absolute', left: 0, right: 0, marginInline: 'auto', width: 'fit-content' }} >
+                    <Outlet />
+                </div>
+
+            </div>
+
+        </>
+    ),
+});
+
+const indexRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/",
+    component: function Index() {
+        return (
+            <IndexPage />
+        );
+    },
+});
+
+const titleRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/title",
+    component: function Test() {
+        return (
+            <TitlePage />
+        );
+    },
+});
+
+const sceneRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/scene",
+    component: function Lora() {
+        return (
+            <ScenePage />
+        );
+    },
+});
+
+const testRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/test",
+    component: function Lora() {
+        return (
+            <TestPage />
+        );
+    },
+});
+
+
+const testOpenBabylonRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/solid/open-babylon",
+    component: function Lora() {
+        return (
+            <TestBabylonPage />
+        );
+    },
+});
+
+const testWriteShadeRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/shade/surface-test",
+    component: function Lora() {
+        return (
+            <TestSurfacePage />
+        );
+    },
+});
+
+
+
+
+export var RouteTree = () => {
+
+    var item = rootRoute.addChildren([indexRoute, titleRoute,  sceneRoute, testRoute, testOpenBabylonRoute, testWriteShadeRoute ]);
+    return item
+
+}
+
