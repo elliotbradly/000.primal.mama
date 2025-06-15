@@ -6,13 +6,13 @@ import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
 export default function ContentsPage() {
 
- 
+
   var act00 = () => {
     document.location.href = './test/pixel'
   }
 
   var act01 = () => {
-    document.location.href = './solid/open-babylon'
+    document.location.href = './test/control'
   }
 
 
@@ -31,14 +31,12 @@ export default function ContentsPage() {
         <Stack >
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Button fullWidth variant="outline" color="black" onClick={act00} > OPEN PIXEL TEST </Button>
+            <Button fullWidth variant="outline" color="black" onClick={act01} > OPEN CONTROL TEST </Button>
           </Box>
-
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-          <Button fullWidth variant="outline" color="black" onClick={act01} > OPEN BABYLON TEST </Button>
+            <Button fullWidth variant="outline" color="black" onClick={act00} > OPEN PIXEL TEST </Button>
           </Box>
-
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
             <Text style={{ fontSize: 18, fontWeight: 400 }}> LIBRARY Online </Text>
