@@ -67,7 +67,7 @@ export default function Component() {
 
             <Box style={{ paddingLeft: '94px', }} className={'titleContainer'}>
                 <Title className={'title'} order={1} size={126}>
-                    GLOPS.LIVE
+                    PRIMAL.MAMA
                 </Title>
                 <Text style={{ paddingLeft: '10px' }} className={'subtitle'} size="xs">
                     v0.0.0
