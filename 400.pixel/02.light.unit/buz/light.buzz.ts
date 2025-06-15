@@ -1,4 +1,3 @@
-import * as ActMnu from "../../98.menu.unit/menu.action";
 import * as ActClr from "../../01.color.unit/color.action";
 import * as ActLgt from "../../02.light.unit/light.action";
 import * as ActCol from "../../97.collect.unit/collect.action";
@@ -16,7 +15,7 @@ export const initLight = async (cpy: LightModel, bal: LightBit, ste: State) => {
 
     if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActLgt, ActClr], dat: bal.dat, src: bal.src })
 
-    if (bal.val == 1) patch(ste, ActMnu.INIT_MENU, bal);
+    //if (bal.val == 1) patch(ste, ActMnu.INIT_MENU, bal);
     if (bal.slv != null) bal.slv({ intBit: { idx: "init-space" } });
 
     var Chance = require('chance');

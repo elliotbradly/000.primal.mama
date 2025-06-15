@@ -13,6 +13,7 @@ import { RouterProvider, createRouter } from '@tanstack/react-router'
 
 import BabylonBlock from '../base/babylon/block'
 import PixiBlock from '../base/pixi/block'
+import PixelBlock from '../base/pixel/block'
 
 
 // Create a brutalist theme
@@ -192,6 +193,7 @@ root.render(
   <React.StrictMode>
     <BabylonBlock/>
     <PixiBlock/>
+    <PixelBlock/>
     <QueryClientProvider client={queryClient}>
       <MantineProvider theme={brutalistTheme}>
       <RouterProvider router={router} />

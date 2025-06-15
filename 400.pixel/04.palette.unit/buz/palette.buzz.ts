@@ -2,15 +2,11 @@ import { PaletteModel } from "../palette.model";
 import PaletteBit from "../fce/palette.bit";
 import State from "../../99.core/state";
 
-
-import * as ActMnu from "../../98.menu.unit/menu.action";
-
 import * as ActPxl from "../../00.pixel.unit/pixel.action";
 import * as ActPal from "../../04.palette.unit/palette.action";
 
 import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActBus from "../../99.bus.unit/bus.action";
-import * as ActCns from "../../83.console.unit/console.action";
 
 import * as ActVrt from "../../act/vurt.action"
 import * as ActDsk from "../../act/disk.action"
