@@ -5,7 +5,6 @@ import State from "../../99.core/state";
 
 import * as ActCns from "../../act/console.action";
 
-
 import * as ActPxl from "../../00.pixel.unit/pixel.action";
 
 import * as ActCol from "../../97.collect.unit/collect.action";
@@ -25,20 +24,8 @@ import * as S from 'string'
 var bit, val, idx, dex, lst, dat, src;
 
 export const initPixel = async (cpy: PixelModel, bal: PixelBit, ste: State) => {
-  if (bal.dat != null)
-    bit = await ste.hunt(ActBus.INIT_BUS, {
-      idx: cpy.idx,
-      lst: [ActPxl],
-      dat: bal.dat,
-      src: bal.src,
-    });
-
-  if (bal.val == 1) {
-    //bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
-    //patch(ste, ActMnu.INIT_MENU, {});
-  }
-
-  if (bal.slv != null) bal.slv({ intBit: { idx: "init-pixel" } });
+  
+  bal.slv({ intBit: { idx: "init-pixel" } });
 
   return cpy;
 };
