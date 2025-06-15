@@ -8,7 +8,7 @@ export default function ContentsPage() {
 
  
   var act00 = () => {
-    document.location.href = './shade/surface-test'
+    document.location.href = './test/pixel'
   }
 
   var act01 = () => {
@@ -25,13 +25,13 @@ export default function ContentsPage() {
         </Title>
 
         <Title order={2} style={{ fontSize: 24, fontWeight: 500, marginBottom: 40 }}>
-          GLOBS.LIVE
+          PRIMAL.MAMA
         </Title>
 
         <Stack >
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Button fullWidth variant="outline" color="black" onClick={act00} > OPEN SURFACE TEST </Button>
+            <Button fullWidth variant="outline" color="black" onClick={act00} > OPEN PIXEL TEST </Button>
           </Box>
 
 
