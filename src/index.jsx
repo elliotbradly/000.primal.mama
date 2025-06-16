@@ -11,8 +11,8 @@ import  {RouteTree } from "../router/RouteTree"
 
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
-import BabylonBlock from '../base/babylon/block'
-import PixiBlock from '../base/pixi/block'
+import BabylonBlock from '../base/space/block'
+import ShadeBlock from '../base/shade/block'
 import PixelBlock from '../base/pixel/block'
 import ControlBlock from '../base/control/block'
 
@@ -193,7 +193,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BabylonBlock/>
-    <PixiBlock/>
+    <ShadeBlock/>
     <PixelBlock/>
     <ControlBlock/>
     <QueryClientProvider client={queryClient}>
