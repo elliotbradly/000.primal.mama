@@ -74,6 +74,8 @@ export const PALETTE_COLOR = "[Palette action] Palette Color";
  readonly type = PALETTE_COLOR;
  constructor(public bale: ColorBit) {}
  }
+
+ 
  
 export type Actions = | InitColor | UpdateColor 
 | OpenColor
