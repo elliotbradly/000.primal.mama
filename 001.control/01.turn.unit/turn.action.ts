@@ -21,5 +21,12 @@ export const OPEN_TURN = "[Open action] Open Turn";
  constructor(public bale: TurnBit) {}
  }
  
+export const READ_TURN = "[Read action] Read Turn";
+ export class ReadTurn implements Action {
+ readonly type = READ_TURN;
+ constructor(public bale: TurnBit) {}
+ }
+ 
 export type Actions = | InitTurn | UpdateTurn 
 | OpenTurn
+| ReadTurn

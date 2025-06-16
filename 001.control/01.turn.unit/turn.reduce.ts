@@ -16,6 +16,9 @@ export function reducer(model: TurnModel = new TurnModel(), act: Act.Actions,  s
 case Act.OPEN_TURN:
  return Buzz.openTurn(clone(model), act.bale, state);
  
+case Act.READ_TURN:
+ return Buzz.readTurn(clone(model), act.bale, state);
+ 
  default:
  return model;
  }

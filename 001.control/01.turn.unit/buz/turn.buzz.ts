@@ -61,6 +61,10 @@ export const openTurn = async (cpy: TurnModel, bal:TurnBit, ste: State) => {
 
 
 
+export const readTurn = (cpy: TurnModel, bal:TurnBit, ste: State) => {
+ debugger
+ return cpy;
+ };
 import { TurnModel } from "../turn.model";
 import TurnBit from "../fce/turn.bit";
 import State from "../../99.core/state";
