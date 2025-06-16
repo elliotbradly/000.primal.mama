@@ -3,7 +3,8 @@ import React from 'react'
 import { Button } from '@mantine/core';
 import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
-import PixelTest from './pixelTest/PixelInit'
+import PixelInit from './pixelTest/PixelInit'
+import ColorFetch from './pixelTest/ColorFetch'
 
 export default function ContentsPage() {
 
@@ -30,7 +31,11 @@ export default function ContentsPage() {
         <Stack >
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <PixelTest/>
+            <PixelInit/>
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <ColorFetch/>
           </Box>
 
         </Stack>

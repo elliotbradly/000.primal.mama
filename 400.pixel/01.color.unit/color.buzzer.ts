@@ -10,3 +10,4 @@ export { mixColor  } from "./buz/color.buzz";
 export { fateColor  } from "./buz/color.buzz";
 export { swatchColor  } from "./buz/color.buzz";
 export { paletteColor  } from "./buz/color.buzz";
+export { fetchColor  } from "./buz/color.buzz";

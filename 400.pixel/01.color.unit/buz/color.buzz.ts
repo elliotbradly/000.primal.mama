@@ -22,6 +22,19 @@ export const initColor = (cpy: ColorModel, bal: ColorBit, ste: State) => {
   return cpy;
 };
 
+export const fetchColor = async (cpy: ColorModel, bal: ColorBit, ste: State) => {
+  
+  const response = await fetch('/dat/000.color.name.json'); // URL is relative to the public folder
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  
+  var dat = await response.json();
+  bal.slv({ clrBit: { idx: "fetch-color", val: dat.length, dat: dat } });
+
+  return cpy;
+};
+
 export const openColor = async (cpy: ColorModel, bal: ColorBit, ste: State) => {
 
   var data = {}
@@ -91,15 +104,15 @@ export const createColor = (cpy: ColorModel, bal: ColorBit, ste: State) => {
 
     //near = require("nearest-color").from(data);
 
-    var itm = cpy.boundaryList( bal.idx)
+    var itm = cpy.boundaryList(bal.idx)
 
     dat['flv'] = itm.name;
 
     cpy.colorData
 
-    var itm2 = near( bal.idx  )
+    var itm2 = near(bal.idx)
 
-    dat.src = S( itm2.name).slugify().s
+    dat.src = S(itm2.name).slugify().s
     dat.bit = itm2
 
 

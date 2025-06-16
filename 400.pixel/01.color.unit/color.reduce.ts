@@ -43,6 +43,9 @@ case Act.SWATCH_COLOR:
 case Act.PALETTE_COLOR:
  return Buzz.paletteColor(clone(model), act.bale, state);
  
+case Act.FETCH_COLOR:
+ return Buzz.fetchColor(clone(model), act.bale, state);
+ 
  default:
  return model;
  }

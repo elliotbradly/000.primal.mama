@@ -77,6 +77,12 @@ export const PALETTE_COLOR = "[Palette action] Palette Color";
 
  
  
+export const FETCH_COLOR = "[Fetch action] Fetch Color";
+ export class FetchColor implements Action {
+ readonly type = FETCH_COLOR;
+ constructor(public bale: ColorBit) {}
+ }
+ 
 export type Actions = | InitColor | UpdateColor 
 | OpenColor
 | ReadColor
@@ -88,3 +94,4 @@ export type Actions = | InitColor | UpdateColor
 | FateColor
 | SwatchColor
 | PaletteColor
+| FetchColor
