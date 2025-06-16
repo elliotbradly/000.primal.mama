@@ -26,13 +26,15 @@ var bit, lst, dex, src, dat;
 
 export const initSpace = async (cpy: SpaceModel, bal: SpaceBit, ste: State) => {
 
-  bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, src: bal.src, lst: [ActSpc, ActGeo, ActMap, ActFoc], dat: bal.dat });
+ // bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, src: bal.src, lst: [ActSpc, ActGeo, ActMap, ActFoc], dat: bal.dat });
 
-  if (bal.val == 1) {
-    bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
+ // if (bal.val == 1) {
+ //   bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
 
-    patch(ste, ActMnu.INIT_MENU, {});
-  }
+ //   patch(ste, ActMnu.INIT_MENU, {});
+ // }
+
+  bal.slv({ intBit: { idx: "init-space" } });
 
   return cpy;
 };

@@ -6,6 +6,7 @@ import TestSurfacePage from '../page/003.test/001.surface-test/page';
 import TestBabylonPage from '../page/003.test/002.babylon-test/page';
 import TestPixelPage from '../page/003.test/003.pixel-test/page';
 import TestControlPage from '../page/003.test/004.control-test/page';
+import TestSpacePage from '../page/003.test/005.space-test/page';
 
 
 import {
@@ -102,6 +103,16 @@ const testControlRoute = createRoute({
     },
 });
 
+const testSpaceRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/test/space",
+    component: function Lora() {
+        return (
+            <TestSpacePage />
+        );
+    },
+});
+
 
 const testOpenBabylonRoute = createRoute({
     getParentRoute: () => rootRoute,
@@ -136,7 +147,9 @@ export var RouteTree = () => {
         testOpenBabylonRoute, 
         testWriteShadeRoute, 
         testPixelRoute,
-        testControlRoute
+        testControlRoute,
+        testSpaceRoute
+        
      ]);
      
     return item

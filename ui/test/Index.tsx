@@ -15,6 +15,10 @@ export default function ContentsPage() {
     document.location.href = './test/control'
   }
 
+  var act02 = () => {
+    document.location.href = './test/space'
+  }
+
 
 
   return (
@@ -38,7 +42,9 @@ export default function ContentsPage() {
             <Button fullWidth variant="outline" color="black" onClick={act00} > OPEN PIXEL TEST </Button>
           </Box>
 
-          
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Button fullWidth variant="outline" color="black" onClick={act02} > OPEN SPACE TEST </Button>
+          </Box>
 
         </Stack>
 
