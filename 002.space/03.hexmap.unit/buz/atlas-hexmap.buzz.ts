@@ -2,7 +2,6 @@ import * as ActMap from "../hexmap.action";
 
 import * as ActFoc from "../../01.focus.unit/focus.action";
 
-import * as ActCns from "../../83.console.unit/console.action";
 
 
 import * as ActSpc from "../../00.space.unit/space.action";
@@ -115,7 +114,7 @@ export const atlasHexmap = async (cpy: HexmapModel, bal: HexmapBit, ste: State) 
 
   var msg = "SCALE : " + scale + " SIZE : " + hex.length;
 
-  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "-----------" })
+  //bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "-----------" })
 
 
   var left = null;
@@ -224,7 +223,7 @@ export const atlasHexmap = async (cpy: HexmapModel, bal: HexmapBit, ste: State) 
     connect[id] = ring1;
   });
 
-  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "valley of the cube" })
+  //bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "valley of the cube" })
 
   var cubeList = [];
   var cube = {};

@@ -1,9 +1,9 @@
 import * as ActGeo from "../geojson.action";
 import * as ActMap from "../../03.hexmap.unit/hexmap.action";
 import * as ActCol from "../../97.collect.unit/collect.action";
-import * as ActCns from "../../83.console.unit/console.action";
+//import * as ActCns from "../../83.console.unit/console.action";
 
-import * as ActDsk from "../../96.disk.unit/disk.action";
+//import * as ActDsk from "../../96.disk.unit/disk.action";
 
 var bit, val, idx, dex, lst, dat, src;
 
@@ -25,7 +25,7 @@ export const loadGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: State
         val = bal.val
 
         //here we will load 
-        bit = await ste.hunt(ActDsk.INDEX_DISK, { src: cpy.geoSrc + '/' })
+       // bit = await ste.hunt(ActDsk.INDEX_DISK, { src: cpy.geoSrc + '/' })
 
         lst = bit.dskBit.lst
 
@@ -33,7 +33,7 @@ export const loadGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: State
 
         var want = cpy.geoSrc + '/' + itm;
         
-        bit = await ste.hunt(ActDsk.READ_DISK, { src: want  })
+        //bit = await ste.hunt(ActDsk.READ_DISK, { src: want  })
         dat = bit.dskBit.dat;
         src = itm.split('.')[0] + '.' + itm.split('.')[1]
         cpy.geojsonData = JSON.parse( dat)
@@ -47,7 +47,7 @@ export const loadGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: State
 
     } else {
 
-        bit = await ste.hunt(ActDsk.READ_DISK, { src: cpy.geoSrc + '/' + src, val: 1 })
+      //  bit = await ste.hunt(ActDsk.READ_DISK, { src: cpy.geoSrc + '/' + src, val: 1 })
         dat = bit.dskBit.dat;
         cpy.geojsonData = dat;
         src = bal.src.split('.')[0] + '.' + bal.src.split('.')[1]
@@ -55,7 +55,7 @@ export const loadGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: State
 
     }
 
-    bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "loading.. "+ src })
+   // bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "loading.. "+ src })
     
     return cpy;
 };
@@ -65,7 +65,7 @@ export const indexGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: Stat
 
     dat = null
 
-    bit = await ste.bus(ActDsk.INDEX_DISK, { src: cpy.geoSrc })
+   // bit = await ste.bus(ActDsk.INDEX_DISK, { src: cpy.geoSrc })
     lst = bit.dskBit.lst
 
     if (bal.slv != null) bal.slv({ geoBit: { idx: "list-geojson", lst } });
@@ -76,8 +76,8 @@ export const indexGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: Stat
 
 export const captureGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: State) => {
 
-    var open = require('open')
-    await open(bal.src);
+    //var open = require('open')
+    //await open(bal.src);
 
     if (bal.slv != null) bal.slv({ geoBit: { idx: "capture-geojson", src: bal.src } });
     return cpy;
@@ -87,7 +87,7 @@ export const captureGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: St
 export const saveGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: State) => {
 
 
-    bit = await ste.bus(ActDsk.INDEX_DISK, { src: "./data/geojson/" })
+ //   bit = await ste.bus(ActDsk.INDEX_DISK, { src: "./data/geojson/" })
     lst = bit.dskBit.lst;
 
     var dex = lst.length
@@ -118,7 +118,7 @@ export const saveGeojson = async (cpy: GeojsonModel, bal: GeojsonBit, ste: State
     }
 
 
-    bit = await ste.bus(ActDsk.WRITE_DISK, { idx: srcDir, dat: geo })
+  //  bit = await ste.bus(ActDsk.WRITE_DISK, { idx: srcDir, dat: geo })
 
 
     if (bal.slv != null) bal.slv({ geoBit: { idx: "save-geojson", src: bal.src } });

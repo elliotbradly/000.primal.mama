@@ -6,7 +6,7 @@ import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActScr from "../screen.action";
 
 import SeeBit from "../fce/see.bit";
-import * as ActFce from '../../act/surface.action'
+//import * as ActFce from '../../act/surface.action'
 
 import { BabylonModel } from "../../01.babylon.unit/babylon.model";
 

@@ -14,12 +14,12 @@ import SpotBit from "../../01.focus.unit/fce/spot.bit";
 import * as ActMap from "../hexmap.action";
 
 import * as ActFoc from "../../01.focus.unit/focus.action";
-import * as ActCns from "../../83.console.unit/console.action";
+//import * as ActCns from "../../83.console.unit/console.action";
 
 import * as ActSpc from "../../00.space.unit/space.action";
 import * as ActCol from "../../97.collect.unit/collect.action";
 
-import * as ActDsk from "../../96.disk.unit/disk.action";
+//import * as ActDsk from "../../96.disk.unit/disk.action";
 import * as ActVrt from "../../act/vurt.action";
 
 var bit, idx, lst, dat, val, src;
@@ -153,9 +153,9 @@ export const toolHexmap = async (cpy: HexmapModel, bal: HexmapBit, ste: State) =
   var fate = new Chance();
   var now = fate.pickone(link);
 
-  const open = require('open')
-  var loc = './vew.shd.bat'
-  bit = await open(now)
+ // const open = require('open')
+ // var loc = './vew.shd.bat'
+ // bit = await open(now)
 
   if (bal.slv != null) bal.slv({ mapBit: { idx: "tool-hexmap", src: now } });
   return cpy;
