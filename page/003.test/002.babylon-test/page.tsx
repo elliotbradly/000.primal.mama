@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from "../../../../ui/test/Index"
+import OpenBabylonTest from "../../../ui/test/OpenBabylonTest"
 
 /**
  * The main page component that renders the HomePage component.
@@ -8,7 +8,7 @@ import Index from "../../../../ui/test/Index"
  */
 const Page = () => {
     
-    return <Index />;
+    return <OpenBabylonTest />;
 };
 
 export default Page;

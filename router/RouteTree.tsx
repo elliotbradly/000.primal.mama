@@ -1,11 +1,11 @@
-import IndexPage from '../src/page/000.index/page';
-import TitlePage from '../src/page/001.title/page';
-import ScenePage from '../src/page/002.scene/page';
-import TestPage from '../src/page/003.test/000.index/page';
-import TestSurfacePage from '../src/page/003.test/001.surface-test/page';
-import TestBabylonPage from '../src/page/003.test/002.babylon-test/page';
-import TestPixelPage from '../src/page/003.test/003.pixel-test/page';
-import TestControlPage from '../src/page/003.test/004.control-test/page';
+import IndexPage from '../page/000.index/page';
+import TitlePage from '../page/001.title/page';
+import ScenePage from '../page/002.scene/page';
+import TestPage from '../page/003.test/000.index/page';
+import TestSurfacePage from '../page/003.test/001.surface-test/page';
+import TestBabylonPage from '../page/003.test/002.babylon-test/page';
+import TestPixelPage from '../page/003.test/003.pixel-test/page';
+import TestControlPage from '../page/003.test/004.control-test/page';
 
 
 import {

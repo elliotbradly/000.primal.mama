@@ -1,5 +1,5 @@
 import React from 'react'
-import SurfaceTest from "../../../../ui/test/SurfaceTest"
+import Index from "../../../ui/test/Index"
 
 /**
  * The main page component that renders the HomePage component.
@@ -8,7 +8,7 @@ import SurfaceTest from "../../../../ui/test/SurfaceTest"
  */
 const Page = () => {
     
-    return <SurfaceTest />;
+    return <Index />;
 };
 
 export default Page;

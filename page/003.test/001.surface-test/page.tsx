@@ -1,4 +1,5 @@
-import Title from '../../../ui/001.Title';
+import React from 'react'
+import SurfaceTest from "../../../ui/test/SurfaceTest"
 
 /**
  * The main page component that renders the HomePage component.
@@ -7,7 +8,7 @@ import Title from '../../../ui/001.Title';
  */
 const Page = () => {
     
-    return <Title />;
+    return <SurfaceTest />;
 };
 
 export default Page;

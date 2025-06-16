@@ -1,4 +1,5 @@
-import Scene from '../../../ui/002.Scene';
+import React from 'react'
+import ControlTest from "../../../ui/test/ControlTest"
 
 /**
  * The main page component that renders the HomePage component.
@@ -7,7 +8,7 @@ import Scene from '../../../ui/002.Scene';
  */
 const Page = () => {
     
-    return <Scene />;
+    return <ControlTest />;
 };
 
 export default Page;

@@ -1,5 +1,4 @@
-import React from 'react'
-import ControlTest from "../../../../ui/test/ControlTest"
+import Index from '../../ui/000.Index';
 
 /**
  * The main page component that renders the HomePage component.
@@ -8,7 +7,7 @@ import ControlTest from "../../../../ui/test/ControlTest"
  */
 const Page = () => {
     
-    return <ControlTest />;
+    return <Index />;
 };
 
 export default Page;

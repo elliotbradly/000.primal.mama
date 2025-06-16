@@ -1,5 +1,4 @@
-import React from 'react'
-import PixelTest from "../../../../ui/test/PixelTest"
+import Scene from '../../ui/002.Scene';
 
 /**
  * The main page component that renders the HomePage component.
@@ -8,7 +7,7 @@ import PixelTest from "../../../../ui/test/PixelTest"
  */
 const Page = () => {
     
-    return <PixelTest />;
+    return <Scene />;
 };
 
 export default Page;

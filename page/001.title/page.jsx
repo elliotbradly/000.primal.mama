@@ -1,5 +1,4 @@
-import React from 'react'
-import OpenBabylonTest from "../../../../ui/test/OpenBabylonTest"
+import Title from '../../ui/001.Title';
 
 /**
  * The main page component that renders the HomePage component.
@@ -8,7 +7,7 @@ import OpenBabylonTest from "../../../../ui/test/OpenBabylonTest"
  */
 const Page = () => {
     
-    return <OpenBabylonTest />;
+    return <Title />;
 };
 
 export default Page;

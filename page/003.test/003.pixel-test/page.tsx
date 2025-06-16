@@ -1,4 +1,5 @@
-import Index from '../../../ui/000.Index';
+import React from 'react'
+import PixelTest from "../../../ui/test/PixelTest"
 
 /**
  * The main page component that renders the HomePage component.
@@ -7,7 +8,7 @@ import Index from '../../../ui/000.Index';
  */
 const Page = () => {
     
-    return <Index />;
+    return <PixelTest />;
 };
 
 export default Page;
