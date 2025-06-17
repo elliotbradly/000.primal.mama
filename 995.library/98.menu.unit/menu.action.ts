@@ -31,9 +31,9 @@ export class GithubMenu implements Action {
   constructor(public bale: MenuBit) { }
 }
 
-export const OLLAMA_MENU = "[Time action] Ollama Menu";
-export class OllamaMenu implements Action {
-  readonly type = OLLAMA_MENU;
+export const SPACE_MENU = "[Menu action] Space Menu";
+export class SpaceMenu implements Action {
+  readonly type = SPACE_MENU;
   constructor(public bale: MenuBit) { }
 }
 
@@ -43,9 +43,9 @@ export class ControlMenu implements Action {
   constructor(public bale: MenuBit) { }
 }
 
-export const OPENAI_MENU = "[Time action] OpenAi Menu";
-export class OpenAIMenu implements Action {
-  readonly type = OPENAI_MENU;
+export const PIXEL_MENU = "[Menu action] Pixel Menu";
+export class PixelMenu implements Action {
+  readonly type = PIXEL_MENU;
   constructor(public bale: MenuBit) { }
 }
 
@@ -118,6 +118,6 @@ export type Actions = InitMenu | UpdateMenu | TestMenu | CloseMenu
   | FocusPlayMenu
   | UpdateFocusPlayMenu
   | PrintMenu
-  | OllamaMenu
-  | OpenAIMenu
+  | SpaceMenu
+  | ControlMenu
   | ControlMenu

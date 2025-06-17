@@ -4,7 +4,6 @@ import MenuBit from "../fce/menu.bit";
 import State from "../../99.core/state";
 //import { HexmapModel } from "../../03.hexmap.unit/hexmap.model";
 
-
 import * as Grid from '../../val/grid';
 import * as Align from '../../val/align'
 import * as Color from '../../val/console-color';
@@ -12,10 +11,7 @@ import * as Color from '../../val/console-color';
 import * as SHAPE from '../../val/shape'
 import * as FOCUS from "../../val/focus";
 
-
-
 import * as ActMnu from "../menu.action";
-
 
 //import * as ActFoc from "../../01.focus.unit/focus.action";
 //import * as ActPvt from "../../96.pivot.unit/pivot.action";
@@ -31,7 +27,7 @@ import * as ActCns from "../../83.console.unit/console.action";
 
 var bit, lst, dex, idx, dat, src;
 
-export const ollamaMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
+export const spaceMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   lst = [  ActMnu.UPDATE_MENU]
 
@@ -56,7 +52,7 @@ export const ollamaMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   setTimeout ( async ()=>{
 
-    bit = await ste.hunt(ActMnu.OLLAMA_MENU, {})
+    bit = await ste.hunt(ActMnu.SPACE_MENU, {})
 
   }, 333 )
   
