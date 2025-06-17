@@ -85,7 +85,7 @@ export const createControl = (cpy: ControlModel, bal: ControlBit, ste: State) =>
 
 export const testControl = async (cpy: ControlModel, bal: ControlBit, ste: State) => {
 
-  bit = await ste.bus(ActCrd.READ_CARDANO, {})
+  //bit = await ste.bus(ActCrd.READ_CARDANO, {})
 
   if (bal.slv != null) bal.slv({ condBit: { idx: "test-control", dat: {} } });
 

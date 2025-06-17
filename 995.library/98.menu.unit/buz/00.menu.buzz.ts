@@ -27,8 +27,6 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   if (bal == null) bal = { idx: null }
 
-
-
   bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
 
   bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
@@ -61,7 +59,6 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
     case ActMnu.CONTROL_MENU:
       bit = await ste.hunt(ActMnu.CONTROL_MENU, {})
-      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
 

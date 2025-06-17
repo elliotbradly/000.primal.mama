@@ -1,7 +1,7 @@
 {
  "extends": "../tsconfig-base.json",
  "compilerOptions": {
- "outDir": "../dist/111.control",
+ "outDir": "../dist/001.control",
  "composite": true,
  "skipLibCheck": true
  },
