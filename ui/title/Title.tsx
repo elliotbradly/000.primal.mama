@@ -70,7 +70,7 @@ export default function Component() {
                     PRIMAL.MAMA
                 </Title>
                 <Text style={{ paddingLeft: '10px' }} className={'subtitle'} size="xs">
-                    v0.0.0
+                    v0.0.1
                 </Text>
             </Box>
 
@@ -105,11 +105,7 @@ export default function Component() {
 
                 </Button>
 
-
-
             </Stack>
-
-
 
             <div className={'characterSilhouette'} />
             <div className={'swampCharacter'} />

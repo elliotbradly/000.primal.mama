@@ -6,6 +6,7 @@ const S = require("string");
 
 var template = "npm run test {{=it.test}}";
 var title = "tech-noir";
+var root = '000.primal.mama';
 
 //COMMAND LINE ACCESS
 const { program } = require("commander");
@@ -48,11 +49,11 @@ var eveiefy = () => {
     lineList[b] = outLine;
   });
 
-  var endLoc = "../" + title + "/work/" + title + ".js";
+  var endLoc = "../" + root + "/work/" + title + ".js";
   FS.ensureFileSync(endLoc);
   console.log("bundle me ... " + endLoc)
 
-  var stream = FS.createWriteStream(endLoc, {encoding:'utf8'});
+  var stream = FS.createWriteStream(endLoc, { encoding: 'utf8' });
   stream.on("error", () => {
     console.log("error browserify stream");
   });
@@ -136,9 +137,10 @@ var eveiefy = () => {
     .exclude("terminal-kit")
     .exclude("undici")
     .exclude("pty.js")
-    .exclude("blessed")
+    //.exclude("blessed")
 
-  var loc = "../" + title + '/' + title + "/000.quest." + pvt + ".js";
+ 
+  var loc = "../" + root + '/' + title + "/000.quest." + pvt + ".js";
   console.log("let see " + loc);
 
   b.add(loc);

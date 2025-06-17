@@ -2,7 +2,6 @@
   "name": "quest",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev --open",
@@ -45,7 +44,12 @@
   "devDependencies": {
     "@rsbuild/core": "^1.2.8",
     "@rsbuild/plugin-react": "^1.1.0",
+    "@types/node": "^24.0.3",
     "commander": "^13.1.0",
-    "fs-extra": "^11.3.0"
+    "fs-extra": "^11.3.0",
+    "i": "^0.3.7",
+    "npm": "^11.4.2",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0"  
   }
 }

@@ -13,38 +13,6 @@
     "sourceMap": true,
     "skipLibCheck": false,
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@act/*": [
-        "./act/*"
-      ],
-      "@earth/*": [
-        "./000.earth/*"
-      ],
-      "@fonts/*": [
-        "./fonts/*"
-      ],
-      "@queue/*": [
-        "./queue/*"
-      ],
-      "@robot/*": [
-        "./robot/*"
-      ],
-      "@ui/*": [
-        "./ui/*"
-      ],
-      "@core/*": [
-        "./core/*"
-      ],
-      "@content/*": [
-        "./content/*"
-      ],
-      "@page/*": [
-        "./src/page/*"
-      ],
-    },
+    "baseUrl": "."
   }
 }
