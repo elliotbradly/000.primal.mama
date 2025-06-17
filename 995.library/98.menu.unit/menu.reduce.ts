@@ -30,6 +30,10 @@ export function reducer(model: MenuModel = new MenuModel(), act: Act.Actions, st
     case Act.OPENAI_MENU:
       return Buzz.openaiMenu(clone(model), act.bale, state);
 
+    case Act.CONTROL_MENU:
+      return Buzz.controlMenu(clone(model), act.bale, state);
+
+
     default:
       return model;
   }

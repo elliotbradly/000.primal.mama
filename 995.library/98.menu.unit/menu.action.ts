@@ -37,6 +37,12 @@ export class OllamaMenu implements Action {
   constructor(public bale: MenuBit) { }
 }
 
+export const CONTROL_MENU = "[Menu action] Control Menu";
+export class ControlMenu implements Action {
+  readonly type = CONTROL_MENU;
+  constructor(public bale: MenuBit) { }
+}
+
 export const OPENAI_MENU = "[Time action] OpenAi Menu";
 export class OpenAIMenu implements Action {
   readonly type = OPENAI_MENU;
@@ -114,3 +120,4 @@ export type Actions = InitMenu | UpdateMenu | TestMenu | CloseMenu
   | PrintMenu
   | OllamaMenu
   | OpenAIMenu
+  | ControlMenu

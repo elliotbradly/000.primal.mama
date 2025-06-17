@@ -27,7 +27,7 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   if (bal == null) bal = { idx: null }
 
-  
+
 
   bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
 
@@ -50,11 +50,7 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  
-
-  //lst = [ ActMnu.OLLAMA_MENU,  ActPmt.UPDATE_PROMPT, ActAut.UPDATE_AUTHOR, ActGen.UPDATE_GENRE, ActSet.UPDATE_SETTING, ActEmo.SELECT_EMOTION,  ActMnu.OPENAI_MENU, ActLib.UPDATE_LIBRARY, ActMnu.GITHUB_MENU]
-
-  lst = [ ActLib.UPDATE_LIBRARY ]
+  lst = [ActMnu.CONTROL_MENU, ActLib.UPDATE_LIBRARY]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -63,16 +59,12 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   switch (src) {
 
-    
-    case ActMnu.OLLAMA_MENU:
-      bit = await ste.hunt(ActMnu.OLLAMA_MENU, {})
-      
-      debugger
-      
+    case ActMnu.CONTROL_MENU:
+      bit = await ste.hunt(ActMnu.CONTROL_MENU, {})
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
-    
+
     case ActMnu.OPENAI_MENU:
       bit = await ste.hunt(ActMnu.OPENAI_MENU, {})
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
