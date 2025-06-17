@@ -1,7 +1,7 @@
 'use server'
 
-import * as Import from "@space/BEE";
-import State from "@space/99.core/state";
+import * as Import from "./BEE";
+import State from "./99.core/state";
 
 var dex = 0;
 

@@ -49,10 +49,10 @@ export const deleteScreen = (cpy: ScreenModel, bal: ScreenBit, ste: State) => {
 };
 
 export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State) => {
-    
+
     var dat: SeeBit = {
         idx: bal.idx, src: bal.src,
-        bit:null
+        bit: null
     }
 
     for (var key in bal.dat) {
@@ -71,20 +71,20 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
 
     var scene = modBab.scene;
 
-    if ( scene == null ){
+    if (scene == null) {
 
-        bal.slv({ scrBit: { idx: "create-screen-err", dat:{bit:null} } });
-        return 
+        bal.slv({ scrBit: { idx: "create-screen-err", dat: { bit: null } } });
+        return
 
     }
 
-    
 
-    bit = await window['SHADE'](ActFce.LIST_SURFACE, {})
-    var dex = bit.fceBit.lst.length
-    var idx = 'fce' + dex;
-    console.log("fce: " + idx)
-    bit = await window['SHADE'](ActFce.WRITE_SURFACE, { idx })
+
+    //bit = await window['SHADE'](ActFce.LIST_SURFACE, {})
+    //var dex = bit.fceBit.lst.length
+    //var idx = 'fce' + dex;
+    //console.log("fce: " + idx)
+    //bit = await window['SHADE'](ActFce.WRITE_SURFACE, { idx })
 
     const app = bit.fceBit.dat.bit
     //const app = new PIXI.Application();
@@ -122,9 +122,9 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     )
 
 
-    dat.bit = out 
+    dat.bit = out
 
-    
+
     bal.slv({ scrBit: { idx: "create-screen", dat } });
     return cpy;
 };

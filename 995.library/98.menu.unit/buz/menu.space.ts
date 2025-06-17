@@ -1,3 +1,4 @@
+const path = require('path');
 
 import { MenuModel } from "../menu.model";
 import MenuBit from "../fce/menu.bit";
@@ -27,7 +28,25 @@ import * as ActCns from "../../83.console.unit/console.action";
 
 var bit, lst, dex, idx, dat, src;
 
+var SPACE;
+
 export const spaceMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
+
+  var exec = require('child_process').exec;
+
+  exec('tsc -b 002.space', async (err, stdout, stderr) => {
+    if (err) {
+      console.error(`exec error: ${err}`);
+    }
+
+    if (SPACE != null) return
+    SPACE = require(path.resolve('./dist/002.space/hunt'));
+
+    //bit = await CONTROL.hunt(CONTROL_ACTION.INIT_CONTROL, {});
+    bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "compiled space" })
+
+
+  })
 
   lst = [  ActMnu.UPDATE_MENU]
 
