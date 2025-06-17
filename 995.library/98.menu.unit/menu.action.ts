@@ -120,4 +120,4 @@ export type Actions = InitMenu | UpdateMenu | TestMenu | CloseMenu
   | PrintMenu
   | SpaceMenu
   | ControlMenu
-  | ControlMenu
+  | PixelMenu

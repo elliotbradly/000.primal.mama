@@ -29,7 +29,7 @@ import * as ActCns from "../../act/console.action";
 
 var bit, lst, dex, idx, dat, src;
 
-export const openaiMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
+export const pixelMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   lst = [ActMnu.UPDATE_MENU]
 

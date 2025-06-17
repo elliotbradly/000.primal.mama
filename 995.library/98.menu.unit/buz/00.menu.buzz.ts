@@ -48,7 +48,7 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  lst = [ActMnu.CONTROL_MENU, ActLib.UPDATE_LIBRARY]
+  lst = [ActMnu.CONTROL_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -61,10 +61,12 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       bit = await ste.hunt(ActMnu.CONTROL_MENU, {})
       break;
 
+    case ActMnu.SPACE_MENU:
+      bit = await ste.hunt(ActMnu.SPACE_MENU, {})
+      break;
 
-    case ActMnu.OPENAI_MENU:
-      bit = await ste.hunt(ActMnu.OPENAI_MENU, {})
-      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+    case ActMnu.PIXEL_MENU:
+      bit = await ste.hunt(ActMnu.PIXEL_MENU, {})
       break;
 
     case ActLib.UPDATE_LIBRARY:
