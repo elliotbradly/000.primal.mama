@@ -123,7 +123,7 @@ export const updatePalette = async (cpy: PaletteModel, bal: PaletteBit, ste: Sta
     if ((dex + 1) % 3 == 0) {
 
       var msg = dex + '/' + lst.length;
-      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: msg })
+      //bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: msg })
 
     }
 
@@ -233,7 +233,7 @@ export const createPalette = async (cpy: PaletteModel, bal: PaletteBit, ste: Sta
     if ((dex + 1) % 2 == 0) {
 
       var msg = dex + '/' + result.length;
-      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: msg })
+      //bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: msg })
 
 
 

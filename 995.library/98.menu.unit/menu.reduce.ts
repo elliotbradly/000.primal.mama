@@ -24,11 +24,11 @@ export function reducer(model: MenuModel = new MenuModel(), act: Act.Actions, st
     case Act.PRINT_MENU:
       return Buzz.printMenu(clone(model), act.bale, state);
 
-    case Act.OLLAMA_MENU:
-      return Buzz.ollamaMenu(clone(model), act.bale, state);
+    case Act.PIXEL_MENU:
+      return Buzz.pixelMenu(clone(model), act.bale, state);
 
-    case Act.OPENAI_MENU:
-      return Buzz.openaiMenu(clone(model), act.bale, state);
+    case Act.SPACE_MENU:
+      return Buzz.spaceMenu(clone(model), act.bale, state);
 
     case Act.CONTROL_MENU:
       return Buzz.controlMenu(clone(model), act.bale, state);

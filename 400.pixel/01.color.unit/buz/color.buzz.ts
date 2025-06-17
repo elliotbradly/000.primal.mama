@@ -216,23 +216,23 @@ export const mixColor = async (cpy: ColorModel, bal: ColorBit, ste: State) => {
   var lst = bal.dat.lst;
   var val = bal.dat.val;
 
-  var rgb0 = convert.hex.rgb(lst[0]);
-  var rgb1 = convert.hex.rgb(lst[1]);
+  //var rgb0 = convert.hex.rgb(lst[0]);
+  //var rgb1 = convert.hex.rgb(lst[1]);
 
-  var clr0 = Color.rgb(rgb0);
-  var clr1 = Color.rgb(rgb1);
+  //var clr0 = Color.rgb(rgb0);
+  //var clr1 = Color.rgb(rgb1);
 
   if (val == null) val = 0.5;
 
   val
 
-  var mix = clr0.mix(clr1, val);
+  //var mix = clr0.mix(clr1, val);
 
-  var mixColor = mix.color;
+  //var mixColor = mix.color;
 
-  var mixHex = convert.rgb.hex(mixColor);
+  //var mixHex = convert.rgb.hex(mixColor);
 
-  bit = await ste.hunt(ActClr.WRITE_COLOR, { idx: bal.idx, src: mixHex })
+  //bit = await ste.hunt(ActClr.WRITE_COLOR, { idx: bal.idx, src: mixHex })
   dat = bit.clrBit.dat;
 
   if (bal.slv != null) bal.slv({ clrBit: { idx: "mix-color", dat } });
