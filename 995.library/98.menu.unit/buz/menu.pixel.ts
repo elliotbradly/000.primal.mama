@@ -1,6 +1,8 @@
 import * as ActMnu from "../menu.action";
 const path = require('path');
 //import * as ActOai from "../../02.openai.unit/openai.action";
+var exec = require('child_process').exec;
+import * as ActPxl from "../../act/pixel.action";
 
 //import * as ActFoc from "../../01.focus.unit/focus.action";
 //import * as ActPvt from "../../96.pivot.unit/pivot.action";
@@ -32,23 +34,18 @@ var PIXEL;
 
 export const pixelMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  var exec = require('child_process').exec;
-
-  exec('tsc -b 400.pixel', async (err, stdout, stderr) => {
-    if (err) {
+  await (async () => {
+    try {
+      await new Promise<void>((resolve, reject) => exec('tsc -b 400.pixel', err => err ? reject(err) : resolve()));
+      if (PIXEL == null) PIXEL = require(path.resolve('./dist/400.pixel/hunt'));
+      bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "compiled pixel" });
+    } catch (err) {
       console.error(`exec error: ${err}`);
+      throw err;
     }
+  })();
 
-    if (PIXEL != null) return
-    PIXEL = require(path.resolve('./dist/400.pixel/hunt'));
-
-    //bit = await CONTROL.hunt(CONTROL_ACTION.INIT_CONTROL, {});
-    bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "compiled pixel" })
-
-
-  })
-
-  lst = [ActMnu.UPDATE_MENU]
+  lst = [ActPxl.TEST_PIXEL, ActPxl.WRITE_PIXEL]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -57,8 +54,13 @@ export const pixelMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   switch (src) {
 
-    case ActMnu.UPDATE_MENU:
-      bit = await ste.hunt(ActMnu.UPDATE_MENU, {})
+    case ActPxl.WRITE_PIXEL:
+      bit = await PIXEL.hunt(ActPxl.WRITE_PIXEL, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+      break;
+
+    case ActPxl.TEST_PIXEL:
+      bit = await PIXEL.hunt(ActPxl.TEST_PIXEL, {})
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 

@@ -351,7 +351,9 @@ export const readPixel = async (cpy: PixelModel, bal: PixelBit, ste: State) => {
 };
 
 export const writePixel = (cpy: PixelModel, bal: PixelBit, ste: State) => {
-  debugger;
+  
+  bal.slv({ pxlBit: { idx: "write-pixel" } });
+
   return cpy;
 };
 
