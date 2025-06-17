@@ -11,3 +11,4 @@ export { batchPixel  } from "./buz/pixel.buzz";
 export { framePixel  } from "./buz/pixel.buzz";
 export { chromaPixel  } from "./buz/pixel.buzz";
 export { sortPixel  } from "./buz/pixel.buzz";
+export { testPixel  } from "./buz/pixel.buzz";

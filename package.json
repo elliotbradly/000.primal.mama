@@ -31,6 +31,7 @@
     "gsap": "^3.12.5",
     "h3-js": "^3.7.2",
     "honeycomb-grid": "^3.1.8",
+    "luxon": "^3.6.1",
     "nearest-color": "^0.4.4",
     "pixi.js": "8.9.x",
     "pngjs": "^7.0.0",
@@ -42,14 +43,17 @@
     "stringify": "^5.2.0"
   },
   "devDependencies": {
+    "@root/walk": "^1.1.0",
     "@rsbuild/core": "^1.2.8",
     "@rsbuild/plugin-react": "^1.1.0",
     "@types/node": "^24.0.3",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
     "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
     "i": "^0.3.7",
     "npm": "^11.4.2",
-    "blessed": "^0.1.81",
-    "blessed-contrib": "^4.11.0"  
+    "typescript-ioc": "^3.2.2",
+    "terminal-kit": "^3.1.2"
   }
 }

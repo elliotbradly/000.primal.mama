@@ -47,6 +47,9 @@ export function reducer(model: PixelModel = new PixelModel(), act: Act.Actions, 
     case Act.CHROMA_PIXEL:
       return Buzz.chromaPixel(clone(model), act.bale, state);
 
+case Act.TEST_PIXEL:
+ return Buzz.testPixel(clone(model), act.bale, state);
+ 
     default:
       return model;
   }

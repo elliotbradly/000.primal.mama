@@ -83,6 +83,12 @@ export const CHROMA_PIXEL = "[Chroma action] Chroma Pixel";
  constructor(public bale: PixelBit) {}
  }
 
+export const TEST_PIXEL = "[Test action] Test Pixel";
+ export class TestPixel implements Action {
+ readonly type = TEST_PIXEL;
+ constructor(public bale: PixelBit) {}
+ }
+ 
 export type Actions = | InitPixel | UpdatePixel
 | OpenPixel
 | ProcessPixel
@@ -95,3 +101,4 @@ export type Actions = | InitPixel | UpdatePixel
 | FramePixel
 | ChromaPixel
 | SortPixel
+| TestPixel

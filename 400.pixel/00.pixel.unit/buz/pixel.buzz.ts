@@ -1,4 +1,5 @@
 
+
 import { PixelModel } from "../pixel.model";
 import PixelBit from "../fce/pixel.bit";
 import State from "../../99.core/state";
@@ -581,11 +582,14 @@ export const sortPixel = async (cpy: PixelModel, bal: PixelBit, ste: State) => {
     FS.copySync(input, output)
   })
 
-
-
   bal.slv({ palBit: { idx: "sort-pixel" } });
-
 
   return cpy;
 };
 
+export const testPixel = (cpy: PixelModel, bal:PixelBit, ste: State) => {
+  
+  bal.slv({ palBit: { idx: "test-pixel" } });
+
+  return cpy;
+  };
