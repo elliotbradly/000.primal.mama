@@ -37,6 +37,9 @@ export const fetchColor = async (cpy: ColorModel, bal: ColorBit, ste: State) => 
 
 export const openColor = async (cpy: ColorModel, bal: ColorBit, ste: State) => {
 
+ var bit = ste.hunt( ActClr.FATE_COLOR, {})
+ debugger
+
   var data = {}
 
   var modClr = ste.value.light;
