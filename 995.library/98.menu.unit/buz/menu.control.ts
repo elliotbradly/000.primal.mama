@@ -3,6 +3,7 @@ import MenuBit from "../fce/menu.bit";
 import State from "../../99.core/state";
 //import { HexmapModel } from "../../03.hexmap.unit/hexmap.model";
 const path = require('path');
+var exec = require('child_process').exec;
 
 import * as Grid from '../../val/grid';
 import * as Align from '../../val/align'
@@ -31,22 +32,16 @@ var CONTROL;
 
 export const controlMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  var exec = require('child_process').exec;
-
-  exec('tsc -b 001.control', async (err, stdout, stderr) => {
-    if (err) {
+  await (async () => {
+    try {
+      await new Promise<void>((resolve, reject) => exec('tsc -b 001.control', err => err ? reject(err) : resolve()));
+      if (CONTROL == null) CONTROL = require(path.resolve('./dist/001.control/hunt'));
+      bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "compiled control" });
+    } catch (err) {
       console.error(`exec error: ${err}`);
+      throw err;
     }
-
-    if (CONTROL != null) return
-
-    CONTROL = require(path.resolve('./dist/001.control/hunt'));
-
-    //bit = await CONTROL.hunt(CONTROL_ACTION.INIT_CONTROL, {});
-    bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "compiled control" })
-
-
-  })
+  })();
 
   lst = [ActCtl.TEST_CONTROL, ActMnu.UPDATE_MENU]
 
