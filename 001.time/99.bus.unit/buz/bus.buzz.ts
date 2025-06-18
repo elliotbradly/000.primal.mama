@@ -1,7 +1,7 @@
-import * as ActMnu from "../../98.menu.unit/menu.action";
+//import * as ActMnu from "../../98.menu.unit/menu.action";
 import * as ActBus from "../../99.bus.unit/bus.action";
 import * as ActCol from "../../97.collect.unit/collect.action";
-import * as ActCns from "../../83.console.unit/console.action";
+//import * as ActCns from "../../83.console.unit/console.action";
 
 
 var lst, idx, bit, src, dat, dex;
@@ -42,7 +42,7 @@ export const initBus = (cpy: BusModel, bal: BusBit, ste: State) => {
     cpy.client.on('message', (tpc, msg) => { messageBus(cpy, { idx: tpc, src: msg }, ste) })
     cpy.client.on('connect', async () => {
 
-      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: bal.idx + " connected " + cpy.host })
+    //  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: bal.idx + " connected " + cpy.host })
 
 
       openBus(cpy, { idx: 'init-bus', lst: cpy.actList }, ste)
@@ -73,7 +73,7 @@ export const initBus = (cpy: BusModel, bal: BusBit, ste: State) => {
 
         if ( flag == true){
 
-          bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: a.idx + " connected " + a.src })
+         // bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: a.idx + " connected " + a.src })
 
 
         }
@@ -130,7 +130,7 @@ export const openBus = async (cpy: BusModel, bal: BusBit, ste: State) => {
       if (!err) {
       
 
-     bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'subscribing ' + a })
+    // bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'subscribing ' + a })
 
 
         
@@ -147,7 +147,7 @@ export const openBus = async (cpy: BusModel, bal: BusBit, ste: State) => {
 export const connectBus = (cpy: BusModel, bal: BusBit, ste: State) => {
 
   var lst = []
-  if (bal.val == 1) patch(ste, ActMnu.INIT_MENU, { lst })
+  //if (bal.val == 1) patch(ste, ActMnu.INIT_MENU, { lst })
 }
 
 export const messageBus = async (cpy: BusModel, bal: BusBit, ste: State) => {

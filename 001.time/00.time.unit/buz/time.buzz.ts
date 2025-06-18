@@ -1,4 +1,3 @@
-import * as ActMnu from '../../98.menu.unit/menu.action';
 import * as ActTme from '../../00.time.unit/time.action';
 
 import * as ActClk from '../../03.clock.unit/clock.action';
@@ -10,7 +9,6 @@ import * as ActCns from '../../act/console.action';
 import * as ActPvt from '../../act/pivot.action';
 import * as ActDsk from '../../act/disk.action';
 
-import * as ActTrm from '../../80.terminal.unit/terminal.action';
 
 import * as ActBus from '../../99.bus.unit/bus.action';
 
@@ -24,10 +22,10 @@ export const initTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
     dat: bal.dat,
   });
 
-  if (bal.val == 1) {
-    bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
-    patch(ste, ActMnu.INIT_MENU, {});
-  }
+  //if (bal.val == 1) {
+  //  bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
+   // patch(ste, ActMnu.INIT_MENU, {});
+ // }
 
   const { exec } = require('child_process');
 
