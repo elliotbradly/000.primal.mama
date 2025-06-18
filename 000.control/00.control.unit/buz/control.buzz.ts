@@ -20,12 +20,9 @@ var bit, val, idx, dex, lst, dat, src;
 
 export const initControl = async (cpy: ControlModel, bal: ControlBit, ste: State) => {
 
-  //if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActCtr], dat: bal.dat, src: bal.src })
+ 
 
-  //if (bal.val == 1) patch(ste, ActMnu.INIT_MENU, bal);
-
-  //bit = await ste.hunt( ActTrn.INIT_TURN, {})
-
+  
   bal.slv({ intBit: { idx: "init-control" } });
 
   return cpy;

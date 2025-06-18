@@ -58,7 +58,74 @@ export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Sta
     return cpy;
 };
 
-export const countLibrary = (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
+export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
+
+    var Walk = require("@root/walk");
+    var path = require("path");
+    var FS = require('fs-extra')
+
+    var output = []
+
+    function walkFunc(err, pathname, dirent) {
+        if (err) {
+            // throw an error to stop walking
+            // (or return to ignore and keep going)
+            console.warn("fs stat error for %s: %s", pathname, err.message);
+            return Promise.resolve();
+        }
+
+        if (dirent.isDirectory() && dirent.name == 'data') { return Promise.resolve(false) }
+        if (dirent.isDirectory() && dirent.name == 'dist') { return Promise.resolve(false) }
+        if (dirent.isDirectory() && dirent.name == 'node_modules') { return Promise.resolve(false) }
+        if (dirent.isDirectory() && dirent.name == 'public') { return Promise.resolve(false) }
+        if (dirent.isDirectory() && dirent.name == 'modules') { return Promise.resolve(false) }
+        if (dirent.isDirectory() && dirent.name == '.') { return Promise.resolve(false) }
+
+        if (dirent.isDirectory() && dirent.name.startsWith(".")) {
+            return Promise.resolve(false);
+        }
+
+        if (dirent.isFile() && dirent.name.startsWith(".") == false) {
+            var file = path.join(path.dirname(pathname), dirent.name);
+            output.push(file)
+        }
+
+        return Promise.resolve();
+    }
+
+    await Walk.walk('./', walkFunc);
+
+    output
+
+    const allowedExtensions = new Set(['.ts', '.js', '.mjs', '.cjs']);
+
+    const paths = output.filter(filePath => {
+        const extension = path.extname(filePath).toLowerCase(); // Ensure case-insensitivity for extension
+        return allowedExtensions.has(extension);
+    });
+
+    paths
+
+    var out = []
+
+    paths.forEach( (a)=>{
+        var lst = FS.readFileSync(a).toString().split('\n');
+        out = out.concat(lst)
+    })
+
+    var score = []
+
+    out.forEach( (a)=>{
+        if ( a.length < 5 ) return
+        a = a.replaceAll(' ', '')
+        if ( a.length <= 3 ) return
+        score.push(a)
+    })
+
+    score
+
+    debugger
+
 
     var obj = {
         includes: [], // The directories and files that need to be included are all included by default
@@ -87,7 +154,7 @@ export const countLibrary = (cpy: LibraryModel, bal: LibraryBit, ste: State) => 
             'utf-8',
             'unicode'
         ],
-        ignoreEmptyLine: true,
+        ignoreEmptyLine: false,
     }
 
     const count = require('count-code-line');
@@ -100,7 +167,7 @@ export const countLibrary = (cpy: LibraryModel, bal: LibraryBit, ste: State) => 
     now = now.replace(':', '-')
     now = S(now).slugify().s;
 
-    var FS = require('fs-extra')
+   
     var dat = FS.readJsonSync('./count.output.json')
     var line = dat.lines + ' : ' + now
 
@@ -115,7 +182,7 @@ export const countLibrary = (cpy: LibraryModel, bal: LibraryBit, ste: State) => 
         FS.writeFileSync('./data/line-log.txt', list.join(' \n '))
     }
 
-    bal.slv({ libBit: { idx: "count-library", val:dat.lines } });
+    bal.slv({ libBit: { idx: "count-library", val: dat.lines } });
     return cpy;
 };
 

@@ -3,8 +3,8 @@
     "type": "dir",
     "fullPath": "",
     "fileNumber": 1177,
-    "lines": 11673,
-    "characters": 1029765,
+    "lines": 14118,
+    "characters": 1034869,
     "childrens": [
         {
             "name": "000.control",
@@ -12,7 +12,7 @@
             "fullPath": "/000.control",
             "fileNumber": 82,
             "lines": 82,
-            "characters": 43757,
+            "characters": 43531,
             "childrens": [
                 {
                     "name": "00.control.unit",
@@ -20,7 +20,7 @@
                     "fullPath": "/000.control/00.control.unit",
                     "fileNumber": 11,
                     "lines": 11,
-                    "characters": 5868,
+                    "characters": 5642,
                     "childrens": [
                         {
                             "name": "buz",
@@ -28,14 +28,14 @@
                             "fullPath": "/000.control/00.control.unit/buz",
                             "fileNumber": 1,
                             "lines": 1,
-                            "characters": 2634,
+                            "characters": 2408,
                             "childrens": [
                                 {
                                     "name": "control.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/000.control/00.control.unit/buz/control.buzz.ts",
                                     "lines": 1,
-                                    "characters": 2634
+                                    "characters": 2408
                                 }
                             ]
                         },
@@ -765,31 +765,31 @@
             "type": "dir",
             "fullPath": "/001.time",
             "fileNumber": 110,
-            "lines": 2080,
-            "characters": 79791,
+            "lines": 2675,
+            "characters": 81060,
             "childrens": [
                 {
                     "name": "00.time.unit",
                     "type": "dir",
                     "fullPath": "/001.time/00.time.unit",
                     "fileNumber": 9,
-                    "lines": 451,
-                    "characters": 13967,
+                    "lines": 568,
+                    "characters": 14210,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/001.time/00.time.unit/buz",
                             "fileNumber": 1,
-                            "lines": 298,
-                            "characters": 9199,
+                            "lines": 375,
+                            "characters": 9356,
                             "childrens": [
                                 {
                                     "name": "time.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/00.time.unit/buz/time.buzz.ts",
-                                    "lines": 298,
-                                    "characters": 9199
+                                    "lines": 375,
+                                    "characters": 9356
                                 }
                             ]
                         },
@@ -798,29 +798,29 @@
                             "type": "dir",
                             "fullPath": "/001.time/00.time.unit/fce",
                             "fileNumber": 3,
-                            "lines": 38,
-                            "characters": 683,
+                            "lines": 45,
+                            "characters": 697,
                             "childrens": [
                                 {
                                     "name": "clock.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/00.time.unit/fce/clock.bit.ts",
-                                    "lines": 21,
-                                    "characters": 350
+                                    "lines": 22,
+                                    "characters": 352
                                 },
                                 {
                                     "name": "time.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/00.time.unit/fce/time.bit.ts",
-                                    "lines": 11,
-                                    "characters": 197
+                                    "lines": 13,
+                                    "characters": 201
                                 },
                                 {
                                     "name": "time.interface.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/00.time.unit/fce/time.interface.ts",
-                                    "lines": 6,
-                                    "characters": 136
+                                    "lines": 10,
+                                    "characters": 144
                                 }
                             ]
                         },
@@ -828,8 +828,8 @@
                             "name": "time.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/00.time.unit/time.action.ts",
-                            "lines": 60,
-                            "characters": 2011
+                            "lines": 74,
+                            "characters": 2044
                         },
                         {
                             "name": "time.buzzer.ts",
@@ -842,22 +842,22 @@
                             "name": "time.model.ts",
                             "type": "file",
                             "fullPath": "/001.time/00.time.unit/time.model.ts",
-                            "lines": 7,
-                            "characters": 214
+                            "lines": 10,
+                            "characters": 221
                         },
                         {
                             "name": "time.reduce.ts",
                             "type": "file",
                             "fullPath": "/001.time/00.time.unit/time.reduce.ts",
-                            "lines": 31,
-                            "characters": 1231
+                            "lines": 44,
+                            "characters": 1257
                         },
                         {
                             "name": "time.unit.ts",
                             "type": "file",
                             "fullPath": "/001.time/00.time.unit/time.unit.ts",
-                            "lines": 7,
-                            "characters": 164
+                            "lines": 10,
+                            "characters": 170
                         }
                     ]
                 },
@@ -866,23 +866,23 @@
                     "type": "dir",
                     "fullPath": "/001.time/03.clock.unit",
                     "fileNumber": 12,
-                    "lines": 471,
-                    "characters": 15395,
+                    "lines": 630,
+                    "characters": 15743,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/001.time/03.clock.unit/buz",
                             "fileNumber": 1,
-                            "lines": 279,
-                            "characters": 9761,
+                            "lines": 395,
+                            "characters": 10005,
                             "childrens": [
                                 {
                                     "name": "clock.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/03.clock.unit/buz/clock.buzz.ts",
-                                    "lines": 279,
-                                    "characters": 9761
+                                    "lines": 395,
+                                    "characters": 10005
                                 }
                             ]
                         },
@@ -891,15 +891,15 @@
                             "type": "dir",
                             "fullPath": "/001.time/03.clock.unit/fce",
                             "fileNumber": 6,
-                            "lines": 71,
-                            "characters": 1439,
+                            "lines": 83,
+                            "characters": 1463,
                             "childrens": [
                                 {
                                     "name": "amount.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/03.clock.unit/fce/amount.bit.ts",
-                                    "lines": 4,
-                                    "characters": 75
+                                    "lines": 6,
+                                    "characters": 79
                                 },
                                 {
                                     "name": "blockbit.ts",
@@ -912,29 +912,29 @@
                                     "name": "blockfrost.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/03.clock.unit/fce/blockfrost.bit.ts",
-                                    "lines": 8,
-                                    "characters": 186
+                                    "lines": 10,
+                                    "characters": 190
                                 },
                                 {
                                     "name": "clock.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/03.clock.unit/fce/clock.bit.ts",
-                                    "lines": 10,
-                                    "characters": 196
+                                    "lines": 12,
+                                    "characters": 200
                                 },
                                 {
                                     "name": "clock.interface.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/03.clock.unit/fce/clock.interface.ts",
-                                    "lines": 6,
-                                    "characters": 142
+                                    "lines": 10,
+                                    "characters": 150
                                 },
                                 {
                                     "name": "tic.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/03.clock.unit/fce/tic.bit.ts",
-                                    "lines": 23,
-                                    "characters": 423
+                                    "lines": 25,
+                                    "characters": 427
                                 }
                             ]
                         },
@@ -942,8 +942,8 @@
                             "name": "clock.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/03.clock.unit/clock.action.ts",
-                            "lines": 62,
-                            "characters": 2071
+                            "lines": 74,
+                            "characters": 2104
                         },
                         {
                             "name": "clock.buzzer.ts",
@@ -956,22 +956,22 @@
                             "name": "clock.model.ts",
                             "type": "file",
                             "fullPath": "/001.time/03.clock.unit/clock.model.ts",
-                            "lines": 11,
-                            "characters": 312
+                            "lines": 14,
+                            "characters": 318
                         },
                         {
                             "name": "clock.reduce.ts",
                             "type": "file",
                             "fullPath": "/001.time/03.clock.unit/clock.reduce.ts",
-                            "lines": 31,
-                            "characters": 1159
+                            "lines": 44,
+                            "characters": 1194
                         },
                         {
                             "name": "clock.unit.ts",
                             "type": "file",
                             "fullPath": "/001.time/03.clock.unit/clock.unit.ts",
-                            "lines": 7,
-                            "characters": 165
+                            "lines": 10,
+                            "characters": 171
                         }
                     ]
                 },
@@ -980,23 +980,23 @@
                     "type": "dir",
                     "fullPath": "/001.time/97.collect.unit",
                     "fileNumber": 9,
-                    "lines": 454,
-                    "characters": 15485,
+                    "lines": 603,
+                    "characters": 15791,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/001.time/97.collect.unit/buz",
                             "fileNumber": 1,
-                            "lines": 250,
-                            "characters": 8023,
+                            "lines": 343,
+                            "characters": 8209,
                             "childrens": [
                                 {
                                     "name": "collect.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/97.collect.unit/buz/collect.buzz.ts",
-                                    "lines": 250,
-                                    "characters": 8023
+                                    "lines": 343,
+                                    "characters": 8209
                                 }
                             ]
                         },
@@ -1005,29 +1005,29 @@
                             "type": "dir",
                             "fullPath": "/001.time/97.collect.unit/fce",
                             "fileNumber": 3,
-                            "lines": 23,
-                            "characters": 447,
+                            "lines": 33,
+                            "characters": 467,
                             "childrens": [
                                 {
                                     "name": "caboodle.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/97.collect.unit/fce/caboodle.bit.ts",
-                                    "lines": 6,
-                                    "characters": 100
+                                    "lines": 8,
+                                    "characters": 104
                                 },
                                 {
                                     "name": "collect.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/97.collect.unit/fce/collect.bit.ts",
-                                    "lines": 10,
-                                    "characters": 153
+                                    "lines": 15,
+                                    "characters": 163
                                 },
                                 {
                                     "name": "collect.interface.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/97.collect.unit/fce/collect.interface.ts",
-                                    "lines": 7,
-                                    "characters": 194
+                                    "lines": 10,
+                                    "characters": 200
                                 }
                             ]
                         },
@@ -1035,8 +1035,8 @@
                             "name": "collect.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/97.collect.unit/collect.action.ts",
-                            "lines": 104,
-                            "characters": 3624
+                            "lines": 125,
+                            "characters": 3674
                         },
                         {
                             "name": "collect.buzzer.ts",
@@ -1049,22 +1049,22 @@
                             "name": "collect.model.ts",
                             "type": "file",
                             "fullPath": "/001.time/97.collect.unit/collect.model.ts",
-                            "lines": 8,
-                            "characters": 287
+                            "lines": 10,
+                            "characters": 291
                         },
                         {
                             "name": "collect.reduce.ts",
                             "type": "file",
                             "fullPath": "/001.time/97.collect.unit/collect.reduce.ts",
-                            "lines": 45,
-                            "characters": 2042
+                            "lines": 65,
+                            "characters": 2082
                         },
                         {
                             "name": "collect.unit.ts",
                             "type": "file",
                             "fullPath": "/001.time/97.collect.unit/collect.unit.ts",
-                            "lines": 7,
-                            "characters": 167
+                            "lines": 10,
+                            "characters": 173
                         }
                     ]
                 },
@@ -1073,23 +1073,23 @@
                     "type": "dir",
                     "fullPath": "/001.time/99.bus.unit",
                     "fileNumber": 12,
-                    "lines": 264,
-                    "characters": 9226,
+                    "lines": 390,
+                    "characters": 9501,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/001.time/99.bus.unit/buz",
                             "fileNumber": 1,
-                            "lines": 157,
-                            "characters": 5775,
+                            "lines": 252,
+                            "characters": 5987,
                             "childrens": [
                                 {
                                     "name": "bus.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/99.bus.unit/buz/bus.buzz.ts",
-                                    "lines": 157,
-                                    "characters": 5775
+                                    "lines": 252,
+                                    "characters": 5987
                                 }
                             ]
                         },
@@ -1098,8 +1098,8 @@
                             "type": "dir",
                             "fullPath": "/001.time/99.bus.unit/fce",
                             "fileNumber": 6,
-                            "lines": 23,
-                            "characters": 635,
+                            "lines": 29,
+                            "characters": 647,
                             "childrens": [
                                 {
                                     "name": "bus.bit.js",
@@ -1119,8 +1119,8 @@
                                     "name": "bus.bit.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/99.bus.unit/fce/bus.bit.ts",
-                                    "lines": 9,
-                                    "characters": 133
+                                    "lines": 11,
+                                    "characters": 137
                                 },
                                 {
                                     "name": "bus.interface.js",
@@ -1140,8 +1140,8 @@
                                     "name": "bus.interface.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/99.bus.unit/fce/bus.interface.ts",
-                                    "lines": 6,
-                                    "characters": 130
+                                    "lines": 10,
+                                    "characters": 138
                                 }
                             ]
                         },
@@ -1149,36 +1149,36 @@
                             "name": "bus.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/99.bus.unit/bus.action.ts",
-                            "lines": 34,
-                            "characters": 1216
+                            "lines": 43,
+                            "characters": 1234
                         },
                         {
                             "name": "bus.buzzer.ts",
                             "type": "file",
                             "fullPath": "/001.time/99.bus.unit/bus.buzzer.ts",
-                            "lines": 6,
-                            "characters": 272
+                            "lines": 7,
+                            "characters": 274
                         },
                         {
                             "name": "bus.model.ts",
                             "type": "file",
                             "fullPath": "/001.time/99.bus.unit/bus.model.ts",
-                            "lines": 14,
-                            "characters": 350
+                            "lines": 17,
+                            "characters": 356
                         },
                         {
                             "name": "bus.reduce.ts",
                             "type": "file",
                             "fullPath": "/001.time/99.bus.unit/bus.reduce.ts",
-                            "lines": 23,
-                            "characters": 815
+                            "lines": 32,
+                            "characters": 834
                         },
                         {
                             "name": "bus.unit.ts",
                             "type": "file",
                             "fullPath": "/001.time/99.bus.unit/bus.unit.ts",
-                            "lines": 7,
-                            "characters": 163
+                            "lines": 10,
+                            "characters": 169
                         }
                     ]
                 },
@@ -1187,30 +1187,30 @@
                     "type": "dir",
                     "fullPath": "/001.time/99.core",
                     "fileNumber": 3,
-                    "lines": 39,
-                    "characters": 1107,
+                    "lines": 51,
+                    "characters": 1133,
                     "childrens": [
                         {
                             "name": "interface",
                             "type": "dir",
                             "fullPath": "/001.time/99.core/interface",
                             "fileNumber": 2,
-                            "lines": 5,
-                            "characters": 100,
+                            "lines": 7,
+                            "characters": 104,
                             "childrens": [
                                 {
                                     "name": "action.interface.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/99.core/interface/action.interface.ts",
-                                    "lines": 4,
-                                    "characters": 67
+                                    "lines": 5,
+                                    "characters": 69
                                 },
                                 {
                                     "name": "model.interface.ts",
                                     "type": "file",
                                     "fullPath": "/001.time/99.core/interface/model.interface.ts",
-                                    "lines": 1,
-                                    "characters": 33
+                                    "lines": 2,
+                                    "characters": 35
                                 }
                             ]
                         },
@@ -1218,8 +1218,8 @@
                             "name": "state.ts",
                             "type": "file",
                             "fullPath": "/001.time/99.core/state.ts",
-                            "lines": 34,
-                            "characters": 1007
+                            "lines": 44,
+                            "characters": 1029
                         }
                     ]
                 },
@@ -1228,8 +1228,8 @@
                     "type": "dir",
                     "fullPath": "/001.time/act",
                     "fileNumber": 30,
-                    "lines": 185,
-                    "characters": 12696,
+                    "lines": 193,
+                    "characters": 12717,
                     "childrens": [
                         {
                             "name": "canvas.action.ts",
@@ -1242,8 +1242,8 @@
                             "name": "choice.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/choice.action.ts",
-                            "lines": 5,
-                            "characters": 291
+                            "lines": 6,
+                            "characters": 293
                         },
                         {
                             "name": "console.action.ts",
@@ -1284,29 +1284,29 @@
                             "name": "github.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/github.action.ts",
-                            "lines": 3,
-                            "characters": 183
+                            "lines": 4,
+                            "characters": 185
                         },
                         {
                             "name": "graphic.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/graphic.action.ts",
-                            "lines": 6,
-                            "characters": 377
+                            "lines": 7,
+                            "characters": 379
                         },
                         {
                             "name": "grid.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/grid.action.ts",
-                            "lines": 2,
-                            "characters": 108
+                            "lines": 3,
+                            "characters": 110
                         },
                         {
                             "name": "hexagon.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/hexagon.action.ts",
                             "lines": 5,
-                            "characters": 312
+                            "characters": 313
                         },
                         {
                             "name": "input.action.ts",
@@ -1340,8 +1340,8 @@
                             "name": "renpy.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/renpy.action.ts",
-                            "lines": 3,
-                            "characters": 170
+                            "lines": 4,
+                            "characters": 172
                         },
                         {
                             "name": "shiny.action.js",
@@ -1361,8 +1361,8 @@
                             "name": "shiny.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/shiny.action.ts",
-                            "lines": 3,
-                            "characters": 170
+                            "lines": 4,
+                            "characters": 172
                         },
                         {
                             "name": "space.action.js",
@@ -1403,22 +1403,22 @@
                             "name": "terminal.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/terminal.action.ts",
-                            "lines": 12,
-                            "characters": 726
+                            "lines": 13,
+                            "characters": 730
                         },
                         {
                             "name": "text.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/text.action.ts",
-                            "lines": 8,
-                            "characters": 447
+                            "lines": 9,
+                            "characters": 449
                         },
                         {
                             "name": "visage.action.ts",
                             "type": "file",
                             "fullPath": "/001.time/act/visage.action.ts",
                             "lines": 8,
-                            "characters": 495
+                            "characters": 497
                         },
                         {
                             "name": "vurt.action.js",
@@ -1448,15 +1448,15 @@
                     "type": "dir",
                     "fullPath": "/001.time/val",
                     "fileNumber": 32,
-                    "lines": 190,
-                    "characters": 9798,
+                    "lines": 205,
+                    "characters": 9828,
                     "childrens": [
                         {
                             "name": "align.ts",
                             "type": "file",
                             "fullPath": "/001.time/val/align.ts",
-                            "lines": 2,
-                            "characters": 76
+                            "lines": 5,
+                            "characters": 82
                         },
                         {
                             "name": "console-color.ts",
@@ -1483,8 +1483,8 @@
                             "name": "console.ts",
                             "type": "file",
                             "fullPath": "/001.time/val/console.ts",
-                            "lines": 5,
-                            "characters": 253
+                            "lines": 6,
+                            "characters": 255
                         },
                         {
                             "name": "direction.js",
@@ -1504,8 +1504,8 @@
                             "name": "direction.ts",
                             "type": "file",
                             "fullPath": "/001.time/val/direction.ts",
-                            "lines": 16,
-                            "characters": 554
+                            "lines": 18,
+                            "characters": 558
                         },
                         {
                             "name": "focus.ts",
@@ -1532,15 +1532,15 @@
                             "name": "graphic.ts",
                             "type": "file",
                             "fullPath": "/001.time/val/graphic.ts",
-                            "lines": 3,
-                            "characters": 149
+                            "lines": 5,
+                            "characters": 153
                         },
                         {
                             "name": "grid.ts",
                             "type": "file",
                             "fullPath": "/001.time/val/grid.ts",
-                            "lines": 14,
-                            "characters": 477
+                            "lines": 19,
+                            "characters": 487
                         },
                         {
                             "name": "hexagon.js",
@@ -1609,8 +1609,8 @@
                             "name": "markup.ts",
                             "type": "file",
                             "fullPath": "/001.time/val/markup.ts",
-                            "lines": 10,
-                            "characters": 404
+                            "lines": 11,
+                            "characters": 406
                         },
                         {
                             "name": "shade.js",
@@ -1637,8 +1637,8 @@
                             "name": "shape.ts",
                             "type": "file",
                             "fullPath": "/001.time/val/shape.ts",
-                            "lines": 5,
-                            "characters": 191
+                            "lines": 6,
+                            "characters": 193
                         },
                         {
                             "name": "space.ts",
@@ -1681,8 +1681,8 @@
                     "name": "000.quest.time.js",
                     "type": "file",
                     "fullPath": "/001.time/000.quest.time.js",
-                    "lines": 1,
-                    "characters": 47
+                    "lines": 2,
+                    "characters": 49
                 },
                 {
                     "name": "BEE.ts",
@@ -1695,8 +1695,8 @@
                     "name": "hunt.ts",
                     "type": "file",
                     "fullPath": "/001.time/hunt.ts",
-                    "lines": 24,
-                    "characters": 655
+                    "lines": 32,
+                    "characters": 673
                 }
             ]
         },
@@ -6841,16 +6841,16 @@
             "type": "dir",
             "fullPath": "/400.pixel",
             "fileNumber": 105,
-            "lines": 1493,
-            "characters": 99505,
+            "lines": 1921,
+            "characters": 100429,
             "childrens": [
                 {
                     "name": "00.pixel.unit",
                     "type": "dir",
                     "fullPath": "/400.pixel/00.pixel.unit",
                     "fileNumber": 8,
-                    "lines": 17,
-                    "characters": 17926,
+                    "lines": 25,
+                    "characters": 17942,
                     "childrens": [
                         {
                             "name": "buz",
@@ -6874,8 +6874,8 @@
                             "type": "dir",
                             "fullPath": "/400.pixel/00.pixel.unit/fce",
                             "fileNumber": 2,
-                            "lines": 7,
-                            "characters": 284,
+                            "lines": 11,
+                            "characters": 292,
                             "childrens": [
                                 {
                                     "name": "pixel.bit.ts",
@@ -6888,8 +6888,8 @@
                                     "name": "pixel.interface.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/00.pixel.unit/fce/pixel.interface.ts",
-                                    "lines": 6,
-                                    "characters": 142
+                                    "lines": 10,
+                                    "characters": 150
                                 }
                             ]
                         },
@@ -6925,8 +6925,8 @@
                             "name": "pixel.unit.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/00.pixel.unit/pixel.unit.ts",
-                            "lines": 5,
-                            "characters": 108
+                            "lines": 9,
+                            "characters": 116
                         }
                     ]
                 },
@@ -6935,8 +6935,8 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/01.color.unit",
                     "fileNumber": 9,
-                    "lines": 139,
-                    "characters": 14942,
+                    "lines": 173,
+                    "characters": 15032,
                     "childrens": [
                         {
                             "name": "buz",
@@ -6960,15 +6960,15 @@
                             "type": "dir",
                             "fullPath": "/400.pixel/01.color.unit/fce",
                             "fileNumber": 3,
-                            "lines": 18,
-                            "characters": 448,
+                            "lines": 22,
+                            "characters": 456,
                             "childrens": [
                                 {
                                     "name": "color.bit.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/01.color.unit/fce/color.bit.ts",
-                                    "lines": 9,
-                                    "characters": 165
+                                    "lines": 11,
+                                    "characters": 169
                                 },
                                 {
                                     "name": "color.interface.ts",
@@ -6981,8 +6981,8 @@
                                     "name": "hue.bit.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/01.color.unit/fce/hue.bit.ts",
-                                    "lines": 8,
-                                    "characters": 142
+                                    "lines": 10,
+                                    "characters": 146
                                 }
                             ]
                         },
@@ -6990,8 +6990,8 @@
                             "name": "color.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/01.color.unit/color.action.ts",
-                            "lines": 74,
-                            "characters": 2652
+                            "lines": 90,
+                            "characters": 2696
                         },
                         {
                             "name": "color.buzzer.ts",
@@ -7011,8 +7011,8 @@
                             "name": "color.reduce.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/01.color.unit/color.reduce.ts",
-                            "lines": 33,
-                            "characters": 1401
+                            "lines": 47,
+                            "characters": 1439
                         },
                         {
                             "name": "color.unit.ts",
@@ -7028,23 +7028,23 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/02.light.unit",
                     "fileNumber": 8,
-                    "lines": 180,
-                    "characters": 7480,
+                    "lines": 230,
+                    "characters": 7587,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/400.pixel/02.light.unit/buz",
                             "fileNumber": 1,
-                            "lines": 43,
-                            "characters": 1869,
+                            "lines": 75,
+                            "characters": 1933,
                             "childrens": [
                                 {
                                     "name": "light.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/02.light.unit/buz/light.buzz.ts",
-                                    "lines": 43,
-                                    "characters": 1869
+                                    "lines": 75,
+                                    "characters": 1933
                                 }
                             ]
                         },
@@ -7076,8 +7076,8 @@
                             "name": "light.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/02.light.unit/light.action.ts",
-                            "lines": 26,
-                            "characters": 913
+                            "lines": 32,
+                            "characters": 928
                         },
                         {
                             "name": "light.buzzer.ts",
@@ -7090,15 +7090,15 @@
                             "name": "light.model.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/02.light.unit/light.model.ts",
-                            "lines": 85,
-                            "characters": 3417
+                            "lines": 90,
+                            "characters": 3428
                         },
                         {
                             "name": "light.reduce.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/02.light.unit/light.reduce.ts",
-                            "lines": 19,
-                            "characters": 679
+                            "lines": 26,
+                            "characters": 696
                         },
                         {
                             "name": "light.unit.ts",
@@ -7207,8 +7207,8 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/04.palette.unit",
                     "fileNumber": 8,
-                    "lines": 113,
-                    "characters": 10581,
+                    "lines": 146,
+                    "characters": 10661,
                     "childrens": [
                         {
                             "name": "buz",
@@ -7232,22 +7232,22 @@
                             "type": "dir",
                             "fullPath": "/400.pixel/04.palette.unit/fce",
                             "fileNumber": 2,
-                            "lines": 15,
-                            "characters": 307,
+                            "lines": 21,
+                            "characters": 319,
                             "childrens": [
                                 {
                                     "name": "palette.bit.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/04.palette.unit/fce/palette.bit.ts",
-                                    "lines": 9,
-                                    "characters": 153
+                                    "lines": 11,
+                                    "characters": 157
                                 },
                                 {
                                     "name": "palette.interface.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/04.palette.unit/fce/palette.interface.ts",
-                                    "lines": 6,
-                                    "characters": 154
+                                    "lines": 10,
+                                    "characters": 162
                                 }
                             ]
                         },
@@ -7255,8 +7255,8 @@
                             "name": "palette.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/04.palette.unit/palette.action.ts",
-                            "lines": 50,
-                            "characters": 1998
+                            "lines": 60,
+                            "characters": 2025
                         },
                         {
                             "name": "palette.buzzer.ts",
@@ -7269,22 +7269,22 @@
                             "name": "palette.model.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/04.palette.unit/palette.model.ts",
-                            "lines": 7,
-                            "characters": 230
+                            "lines": 9,
+                            "characters": 234
                         },
                         {
                             "name": "palette.reduce.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/04.palette.unit/palette.reduce.ts",
-                            "lines": 27,
-                            "characters": 1129
+                            "lines": 38,
+                            "characters": 1158
                         },
                         {
                             "name": "palette.unit.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/04.palette.unit/palette.unit.ts",
-                            "lines": 5,
-                            "characters": 110
+                            "lines": 9,
+                            "characters": 118
                         }
                     ]
                 },
@@ -7293,23 +7293,23 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/97.collect.unit",
                     "fileNumber": 9,
-                    "lines": 433,
-                    "characters": 14695,
+                    "lines": 573,
+                    "characters": 14985,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/400.pixel/97.collect.unit/buz",
                             "fileNumber": 1,
-                            "lines": 241,
-                            "characters": 7694,
+                            "lines": 326,
+                            "characters": 7864,
                             "childrens": [
                                 {
                                     "name": "collect.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/97.collect.unit/buz/collect.buzz.ts",
-                                    "lines": 241,
-                                    "characters": 7694
+                                    "lines": 326,
+                                    "characters": 7864
                                 }
                             ]
                         },
@@ -7318,29 +7318,29 @@
                             "type": "dir",
                             "fullPath": "/400.pixel/97.collect.unit/fce",
                             "fileNumber": 3,
-                            "lines": 22,
-                            "characters": 435,
+                            "lines": 32,
+                            "characters": 455,
                             "childrens": [
                                 {
                                     "name": "caboodle.bit.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/97.collect.unit/fce/caboodle.bit.ts",
-                                    "lines": 6,
-                                    "characters": 100
+                                    "lines": 8,
+                                    "characters": 104
                                 },
                                 {
                                     "name": "collect.bit.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/97.collect.unit/fce/collect.bit.ts",
-                                    "lines": 9,
-                                    "characters": 141
+                                    "lines": 14,
+                                    "characters": 151
                                 },
                                 {
                                     "name": "collect.interface.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/97.collect.unit/fce/collect.interface.ts",
-                                    "lines": 7,
-                                    "characters": 194
+                                    "lines": 10,
+                                    "characters": 200
                                 }
                             ]
                         },
@@ -7348,8 +7348,8 @@
                             "name": "collect.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/97.collect.unit/collect.action.ts",
-                            "lines": 98,
-                            "characters": 3414
+                            "lines": 118,
+                            "characters": 3462
                         },
                         {
                             "name": "collect.buzzer.ts",
@@ -7362,22 +7362,22 @@
                             "name": "collect.model.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/97.collect.unit/collect.model.ts",
-                            "lines": 8,
-                            "characters": 287
+                            "lines": 10,
+                            "characters": 291
                         },
                         {
                             "name": "collect.reduce.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/97.collect.unit/collect.reduce.ts",
-                            "lines": 43,
-                            "characters": 1914
+                            "lines": 62,
+                            "characters": 1954
                         },
                         {
                             "name": "collect.unit.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/97.collect.unit/collect.unit.ts",
-                            "lines": 5,
-                            "characters": 110
+                            "lines": 9,
+                            "characters": 118
                         }
                     ]
                 },
@@ -7386,23 +7386,23 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/99.bus.unit",
                     "fileNumber": 8,
-                    "lines": 249,
-                    "characters": 8446,
+                    "lines": 358,
+                    "characters": 8671,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/400.pixel/99.bus.unit/buz",
                             "fileNumber": 1,
-                            "lines": 152,
-                            "characters": 5424,
+                            "lines": 229,
+                            "characters": 5584,
                             "childrens": [
                                 {
                                     "name": "bus.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/99.bus.unit/buz/bus.buzz.ts",
-                                    "lines": 152,
-                                    "characters": 5424
+                                    "lines": 229,
+                                    "characters": 5584
                                 }
                             ]
                         },
@@ -7411,22 +7411,22 @@
                             "type": "dir",
                             "fullPath": "/400.pixel/99.bus.unit/fce",
                             "fileNumber": 2,
-                            "lines": 15,
-                            "characters": 263,
+                            "lines": 21,
+                            "characters": 275,
                             "childrens": [
                                 {
                                     "name": "bus.bit.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/99.bus.unit/fce/bus.bit.ts",
-                                    "lines": 9,
-                                    "characters": 133
+                                    "lines": 11,
+                                    "characters": 137
                                 },
                                 {
                                     "name": "bus.interface.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/99.bus.unit/fce/bus.interface.ts",
-                                    "lines": 6,
-                                    "characters": 130
+                                    "lines": 10,
+                                    "characters": 138
                                 }
                             ]
                         },
@@ -7434,36 +7434,36 @@
                             "name": "bus.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/99.bus.unit/bus.action.ts",
-                            "lines": 34,
-                            "characters": 1216
+                            "lines": 43,
+                            "characters": 1234
                         },
                         {
                             "name": "bus.buzzer.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/99.bus.unit/bus.buzzer.ts",
-                            "lines": 6,
-                            "characters": 272
+                            "lines": 7,
+                            "characters": 274
                         },
                         {
                             "name": "bus.model.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/99.bus.unit/bus.model.ts",
-                            "lines": 14,
-                            "characters": 350
+                            "lines": 17,
+                            "characters": 356
                         },
                         {
                             "name": "bus.reduce.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/99.bus.unit/bus.reduce.ts",
-                            "lines": 23,
-                            "characters": 815
+                            "lines": 32,
+                            "characters": 834
                         },
                         {
                             "name": "bus.unit.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/99.bus.unit/bus.unit.ts",
-                            "lines": 5,
-                            "characters": 106
+                            "lines": 9,
+                            "characters": 114
                         }
                     ]
                 },
@@ -7472,30 +7472,30 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/99.core",
                     "fileNumber": 3,
-                    "lines": 39,
-                    "characters": 1107,
+                    "lines": 51,
+                    "characters": 1133,
                     "childrens": [
                         {
                             "name": "interface",
                             "type": "dir",
                             "fullPath": "/400.pixel/99.core/interface",
                             "fileNumber": 2,
-                            "lines": 5,
-                            "characters": 100,
+                            "lines": 7,
+                            "characters": 104,
                             "childrens": [
                                 {
                                     "name": "action.interface.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/99.core/interface/action.interface.ts",
-                                    "lines": 4,
-                                    "characters": 67
+                                    "lines": 5,
+                                    "characters": 69
                                 },
                                 {
                                     "name": "model.interface.ts",
                                     "type": "file",
                                     "fullPath": "/400.pixel/99.core/interface/model.interface.ts",
-                                    "lines": 1,
-                                    "characters": 33
+                                    "lines": 2,
+                                    "characters": 35
                                 }
                             ]
                         },
@@ -7503,8 +7503,8 @@
                             "name": "state.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/99.core/state.ts",
-                            "lines": 34,
-                            "characters": 1007
+                            "lines": 44,
+                            "characters": 1029
                         }
                     ]
                 },
@@ -7513,8 +7513,8 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/act",
                     "fileNumber": 17,
-                    "lines": 113,
-                    "characters": 6686,
+                    "lines": 123,
+                    "characters": 6709,
                     "childrens": [
                         {
                             "name": "canvas.action.ts",
@@ -7527,15 +7527,15 @@
                             "name": "choice.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/choice.action.ts",
-                            "lines": 5,
-                            "characters": 291
+                            "lines": 6,
+                            "characters": 293
                         },
                         {
                             "name": "color.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/color.action.ts",
-                            "lines": 4,
-                            "characters": 224
+                            "lines": 5,
+                            "characters": 226
                         },
                         {
                             "name": "console.action.ts",
@@ -7548,29 +7548,29 @@
                             "name": "disk.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/disk.action.ts",
-                            "lines": 15,
-                            "characters": 838
+                            "lines": 16,
+                            "characters": 840
                         },
                         {
                             "name": "graphic.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/graphic.action.ts",
-                            "lines": 6,
-                            "characters": 377
+                            "lines": 7,
+                            "characters": 379
                         },
                         {
                             "name": "grid.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/grid.action.ts",
-                            "lines": 2,
-                            "characters": 108
+                            "lines": 3,
+                            "characters": 110
                         },
                         {
                             "name": "hexagon.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/hexagon.action.ts",
                             "lines": 5,
-                            "characters": 312
+                            "characters": 313
                         },
                         {
                             "name": "input.action.ts",
@@ -7583,29 +7583,29 @@
                             "name": "light.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/light.action.ts",
-                            "lines": 3,
-                            "characters": 169
+                            "lines": 4,
+                            "characters": 171
                         },
                         {
                             "name": "pivot.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/pivot.action.ts",
-                            "lines": 12,
-                            "characters": 697
+                            "lines": 13,
+                            "characters": 699
                         },
                         {
                             "name": "renpy.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/renpy.action.ts",
-                            "lines": 3,
-                            "characters": 170
+                            "lines": 4,
+                            "characters": 172
                         },
                         {
                             "name": "shiny.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/shiny.action.ts",
-                            "lines": 3,
-                            "characters": 170
+                            "lines": 4,
+                            "characters": 172
                         },
                         {
                             "name": "space.action.ts",
@@ -7618,15 +7618,15 @@
                             "name": "terminal.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/terminal.action.ts",
-                            "lines": 13,
-                            "characters": 811
+                            "lines": 14,
+                            "characters": 813
                         },
                         {
                             "name": "visage.action.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/act/visage.action.ts",
                             "lines": 8,
-                            "characters": 495
+                            "characters": 497
                         },
                         {
                             "name": "vurt.action.ts",
@@ -7642,15 +7642,15 @@
                     "type": "dir",
                     "fullPath": "/400.pixel/val",
                     "fileNumber": 23,
-                    "lines": 174,
-                    "characters": 6893,
+                    "lines": 189,
+                    "characters": 6923,
                     "childrens": [
                         {
                             "name": "align.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/val/align.ts",
-                            "lines": 2,
-                            "characters": 76
+                            "lines": 5,
+                            "characters": 82
                         },
                         {
                             "name": "console-color.ts",
@@ -7670,8 +7670,8 @@
                             "name": "console.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/val/console.ts",
-                            "lines": 5,
-                            "characters": 253
+                            "lines": 6,
+                            "characters": 255
                         },
                         {
                             "name": "direction.js",
@@ -7684,8 +7684,8 @@
                             "name": "direction.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/val/direction.ts",
-                            "lines": 16,
-                            "characters": 554
+                            "lines": 18,
+                            "characters": 558
                         },
                         {
                             "name": "focus.ts",
@@ -7705,15 +7705,15 @@
                             "name": "graphic.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/val/graphic.ts",
-                            "lines": 3,
-                            "characters": 149
+                            "lines": 5,
+                            "characters": 153
                         },
                         {
                             "name": "grid.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/val/grid.ts",
-                            "lines": 14,
-                            "characters": 477
+                            "lines": 19,
+                            "characters": 487
                         },
                         {
                             "name": "hexagon.js",
@@ -7754,8 +7754,8 @@
                             "name": "markup.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/val/markup.ts",
-                            "lines": 10,
-                            "characters": 404
+                            "lines": 11,
+                            "characters": 406
                         },
                         {
                             "name": "shade.js",
@@ -7775,8 +7775,8 @@
                             "name": "shape.ts",
                             "type": "file",
                             "fullPath": "/400.pixel/val/shape.ts",
-                            "lines": 5,
-                            "characters": 191
+                            "lines": 6,
+                            "characters": 193
                         },
                         {
                             "name": "space.ts",
@@ -7812,8 +7812,8 @@
                     "name": "000.quest.pixel.js",
                     "type": "file",
                     "fullPath": "/400.pixel/000.quest.pixel.js",
-                    "lines": 2,
-                    "characters": 129
+                    "lines": 8,
+                    "characters": 141
                 },
                 {
                     "name": "BEE.ts",
@@ -7826,8 +7826,8 @@
                     "name": "hunt.ts",
                     "type": "file",
                     "fullPath": "/400.pixel/hunt.ts",
-                    "lines": 24,
-                    "characters": 641
+                    "lines": 35,
+                    "characters": 666
                 }
             ]
         },
@@ -7836,31 +7836,31 @@
             "type": "dir",
             "fullPath": "/995.library",
             "fileNumber": 178,
-            "lines": 3405,
-            "characters": 133740,
+            "lines": 4679,
+            "characters": 136553,
             "childrens": [
                 {
                     "name": "00.library.unit",
                     "type": "dir",
                     "fullPath": "/995.library/00.library.unit",
                     "fileNumber": 8,
-                    "lines": 158,
-                    "characters": 6732,
+                    "lines": 215,
+                    "characters": 6849,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/00.library.unit/buz",
                             "fileNumber": 1,
-                            "lines": 92,
-                            "characters": 4210,
+                            "lines": 126,
+                            "characters": 4279,
                             "childrens": [
                                 {
                                     "name": "library.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/00.library.unit/buz/library.buzz.ts",
-                                    "lines": 92,
-                                    "characters": 4210
+                                    "lines": 126,
+                                    "characters": 4279
                                 }
                             ]
                         },
@@ -7869,22 +7869,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/00.library.unit/fce",
                             "fileNumber": 2,
-                            "lines": 13,
-                            "characters": 287,
+                            "lines": 19,
+                            "characters": 299,
                             "childrens": [
                                 {
                                     "name": "library.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/00.library.unit/fce/library.bit.ts",
-                                    "lines": 7,
-                                    "characters": 133
+                                    "lines": 9,
+                                    "characters": 137
                                 },
                                 {
                                     "name": "library.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/00.library.unit/fce/library.interface.ts",
-                                    "lines": 6,
-                                    "characters": 154
+                                    "lines": 10,
+                                    "characters": 162
                                 }
                             ]
                         },
@@ -7892,8 +7892,8 @@
                             "name": "library.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/00.library.unit/library.action.ts",
-                            "lines": 20,
-                            "characters": 962
+                            "lines": 25,
+                            "characters": 973
                         },
                         {
                             "name": "library.buzzer.ts",
@@ -7906,22 +7906,22 @@
                             "name": "library.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/00.library.unit/library.model.ts",
-                            "lines": 7,
-                            "characters": 248
+                            "lines": 9,
+                            "characters": 252
                         },
                         {
                             "name": "library.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/00.library.unit/library.reduce.ts",
-                            "lines": 17,
-                            "characters": 706
+                            "lines": 23,
+                            "characters": 719
                         },
                         {
                             "name": "library.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/00.library.unit/library.unit.ts",
-                            "lines": 5,
-                            "characters": 110
+                            "lines": 9,
+                            "characters": 118
                         }
                     ]
                 },
@@ -7930,23 +7930,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/80.terminal.unit",
                     "fileNumber": 8,
-                    "lines": 238,
-                    "characters": 9566,
+                    "lines": 363,
+                    "characters": 9845,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/80.terminal.unit/buz",
                             "fileNumber": 1,
-                            "lines": 98,
-                            "characters": 4303,
+                            "lines": 173,
+                            "characters": 4472,
                             "childrens": [
                                 {
                                     "name": "terminal.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/80.terminal.unit/buz/terminal.buzz.ts",
-                                    "lines": 98,
-                                    "characters": 4303
+                                    "lines": 173,
+                                    "characters": 4472
                                 }
                             ]
                         },
@@ -7955,22 +7955,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/80.terminal.unit/fce",
                             "fileNumber": 2,
-                            "lines": 11,
-                            "characters": 210,
+                            "lines": 16,
+                            "characters": 220,
                             "childrens": [
                                 {
                                     "name": "terminal.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/80.terminal.unit/fce/terminal.bit.ts",
-                                    "lines": 8,
-                                    "characters": 128
+                                    "lines": 10,
+                                    "characters": 132
                                 },
                                 {
                                     "name": "terminal.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/80.terminal.unit/fce/terminal.interface.ts",
-                                    "lines": 3,
-                                    "characters": 82
+                                    "lines": 6,
+                                    "characters": 88
                                 }
                             ]
                         },
@@ -7978,8 +7978,8 @@
                             "name": "terminal.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/80.terminal.unit/terminal.action.ts",
-                            "lines": 67,
-                            "characters": 2449
+                            "lines": 82,
+                            "characters": 2489
                         },
                         {
                             "name": "terminal.buzzer.ts",
@@ -7992,22 +7992,22 @@
                             "name": "terminal.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/80.terminal.unit/terminal.model.ts",
-                            "lines": 13,
-                            "characters": 344
+                            "lines": 20,
+                            "characters": 358
                         },
                         {
                             "name": "terminal.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/80.terminal.unit/terminal.reduce.ts",
-                            "lines": 33,
-                            "characters": 1548
+                            "lines": 50,
+                            "characters": 1582
                         },
                         {
                             "name": "terminal.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/80.terminal.unit/terminal.unit.ts",
-                            "lines": 5,
-                            "characters": 111
+                            "lines": 11,
+                            "characters": 123
                         }
                     ]
                 },
@@ -8016,23 +8016,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/81.grid.unit",
                     "fileNumber": 9,
-                    "lines": 99,
-                    "characters": 3108,
+                    "lines": 141,
+                    "characters": 3196,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/81.grid.unit/buz",
                             "fileNumber": 1,
-                            "lines": 31,
-                            "characters": 1187,
+                            "lines": 47,
+                            "characters": 1222,
                             "childrens": [
                                 {
                                     "name": "grid.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/81.grid.unit/buz/grid.buzz.ts",
-                                    "lines": 31,
-                                    "characters": 1187
+                                    "lines": 47,
+                                    "characters": 1222
                                 }
                             ]
                         },
@@ -8041,29 +8041,29 @@
                             "type": "dir",
                             "fullPath": "/995.library/81.grid.unit/fce",
                             "fileNumber": 3,
-                            "lines": 25,
-                            "characters": 498,
+                            "lines": 35,
+                            "characters": 518,
                             "childrens": [
                                 {
                                     "name": "grid.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/81.grid.unit/fce/grid.bit.ts",
-                                    "lines": 13,
-                                    "characters": 252
+                                    "lines": 16,
+                                    "characters": 258
                                 },
                                 {
                                     "name": "grid.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/81.grid.unit/fce/grid.interface.ts",
-                                    "lines": 6,
-                                    "characters": 136
+                                    "lines": 10,
+                                    "characters": 144
                                 },
                                 {
                                     "name": "net.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/81.grid.unit/fce/net.bit.ts",
-                                    "lines": 6,
-                                    "characters": 110
+                                    "lines": 9,
+                                    "characters": 116
                                 }
                             ]
                         },
@@ -8071,36 +8071,36 @@
                             "name": "grid.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/81.grid.unit/grid.action.ts",
-                            "lines": 14,
-                            "characters": 512
+                            "lines": 19,
+                            "characters": 522
                         },
                         {
                             "name": "grid.buzzer.ts",
                             "type": "file",
                             "fullPath": "/995.library/81.grid.unit/grid.buzzer.ts",
-                            "lines": 2,
-                            "characters": 92
+                            "lines": 3,
+                            "characters": 94
                         },
                         {
                             "name": "grid.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/81.grid.unit/grid.model.ts",
-                            "lines": 7,
-                            "characters": 203
+                            "lines": 9,
+                            "characters": 207
                         },
                         {
                             "name": "grid.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/81.grid.unit/grid.reduce.ts",
-                            "lines": 15,
-                            "characters": 509
+                            "lines": 20,
+                            "characters": 520
                         },
                         {
                             "name": "grid.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/81.grid.unit/grid.unit.ts",
-                            "lines": 5,
-                            "characters": 107
+                            "lines": 8,
+                            "characters": 113
                         }
                     ]
                 },
@@ -8109,23 +8109,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/82.canvas.unit",
                     "fileNumber": 9,
-                    "lines": 265,
-                    "characters": 10058,
+                    "lines": 372,
+                    "characters": 10294,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/82.canvas.unit/buz",
                             "fileNumber": 1,
-                            "lines": 124,
-                            "characters": 5420,
+                            "lines": 192,
+                            "characters": 5560,
                             "childrens": [
                                 {
                                     "name": "canvas.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/82.canvas.unit/buz/canvas.buzz.ts",
-                                    "lines": 124,
-                                    "characters": 5420
+                                    "lines": 192,
+                                    "characters": 5560
                                 }
                             ]
                         },
@@ -8134,29 +8134,29 @@
                             "type": "dir",
                             "fullPath": "/995.library/82.canvas.unit/fce",
                             "fileNumber": 3,
-                            "lines": 35,
-                            "characters": 785,
+                            "lines": 43,
+                            "characters": 801,
                             "childrens": [
                                 {
                                     "name": "canvas.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/82.canvas.unit/fce/canvas.bit.ts",
-                                    "lines": 10,
-                                    "characters": 216
+                                    "lines": 12,
+                                    "characters": 220
                                 },
                                 {
                                     "name": "canvas.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/82.canvas.unit/fce/canvas.interface.ts",
-                                    "lines": 6,
-                                    "characters": 148
+                                    "lines": 10,
+                                    "characters": 156
                                 },
                                 {
                                     "name": "frame.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/82.canvas.unit/fce/frame.bit.ts",
-                                    "lines": 19,
-                                    "characters": 421
+                                    "lines": 21,
+                                    "characters": 425
                                 }
                             ]
                         },
@@ -8164,8 +8164,8 @@
                             "name": "canvas.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/82.canvas.unit/canvas.action.ts",
-                            "lines": 56,
-                            "characters": 1947
+                            "lines": 67,
+                            "characters": 1976
                         },
                         {
                             "name": "canvas.buzzer.ts",
@@ -8178,22 +8178,22 @@
                             "name": "canvas.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/82.canvas.unit/canvas.model.ts",
-                            "lines": 7,
-                            "characters": 230
+                            "lines": 10,
+                            "characters": 240
                         },
                         {
                             "name": "canvas.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/82.canvas.unit/canvas.reduce.ts",
-                            "lines": 29,
-                            "characters": 1108
+                            "lines": 41,
+                            "characters": 1139
                         },
                         {
                             "name": "canvas.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/82.canvas.unit/canvas.unit.ts",
-                            "lines": 5,
-                            "characters": 109
+                            "lines": 10,
+                            "characters": 119
                         }
                     ]
                 },
@@ -8202,23 +8202,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/83.console.unit",
                     "fileNumber": 9,
-                    "lines": 179,
-                    "characters": 6540,
+                    "lines": 252,
+                    "characters": 6731,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/83.console.unit/buz",
                             "fileNumber": 1,
-                            "lines": 68,
-                            "characters": 2814,
+                            "lines": 107,
+                            "characters": 2925,
                             "childrens": [
                                 {
                                     "name": "console.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/83.console.unit/buz/console.buzz.ts",
-                                    "lines": 68,
-                                    "characters": 2814
+                                    "lines": 107,
+                                    "characters": 2925
                                 }
                             ]
                         },
@@ -8227,29 +8227,29 @@
                             "type": "dir",
                             "fullPath": "/995.library/83.console.unit/fce",
                             "fileNumber": 3,
-                            "lines": 23,
-                            "characters": 454,
+                            "lines": 31,
+                            "characters": 470,
                             "childrens": [
                                 {
                                     "name": "console.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/83.console.unit/fce/console.bit.ts",
-                                    "lines": 11,
-                                    "characters": 213
+                                    "lines": 13,
+                                    "characters": 217
                                 },
                                 {
                                     "name": "console.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/83.console.unit/fce/console.interface.ts",
-                                    "lines": 6,
-                                    "characters": 154
+                                    "lines": 10,
+                                    "characters": 162
                                 },
                                 {
                                     "name": "term.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/83.console.unit/fce/term.bit.ts",
-                                    "lines": 6,
-                                    "characters": 87
+                                    "lines": 8,
+                                    "characters": 91
                                 }
                             ]
                         },
@@ -8257,8 +8257,8 @@
                             "name": "console.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/83.console.unit/console.action.ts",
-                            "lines": 44,
-                            "characters": 1598
+                            "lines": 53,
+                            "characters": 1622
                         },
                         {
                             "name": "console.buzzer.ts",
@@ -8271,22 +8271,22 @@
                             "name": "console.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/83.console.unit/console.model.ts",
-                            "lines": 7,
-                            "characters": 230
+                            "lines": 9,
+                            "characters": 234
                         },
                         {
                             "name": "console.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/83.console.unit/console.reduce.ts",
-                            "lines": 25,
-                            "characters": 963
+                            "lines": 35,
+                            "characters": 989
                         },
                         {
                             "name": "console.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/83.console.unit/console.unit.ts",
-                            "lines": 5,
-                            "characters": 110
+                            "lines": 10,
+                            "characters": 120
                         }
                     ]
                 },
@@ -8295,23 +8295,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/84.input.unit",
                     "fileNumber": 8,
-                    "lines": 129,
-                    "characters": 3896,
+                    "lines": 173,
+                    "characters": 3998,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/84.input.unit/buz",
                             "fileNumber": 1,
-                            "lines": 61,
-                            "characters": 1802,
+                            "lines": 81,
+                            "characters": 1852,
                             "childrens": [
                                 {
                                     "name": "input.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/84.input.unit/buz/input.buzz.ts",
-                                    "lines": 61,
-                                    "characters": 1802
+                                    "lines": 81,
+                                    "characters": 1852
                                 }
                             ]
                         },
@@ -8320,22 +8320,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/84.input.unit/fce",
                             "fileNumber": 2,
-                            "lines": 16,
-                            "characters": 319,
+                            "lines": 22,
+                            "characters": 331,
                             "childrens": [
                                 {
                                     "name": "input.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/84.input.unit/fce/input.bit.ts",
-                                    "lines": 10,
-                                    "characters": 177
+                                    "lines": 12,
+                                    "characters": 181
                                 },
                                 {
                                     "name": "input.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/84.input.unit/fce/input.interface.ts",
-                                    "lines": 6,
-                                    "characters": 142
+                                    "lines": 10,
+                                    "characters": 150
                                 }
                             ]
                         },
@@ -8343,8 +8343,8 @@
                             "name": "input.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/84.input.unit/input.action.ts",
-                            "lines": 20,
-                            "characters": 714
+                            "lines": 25,
+                            "characters": 726
                         },
                         {
                             "name": "input.buzzer.ts",
@@ -8357,22 +8357,22 @@
                             "name": "input.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/84.input.unit/input.model.ts",
-                            "lines": 7,
-                            "characters": 212
+                            "lines": 9,
+                            "characters": 216
                         },
                         {
                             "name": "input.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/84.input.unit/input.reduce.ts",
-                            "lines": 17,
-                            "characters": 597
+                            "lines": 23,
+                            "characters": 611
                         },
                         {
                             "name": "input.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/84.input.unit/input.unit.ts",
-                            "lines": 5,
-                            "characters": 108
+                            "lines": 10,
+                            "characters": 118
                         }
                     ]
                 },
@@ -8381,23 +8381,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/85.choice.unit",
                     "fileNumber": 8,
-                    "lines": 226,
-                    "characters": 6556,
+                    "lines": 308,
+                    "characters": 6743,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/85.choice.unit/buz",
                             "fileNumber": 1,
-                            "lines": 139,
-                            "characters": 3702,
+                            "lines": 193,
+                            "characters": 3825,
                             "childrens": [
                                 {
                                     "name": "choice.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/85.choice.unit/buz/choice.buzz.ts",
-                                    "lines": 139,
-                                    "characters": 3702
+                                    "lines": 193,
+                                    "characters": 3825
                                 }
                             ]
                         },
@@ -8406,22 +8406,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/85.choice.unit/fce",
                             "fileNumber": 2,
-                            "lines": 17,
-                            "characters": 382,
+                            "lines": 23,
+                            "characters": 394,
                             "childrens": [
                                 {
                                     "name": "choice.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/85.choice.unit/fce/choice.bit.ts",
-                                    "lines": 11,
-                                    "characters": 234
+                                    "lines": 13,
+                                    "characters": 238
                                 },
                                 {
                                     "name": "choice.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/85.choice.unit/fce/choice.interface.ts",
-                                    "lines": 6,
-                                    "characters": 148
+                                    "lines": 10,
+                                    "characters": 156
                                 }
                             ]
                         },
@@ -8429,8 +8429,8 @@
                             "name": "choice.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/85.choice.unit/choice.action.ts",
-                            "lines": 32,
-                            "characters": 1123
+                            "lines": 39,
+                            "characters": 1141
                         },
                         {
                             "name": "choice.buzzer.ts",
@@ -8443,22 +8443,22 @@
                             "name": "choice.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/85.choice.unit/choice.model.ts",
-                            "lines": 7,
-                            "characters": 221
+                            "lines": 9,
+                            "characters": 225
                         },
                         {
                             "name": "choice.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/85.choice.unit/choice.reduce.ts",
-                            "lines": 21,
-                            "characters": 769
+                            "lines": 29,
+                            "characters": 789
                         },
                         {
                             "name": "choice.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/85.choice.unit/choice.unit.ts",
-                            "lines": 5,
-                            "characters": 109
+                            "lines": 10,
+                            "characters": 119
                         }
                     ]
                 },
@@ -8467,23 +8467,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/86.container.unit",
                     "fileNumber": 8,
-                    "lines": 62,
-                    "characters": 2217,
+                    "lines": 89,
+                    "characters": 2272,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/86.container.unit/buz",
                             "fileNumber": 1,
-                            "lines": 10,
-                            "characters": 367,
+                            "lines": 13,
+                            "characters": 373,
                             "childrens": [
                                 {
                                     "name": "container.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/86.container.unit/buz/container.buzz.ts",
-                                    "lines": 10,
-                                    "characters": 367
+                                    "lines": 13,
+                                    "characters": 373
                                 }
                             ]
                         },
@@ -8492,22 +8492,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/86.container.unit/fce",
                             "fileNumber": 2,
-                            "lines": 9,
-                            "characters": 222,
+                            "lines": 15,
+                            "characters": 234,
                             "childrens": [
                                 {
                                     "name": "container.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/86.container.unit/fce/container.bit.ts",
-                                    "lines": 3,
-                                    "characters": 56
+                                    "lines": 5,
+                                    "characters": 60
                                 },
                                 {
                                     "name": "container.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/86.container.unit/fce/container.interface.ts",
-                                    "lines": 6,
-                                    "characters": 166
+                                    "lines": 10,
+                                    "characters": 174
                                 }
                             ]
                         },
@@ -8515,36 +8515,36 @@
                             "name": "container.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/86.container.unit/container.action.ts",
-                            "lines": 14,
-                            "characters": 597
+                            "lines": 19,
+                            "characters": 607
                         },
                         {
                             "name": "container.buzzer.ts",
                             "type": "file",
                             "fullPath": "/995.library/86.container.unit/container.buzzer.ts",
-                            "lines": 2,
-                            "characters": 112
+                            "lines": 3,
+                            "characters": 114
                         },
                         {
                             "name": "container.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/86.container.unit/container.model.ts",
-                            "lines": 7,
-                            "characters": 248
+                            "lines": 9,
+                            "characters": 252
                         },
                         {
                             "name": "container.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/86.container.unit/container.reduce.ts",
-                            "lines": 15,
-                            "characters": 559
+                            "lines": 20,
+                            "characters": 570
                         },
                         {
                             "name": "container.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/86.container.unit/container.unit.ts",
-                            "lines": 5,
-                            "characters": 112
+                            "lines": 10,
+                            "characters": 122
                         }
                     ]
                 },
@@ -8553,23 +8553,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/87.graphic.unit",
                     "fileNumber": 8,
-                    "lines": 62,
-                    "characters": 2101,
+                    "lines": 89,
+                    "characters": 2156,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/87.graphic.unit/buz",
                             "fileNumber": 1,
-                            "lines": 10,
-                            "characters": 347,
+                            "lines": 13,
+                            "characters": 353,
                             "childrens": [
                                 {
                                     "name": "graphic.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/87.graphic.unit/buz/graphic.buzz.ts",
-                                    "lines": 10,
-                                    "characters": 347
+                                    "lines": 13,
+                                    "characters": 353
                                 }
                             ]
                         },
@@ -8578,22 +8578,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/87.graphic.unit/fce",
                             "fileNumber": 2,
-                            "lines": 9,
-                            "characters": 208,
+                            "lines": 15,
+                            "characters": 220,
                             "childrens": [
                                 {
                                     "name": "graphic.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/87.graphic.unit/fce/graphic.bit.ts",
-                                    "lines": 3,
-                                    "characters": 54
+                                    "lines": 5,
+                                    "characters": 58
                                 },
                                 {
                                     "name": "graphic.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/87.graphic.unit/fce/graphic.interface.ts",
-                                    "lines": 6,
-                                    "characters": 154
+                                    "lines": 10,
+                                    "characters": 162
                                 }
                             ]
                         },
@@ -8601,36 +8601,36 @@
                             "name": "graphic.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/87.graphic.unit/graphic.action.ts",
-                            "lines": 14,
-                            "characters": 563
+                            "lines": 19,
+                            "characters": 573
                         },
                         {
                             "name": "graphic.buzzer.ts",
                             "type": "file",
                             "fullPath": "/995.library/87.graphic.unit/graphic.buzzer.ts",
-                            "lines": 2,
-                            "characters": 104
+                            "lines": 3,
+                            "characters": 106
                         },
                         {
                             "name": "graphic.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/87.graphic.unit/graphic.model.ts",
-                            "lines": 7,
-                            "characters": 230
+                            "lines": 9,
+                            "characters": 234
                         },
                         {
                             "name": "graphic.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/87.graphic.unit/graphic.reduce.ts",
-                            "lines": 15,
-                            "characters": 539
+                            "lines": 20,
+                            "characters": 550
                         },
                         {
                             "name": "graphic.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/87.graphic.unit/graphic.unit.ts",
-                            "lines": 5,
-                            "characters": 110
+                            "lines": 10,
+                            "characters": 120
                         }
                     ]
                 },
@@ -8639,23 +8639,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/88.hexagon.unit",
                     "fileNumber": 8,
-                    "lines": 158,
-                    "characters": 5782,
+                    "lines": 211,
+                    "characters": 5904,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/88.hexagon.unit/buz",
                             "fileNumber": 1,
-                            "lines": 60,
-                            "characters": 2291,
+                            "lines": 81,
+                            "characters": 2337,
                             "childrens": [
                                 {
                                     "name": "hexagon.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/88.hexagon.unit/buz/hexagon.buzz.ts",
-                                    "lines": 60,
-                                    "characters": 2291
+                                    "lines": 81,
+                                    "characters": 2337
                                 }
                             ]
                         },
@@ -8664,22 +8664,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/88.hexagon.unit/fce",
                             "fileNumber": 2,
-                            "lines": 10,
-                            "characters": 219,
+                            "lines": 16,
+                            "characters": 231,
                             "childrens": [
                                 {
                                     "name": "hexagon.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/88.hexagon.unit/fce/hexagon.bit.ts",
-                                    "lines": 4,
-                                    "characters": 65
+                                    "lines": 6,
+                                    "characters": 69
                                 },
                                 {
                                     "name": "hexagon.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/88.hexagon.unit/fce/hexagon.interface.ts",
-                                    "lines": 6,
-                                    "characters": 154
+                                    "lines": 10,
+                                    "characters": 162
                                 }
                             ]
                         },
@@ -8687,8 +8687,8 @@
                             "name": "hexagon.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/88.hexagon.unit/hexagon.action.ts",
-                            "lines": 44,
-                            "characters": 1598
+                            "lines": 53,
+                            "characters": 1622
                         },
                         {
                             "name": "hexagon.buzzer.ts",
@@ -8701,22 +8701,22 @@
                             "name": "hexagon.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/88.hexagon.unit/hexagon.model.ts",
-                            "lines": 7,
-                            "characters": 230
+                            "lines": 9,
+                            "characters": 234
                         },
                         {
                             "name": "hexagon.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/88.hexagon.unit/hexagon.reduce.ts",
-                            "lines": 25,
-                            "characters": 963
+                            "lines": 35,
+                            "characters": 989
                         },
                         {
                             "name": "hexagon.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/88.hexagon.unit/hexagon.unit.ts",
-                            "lines": 5,
-                            "characters": 110
+                            "lines": 10,
+                            "characters": 120
                         }
                     ]
                 },
@@ -8725,23 +8725,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/89.sprite.unit",
                     "fileNumber": 8,
-                    "lines": 62,
-                    "characters": 2043,
+                    "lines": 89,
+                    "characters": 2098,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/89.sprite.unit/buz",
                             "fileNumber": 1,
-                            "lines": 10,
-                            "characters": 337,
+                            "lines": 13,
+                            "characters": 343,
                             "childrens": [
                                 {
                                     "name": "sprite.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/89.sprite.unit/buz/sprite.buzz.ts",
-                                    "lines": 10,
-                                    "characters": 337
+                                    "lines": 13,
+                                    "characters": 343
                                 }
                             ]
                         },
@@ -8750,22 +8750,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/89.sprite.unit/fce",
                             "fileNumber": 2,
-                            "lines": 9,
-                            "characters": 201,
+                            "lines": 15,
+                            "characters": 213,
                             "childrens": [
                                 {
                                     "name": "sprite.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/89.sprite.unit/fce/sprite.bit.ts",
-                                    "lines": 3,
-                                    "characters": 53
+                                    "lines": 5,
+                                    "characters": 57
                                 },
                                 {
                                     "name": "sprite.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/89.sprite.unit/fce/sprite.interface.ts",
-                                    "lines": 6,
-                                    "characters": 148
+                                    "lines": 10,
+                                    "characters": 156
                                 }
                             ]
                         },
@@ -8773,36 +8773,36 @@
                             "name": "sprite.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/89.sprite.unit/sprite.action.ts",
-                            "lines": 14,
-                            "characters": 546
+                            "lines": 19,
+                            "characters": 556
                         },
                         {
                             "name": "sprite.buzzer.ts",
                             "type": "file",
                             "fullPath": "/995.library/89.sprite.unit/sprite.buzzer.ts",
-                            "lines": 2,
-                            "characters": 100
+                            "lines": 3,
+                            "characters": 102
                         },
                         {
                             "name": "sprite.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/89.sprite.unit/sprite.model.ts",
-                            "lines": 7,
-                            "characters": 221
+                            "lines": 9,
+                            "characters": 225
                         },
                         {
                             "name": "sprite.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/89.sprite.unit/sprite.reduce.ts",
-                            "lines": 15,
-                            "characters": 529
+                            "lines": 20,
+                            "characters": 540
                         },
                         {
                             "name": "sprite.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/89.sprite.unit/sprite.unit.ts",
-                            "lines": 5,
-                            "characters": 109
+                            "lines": 10,
+                            "characters": 119
                         }
                     ]
                 },
@@ -8811,23 +8811,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/90.text.unit",
                     "fileNumber": 9,
-                    "lines": 194,
-                    "characters": 6995,
+                    "lines": 271,
+                    "characters": 7210,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/90.text.unit/buz",
                             "fileNumber": 1,
-                            "lines": 74,
-                            "characters": 3401,
+                            "lines": 116,
+                            "characters": 3530,
                             "childrens": [
                                 {
                                     "name": "text.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/90.text.unit/buz/text.buzz.ts",
-                                    "lines": 74,
-                                    "characters": 3401
+                                    "lines": 116,
+                                    "characters": 3530
                                 }
                             ]
                         },
@@ -8836,29 +8836,29 @@
                             "type": "dir",
                             "fullPath": "/995.library/90.text.unit/fce",
                             "fileNumber": 3,
-                            "lines": 32,
-                            "characters": 595,
+                            "lines": 41,
+                            "characters": 617,
                             "childrens": [
                                 {
                                     "name": "line.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/90.text.unit/fce/line.bit.ts",
-                                    "lines": 18,
-                                    "characters": 316
+                                    "lines": 21,
+                                    "characters": 326
                                 },
                                 {
                                     "name": "text.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/90.text.unit/fce/text.bit.ts",
-                                    "lines": 8,
-                                    "characters": 143
+                                    "lines": 10,
+                                    "characters": 147
                                 },
                                 {
                                     "name": "text.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/90.text.unit/fce/text.interface.ts",
-                                    "lines": 6,
-                                    "characters": 136
+                                    "lines": 10,
+                                    "characters": 144
                                 }
                             ]
                         },
@@ -8866,8 +8866,8 @@
                             "name": "text.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/90.text.unit/text.action.ts",
-                            "lines": 44,
-                            "characters": 1457
+                            "lines": 53,
+                            "characters": 1481
                         },
                         {
                             "name": "text.buzzer.ts",
@@ -8880,22 +8880,22 @@
                             "name": "text.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/90.text.unit/text.model.ts",
-                            "lines": 7,
-                            "characters": 203
+                            "lines": 9,
+                            "characters": 207
                         },
                         {
                             "name": "text.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/90.text.unit/text.reduce.ts",
-                            "lines": 25,
-                            "characters": 903
+                            "lines": 35,
+                            "characters": 929
                         },
                         {
                             "name": "text.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/90.text.unit/text.unit.ts",
-                            "lines": 5,
-                            "characters": 107
+                            "lines": 10,
+                            "characters": 117
                         }
                     ]
                 },
@@ -8904,23 +8904,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/97.collect.unit",
                     "fileNumber": 9,
-                    "lines": 452,
-                    "characters": 15428,
+                    "lines": 603,
+                    "characters": 15738,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/97.collect.unit/buz",
                             "fileNumber": 1,
-                            "lines": 250,
-                            "characters": 8023,
+                            "lines": 343,
+                            "characters": 8209,
                             "childrens": [
                                 {
                                     "name": "collect.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/97.collect.unit/buz/collect.buzz.ts",
-                                    "lines": 250,
-                                    "characters": 8023
+                                    "lines": 343,
+                                    "characters": 8209
                                 }
                             ]
                         },
@@ -8929,29 +8929,29 @@
                             "type": "dir",
                             "fullPath": "/995.library/97.collect.unit/fce",
                             "fileNumber": 3,
-                            "lines": 23,
-                            "characters": 447,
+                            "lines": 33,
+                            "characters": 467,
                             "childrens": [
                                 {
                                     "name": "caboodle.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/97.collect.unit/fce/caboodle.bit.ts",
-                                    "lines": 6,
-                                    "characters": 100
+                                    "lines": 8,
+                                    "characters": 104
                                 },
                                 {
                                     "name": "collect.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/97.collect.unit/fce/collect.bit.ts",
-                                    "lines": 10,
-                                    "characters": 153
+                                    "lines": 15,
+                                    "characters": 163
                                 },
                                 {
                                     "name": "collect.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/97.collect.unit/fce/collect.interface.ts",
-                                    "lines": 7,
-                                    "characters": 194
+                                    "lines": 10,
+                                    "characters": 200
                                 }
                             ]
                         },
@@ -8959,8 +8959,8 @@
                             "name": "collect.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/97.collect.unit/collect.action.ts",
-                            "lines": 104,
-                            "characters": 3624
+                            "lines": 125,
+                            "characters": 3674
                         },
                         {
                             "name": "collect.buzzer.ts",
@@ -8973,22 +8973,22 @@
                             "name": "collect.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/97.collect.unit/collect.model.ts",
-                            "lines": 8,
-                            "characters": 287
+                            "lines": 10,
+                            "characters": 291
                         },
                         {
                             "name": "collect.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/97.collect.unit/collect.reduce.ts",
-                            "lines": 45,
-                            "characters": 2042
+                            "lines": 65,
+                            "characters": 2082
                         },
                         {
                             "name": "collect.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/97.collect.unit/collect.unit.ts",
-                            "lines": 5,
-                            "characters": 110
+                            "lines": 10,
+                            "characters": 120
                         }
                     ]
                 },
@@ -8997,51 +8997,51 @@
                     "type": "dir",
                     "fullPath": "/995.library/98.menu.unit",
                     "fileNumber": 16,
-                    "lines": 514,
-                    "characters": 21171,
+                    "lines": 736,
+                    "characters": 21635,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/98.menu.unit/buz",
                             "fileNumber": 5,
-                            "lines": 335,
-                            "characters": 14918,
+                            "lines": 504,
+                            "characters": 15276,
                             "childrens": [
                                 {
                                     "name": "00.menu.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/98.menu.unit/buz/00.menu.buzz.ts",
-                                    "lines": 105,
-                                    "characters": 4840
+                                    "lines": 163,
+                                    "characters": 4970
                                 },
                                 {
                                     "name": "menu.control.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/98.menu.unit/buz/menu.control.ts",
-                                    "lines": 57,
-                                    "characters": 2515
+                                    "lines": 83,
+                                    "characters": 2567
                                 },
                                 {
                                     "name": "menu.pixel.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/98.menu.unit/buz/menu.pixel.ts",
-                                    "lines": 59,
-                                    "characters": 2586
+                                    "lines": 86,
+                                    "characters": 2640
                                 },
                                 {
                                     "name": "menu.space.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/98.menu.unit/buz/menu.space.ts",
-                                    "lines": 57,
-                                    "characters": 2498
+                                    "lines": 86,
+                                    "characters": 2562
                                 },
                                 {
                                     "name": "menu.time.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/98.menu.unit/buz/menu.time.ts",
-                                    "lines": 57,
-                                    "characters": 2479
+                                    "lines": 86,
+                                    "characters": 2537
                                 }
                             ]
                         },
@@ -9050,8 +9050,8 @@
                             "type": "dir",
                             "fullPath": "/995.library/98.menu.unit/fce",
                             "fileNumber": 6,
-                            "lines": 20,
-                            "characters": 624,
+                            "lines": 27,
+                            "characters": 638,
                             "childrens": [
                                 {
                                     "name": "menu.bit.js",
@@ -9071,8 +9071,8 @@
                                     "name": "menu.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/98.menu.unit/fce/menu.bit.ts",
-                                    "lines": 6,
-                                    "characters": 110
+                                    "lines": 9,
+                                    "characters": 116
                                 },
                                 {
                                     "name": "menu.interface.js",
@@ -9092,8 +9092,8 @@
                                     "name": "menu.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/98.menu.unit/fce/menu.interface.ts",
-                                    "lines": 6,
-                                    "characters": 136
+                                    "lines": 10,
+                                    "characters": 144
                                 }
                             ]
                         },
@@ -9101,36 +9101,36 @@
                             "name": "menu.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/98.menu.unit/menu.action.ts",
-                            "lines": 101,
-                            "characters": 3475
+                            "lines": 123,
+                            "characters": 3519
                         },
                         {
                             "name": "menu.buzzer.ts",
                             "type": "file",
                             "fullPath": "/995.library/98.menu.unit/menu.buzzer.ts",
-                            "lines": 10,
-                            "characters": 488
+                            "lines": 12,
+                            "characters": 492
                         },
                         {
                             "name": "menu.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/98.menu.unit/menu.model.ts",
-                            "lines": 12,
-                            "characters": 328
+                            "lines": 16,
+                            "characters": 336
                         },
                         {
                             "name": "menu.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/98.menu.unit/menu.reduce.ts",
-                            "lines": 31,
-                            "characters": 1231
+                            "lines": 44,
+                            "characters": 1257
                         },
                         {
                             "name": "menu.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/98.menu.unit/menu.unit.ts",
-                            "lines": 5,
-                            "characters": 107
+                            "lines": 10,
+                            "characters": 117
                         }
                     ]
                 },
@@ -9139,23 +9139,23 @@
                     "type": "dir",
                     "fullPath": "/995.library/99.bus.unit",
                     "fileNumber": 8,
-                    "lines": 249,
-                    "characters": 8442,
+                    "lines": 357,
+                    "characters": 8665,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/995.library/99.bus.unit/buz",
                             "fileNumber": 1,
-                            "lines": 152,
-                            "characters": 5420,
+                            "lines": 227,
+                            "characters": 5576,
                             "childrens": [
                                 {
                                     "name": "bus.buzz.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/99.bus.unit/buz/bus.buzz.ts",
-                                    "lines": 152,
-                                    "characters": 5420
+                                    "lines": 227,
+                                    "characters": 5576
                                 }
                             ]
                         },
@@ -9164,22 +9164,22 @@
                             "type": "dir",
                             "fullPath": "/995.library/99.bus.unit/fce",
                             "fileNumber": 2,
-                            "lines": 15,
-                            "characters": 263,
+                            "lines": 21,
+                            "characters": 275,
                             "childrens": [
                                 {
                                     "name": "bus.bit.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/99.bus.unit/fce/bus.bit.ts",
-                                    "lines": 9,
-                                    "characters": 133
+                                    "lines": 11,
+                                    "characters": 137
                                 },
                                 {
                                     "name": "bus.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/99.bus.unit/fce/bus.interface.ts",
-                                    "lines": 6,
-                                    "characters": 130
+                                    "lines": 10,
+                                    "characters": 138
                                 }
                             ]
                         },
@@ -9187,36 +9187,36 @@
                             "name": "bus.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/99.bus.unit/bus.action.ts",
-                            "lines": 34,
-                            "characters": 1216
+                            "lines": 43,
+                            "characters": 1234
                         },
                         {
                             "name": "bus.buzzer.ts",
                             "type": "file",
                             "fullPath": "/995.library/99.bus.unit/bus.buzzer.ts",
-                            "lines": 6,
-                            "characters": 272
+                            "lines": 7,
+                            "characters": 274
                         },
                         {
                             "name": "bus.model.ts",
                             "type": "file",
                             "fullPath": "/995.library/99.bus.unit/bus.model.ts",
-                            "lines": 14,
-                            "characters": 350
+                            "lines": 17,
+                            "characters": 356
                         },
                         {
                             "name": "bus.reduce.ts",
                             "type": "file",
                             "fullPath": "/995.library/99.bus.unit/bus.reduce.ts",
-                            "lines": 23,
-                            "characters": 815
+                            "lines": 32,
+                            "characters": 834
                         },
                         {
                             "name": "bus.unit.ts",
                             "type": "file",
                             "fullPath": "/995.library/99.bus.unit/bus.unit.ts",
-                            "lines": 5,
-                            "characters": 106
+                            "lines": 10,
+                            "characters": 116
                         }
                     ]
                 },
@@ -9225,16 +9225,16 @@
                     "type": "dir",
                     "fullPath": "/995.library/99.core",
                     "fileNumber": 9,
-                    "lines": 127,
-                    "characters": 5946,
+                    "lines": 139,
+                    "characters": 5972,
                     "childrens": [
                         {
                             "name": "interface",
                             "type": "dir",
                             "fullPath": "/995.library/99.core/interface",
                             "fileNumber": 6,
-                            "lines": 13,
-                            "characters": 505,
+                            "lines": 15,
+                            "characters": 509,
                             "childrens": [
                                 {
                                     "name": "action.interface.js",
@@ -9254,8 +9254,8 @@
                                     "name": "action.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/99.core/interface/action.interface.ts",
-                                    "lines": 4,
-                                    "characters": 67
+                                    "lines": 5,
+                                    "characters": 69
                                 },
                                 {
                                     "name": "model.interface.js",
@@ -9275,8 +9275,8 @@
                                     "name": "model.interface.ts",
                                     "type": "file",
                                     "fullPath": "/995.library/99.core/interface/model.interface.ts",
-                                    "lines": 1,
-                                    "characters": 33
+                                    "lines": 2,
+                                    "characters": 35
                                 }
                             ]
                         },
@@ -9298,8 +9298,8 @@
                             "name": "state.ts",
                             "type": "file",
                             "fullPath": "/995.library/99.core/state.ts",
-                            "lines": 34,
-                            "characters": 1007
+                            "lines": 44,
+                            "characters": 1029
                         }
                     ]
                 },
@@ -9308,8 +9308,8 @@
                     "type": "dir",
                     "fullPath": "/995.library/act",
                     "fileNumber": 18,
-                    "lines": 116,
-                    "characters": 7812,
+                    "lines": 124,
+                    "characters": 7833,
                     "childrens": [
                         {
                             "name": "canvas.action.ts",
@@ -9322,8 +9322,8 @@
                             "name": "choice.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/choice.action.ts",
-                            "lines": 5,
-                            "characters": 291
+                            "lines": 6,
+                            "characters": 293
                         },
                         {
                             "name": "console.action.ts",
@@ -9350,22 +9350,22 @@
                             "name": "graphic.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/graphic.action.ts",
-                            "lines": 6,
-                            "characters": 377
+                            "lines": 7,
+                            "characters": 379
                         },
                         {
                             "name": "grid.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/grid.action.ts",
-                            "lines": 2,
-                            "characters": 108
+                            "lines": 3,
+                            "characters": 110
                         },
                         {
                             "name": "hexagon.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/hexagon.action.ts",
                             "lines": 5,
-                            "characters": 312
+                            "characters": 313
                         },
                         {
                             "name": "input.action.ts",
@@ -9378,8 +9378,8 @@
                             "name": "pivot.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/pivot.action.ts",
-                            "lines": 13,
-                            "characters": 750
+                            "lines": 14,
+                            "characters": 752
                         },
                         {
                             "name": "pixel.action.ts",
@@ -9392,15 +9392,15 @@
                             "name": "renpy.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/renpy.action.ts",
-                            "lines": 3,
-                            "characters": 170
+                            "lines": 4,
+                            "characters": 172
                         },
                         {
                             "name": "shiny.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/shiny.action.ts",
-                            "lines": 3,
-                            "characters": 170
+                            "lines": 4,
+                            "characters": 172
                         },
                         {
                             "name": "space.action.ts",
@@ -9413,22 +9413,22 @@
                             "name": "terminal.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/terminal.action.ts",
-                            "lines": 12,
-                            "characters": 726
+                            "lines": 13,
+                            "characters": 730
                         },
                         {
                             "name": "time.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/time.action.ts",
-                            "lines": 10,
-                            "characters": 560
+                            "lines": 11,
+                            "characters": 562
                         },
                         {
                             "name": "visage.action.ts",
                             "type": "file",
                             "fullPath": "/995.library/act/visage.action.ts",
                             "lines": 8,
-                            "characters": 495
+                            "characters": 497
                         },
                         {
                             "name": "vurt.action.ts",
@@ -9444,15 +9444,15 @@
                     "type": "dir",
                     "fullPath": "/995.library/val",
                     "fileNumber": 15,
-                    "lines": 88,
-                    "characters": 3452,
+                    "lines": 103,
+                    "characters": 3482,
                     "childrens": [
                         {
                             "name": "align.ts",
                             "type": "file",
                             "fullPath": "/995.library/val/align.ts",
-                            "lines": 2,
-                            "characters": 76
+                            "lines": 5,
+                            "characters": 82
                         },
                         {
                             "name": "console-color.ts",
@@ -9465,15 +9465,15 @@
                             "name": "console.ts",
                             "type": "file",
                             "fullPath": "/995.library/val/console.ts",
-                            "lines": 5,
-                            "characters": 253
+                            "lines": 6,
+                            "characters": 255
                         },
                         {
                             "name": "direction.ts",
                             "type": "file",
                             "fullPath": "/995.library/val/direction.ts",
-                            "lines": 16,
-                            "characters": 554
+                            "lines": 18,
+                            "characters": 558
                         },
                         {
                             "name": "focus.ts",
@@ -9486,15 +9486,15 @@
                             "name": "graphic.ts",
                             "type": "file",
                             "fullPath": "/995.library/val/graphic.ts",
-                            "lines": 3,
-                            "characters": 149
+                            "lines": 5,
+                            "characters": 153
                         },
                         {
                             "name": "grid.ts",
                             "type": "file",
                             "fullPath": "/995.library/val/grid.ts",
-                            "lines": 14,
-                            "characters": 477
+                            "lines": 19,
+                            "characters": 487
                         },
                         {
                             "name": "hexagon.ts",
@@ -9514,8 +9514,8 @@
                             "name": "markup.ts",
                             "type": "file",
                             "fullPath": "/995.library/val/markup.ts",
-                            "lines": 10,
-                            "characters": 404
+                            "lines": 11,
+                            "characters": 406
                         },
                         {
                             "name": "shade.ts",
@@ -9528,8 +9528,8 @@
                             "name": "shape.ts",
                             "type": "file",
                             "fullPath": "/995.library/val/shape.ts",
-                            "lines": 5,
-                            "characters": 191
+                            "lines": 6,
+                            "characters": 193
                         },
                         {
                             "name": "space.ts",
@@ -9558,8 +9558,8 @@
                     "name": "000.quest.library.js",
                     "type": "file",
                     "fullPath": "/995.library/000.quest.library.js",
-                    "lines": 2,
-                    "characters": 141
+                    "lines": 8,
+                    "characters": 153
                 },
                 {
                     "name": "BEE.ts",
@@ -9572,8 +9572,8 @@
                     "name": "hunt.ts",
                     "type": "file",
                     "fullPath": "/995.library/hunt.ts",
-                    "lines": 24,
-                    "characters": 641
+                    "lines": 35,
+                    "characters": 666
                 }
             ]
         },
@@ -9582,8 +9582,8 @@
             "type": "dir",
             "fullPath": "/999.pivot",
             "fileNumber": 87,
-            "lines": 3839,
-            "characters": 155501,
+            "lines": 3890,
+            "characters": 155607,
             "childrens": [
                 {
                     "name": "00.pivot.unit",
@@ -9776,23 +9776,23 @@
                     "type": "dir",
                     "fullPath": "/999.pivot/02.unit.unit",
                     "fileNumber": 8,
-                    "lines": 531,
-                    "characters": 21197,
+                    "lines": 566,
+                    "characters": 21267,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/999.pivot/02.unit.unit/buz",
                             "fileNumber": 1,
-                            "lines": 342,
-                            "characters": 13333,
+                            "lines": 368,
+                            "characters": 13385,
                             "childrens": [
                                 {
                                     "name": "unit.buzz.js",
                                     "type": "file",
                                     "fullPath": "/999.pivot/02.unit.unit/buz/unit.buzz.js",
-                                    "lines": 342,
-                                    "characters": 13333
+                                    "lines": 368,
+                                    "characters": 13385
                                 }
                             ]
                         },
@@ -9824,15 +9824,15 @@
                             "name": "unit.action.js",
                             "type": "file",
                             "fullPath": "/999.pivot/02.unit.unit/unit.action.js",
-                            "lines": 77,
-                            "characters": 2299
+                            "lines": 84,
+                            "characters": 2313
                         },
                         {
                             "name": "unit.buzzer.js",
                             "type": "file",
                             "fullPath": "/999.pivot/02.unit.unit/unit.buzzer.js",
-                            "lines": 22,
-                            "characters": 1759
+                            "lines": 24,
+                            "characters": 1763
                         },
                         {
                             "name": "unit.model.js",
@@ -9948,23 +9948,23 @@
                     "type": "dir",
                     "fullPath": "/999.pivot/96.disk.unit",
                     "fileNumber": 8,
-                    "lines": 561,
-                    "characters": 21604,
+                    "lines": 567,
+                    "characters": 21617,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/999.pivot/96.disk.unit/buz",
                             "fileNumber": 1,
-                            "lines": 309,
-                            "characters": 10697,
+                            "lines": 315,
+                            "characters": 10710,
                             "childrens": [
                                 {
                                     "name": "disk.buzz.js",
                                     "type": "file",
                                     "fullPath": "/999.pivot/96.disk.unit/buz/disk.buzz.js",
-                                    "lines": 309,
-                                    "characters": 10697
+                                    "lines": 315,
+                                    "characters": 10710
                                 }
                             ]
                         },
@@ -10035,7 +10035,7 @@
                     "fullPath": "/999.pivot/97.collect.unit",
                     "fileNumber": 9,
                     "lines": 432,
-                    "characters": 17957,
+                    "characters": 17958,
                     "childrens": [
                         {
                             "name": "buz",
@@ -10043,14 +10043,14 @@
                             "fullPath": "/999.pivot/97.collect.unit/buz",
                             "fileNumber": 1,
                             "lines": 196,
-                            "characters": 7172,
+                            "characters": 7173,
                             "childrens": [
                                 {
                                     "name": "collect.buzz.js",
                                     "type": "file",
                                     "fullPath": "/999.pivot/97.collect.unit/buz/collect.buzz.js",
                                     "lines": 196,
-                                    "characters": 7172
+                                    "characters": 7173
                                 }
                             ]
                         },
@@ -10127,16 +10127,16 @@
                     "type": "dir",
                     "fullPath": "/999.pivot/98.menu.unit",
                     "fileNumber": 9,
-                    "lines": 356,
-                    "characters": 15654,
+                    "lines": 362,
+                    "characters": 15666,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/999.pivot/98.menu.unit/buz",
                             "fileNumber": 2,
-                            "lines": 211,
-                            "characters": 9640,
+                            "lines": 217,
+                            "characters": 9652,
                             "childrens": [
                                 {
                                     "name": "00.menu.buzz.js",
@@ -10149,8 +10149,8 @@
                                     "name": "unit-menu.js",
                                     "type": "file",
                                     "fullPath": "/999.pivot/98.menu.unit/buz/unit-menu.js",
-                                    "lines": 92,
-                                    "characters": 4329
+                                    "lines": 98,
+                                    "characters": 4341
                                 }
                             ]
                         },
@@ -10220,23 +10220,23 @@
                     "type": "dir",
                     "fullPath": "/999.pivot/99.bus.unit",
                     "fileNumber": 8,
-                    "lines": 313,
-                    "characters": 12073,
+                    "lines": 317,
+                    "characters": 12083,
                     "childrens": [
                         {
                             "name": "buz",
                             "type": "dir",
                             "fullPath": "/999.pivot/99.bus.unit/buz",
                             "fileNumber": 1,
-                            "lines": 176,
-                            "characters": 6430,
+                            "lines": 180,
+                            "characters": 6440,
                             "childrens": [
                                 {
                                     "name": "bus.buzz.js",
                                     "type": "file",
                                     "fullPath": "/999.pivot/99.bus.unit/buz/bus.buzz.js",
-                                    "lines": 176,
-                                    "characters": 6430
+                                    "lines": 180,
+                                    "characters": 6440
                                 }
                             ]
                         },
@@ -10969,8 +10969,8 @@
             "type": "dir",
             "fullPath": "/ui",
             "fileNumber": 23,
-            "lines": 123,
-            "characters": 22628,
+            "lines": 203,
+            "characters": 22812,
             "childrens": [
                 {
                     "name": "scene",
@@ -11022,23 +11022,23 @@
                     "type": "dir",
                     "fullPath": "/ui/test",
                     "fileNumber": 9,
-                    "lines": 109,
-                    "characters": 7761,
+                    "lines": 189,
+                    "characters": 7945,
                     "childrens": [
                         {
                             "name": "controlTest",
                             "type": "dir",
                             "fullPath": "/ui/test/controlTest",
                             "fileNumber": 1,
-                            "lines": 26,
-                            "characters": 696,
+                            "lines": 46,
+                            "characters": 742,
                             "childrens": [
                                 {
                                     "name": "ControlInit.tsx",
                                     "type": "file",
                                     "fullPath": "/ui/test/controlTest/ControlInit.tsx",
-                                    "lines": 26,
-                                    "characters": 696
+                                    "lines": 46,
+                                    "characters": 742
                                 }
                             ]
                         },
@@ -11047,22 +11047,22 @@
                             "type": "dir",
                             "fullPath": "/ui/test/pixelTest",
                             "fileNumber": 2,
-                            "lines": 52,
-                            "characters": 1370,
+                            "lines": 92,
+                            "characters": 1462,
                             "childrens": [
                                 {
                                     "name": "ColorFetch.tsx",
                                     "type": "file",
                                     "fullPath": "/ui/test/pixelTest/ColorFetch.tsx",
-                                    "lines": 26,
-                                    "characters": 682
+                                    "lines": 46,
+                                    "characters": 728
                                 },
                                 {
                                     "name": "PixelInit.tsx",
                                     "type": "file",
                                     "fullPath": "/ui/test/pixelTest/PixelInit.tsx",
-                                    "lines": 26,
-                                    "characters": 688
+                                    "lines": 46,
+                                    "characters": 734
                                 }
                             ]
                         },
@@ -11071,15 +11071,15 @@
                             "type": "dir",
                             "fullPath": "/ui/test/spaceTest",
                             "fileNumber": 1,
-                            "lines": 26,
-                            "characters": 700,
+                            "lines": 46,
+                            "characters": 746,
                             "childrens": [
                                 {
                                     "name": "SpaceInit.tsx",
                                     "type": "file",
                                     "fullPath": "/ui/test/spaceTest/SpaceInit.tsx",
-                                    "lines": 26,
-                                    "characters": 700
+                                    "lines": 46,
+                                    "characters": 746
                                 }
                             ]
                         },
@@ -11272,8 +11272,8 @@
             "name": "pivot.cjs",
             "type": "file",
             "fullPath": "/pivot.cjs",
-            "lines": 14,
-            "characters": 571
+            "lines": 19,
+            "characters": 581
         },
         {
             "name": "postcss.config.cjs",
@@ -11300,8 +11300,8 @@
             "name": "run.js",
             "type": "file",
             "fullPath": "/run.js",
-            "lines": 21,
-            "characters": 788
+            "lines": 32,
+            "characters": 810
         },
         {
             "name": "vrt.cde.bat",
@@ -11335,8 +11335,8 @@
             "name": "vrt.pvt.bat",
             "type": "file",
             "fullPath": "/vrt.pvt.bat",
-            "lines": 1,
-            "characters": 15
+            "lines": 2,
+            "characters": 17
         },
         {
             "name": "vrt.wrk.bat",
