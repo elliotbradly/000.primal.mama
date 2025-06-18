@@ -65,10 +65,10 @@ export const testTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
   
  
 
-  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, {
-    idx: 'cns00',
-    src: '--- time ' + "testing time",
-  });
+  //bit = await ste.hunt(ActCns.UPDATE_CONSOLE, {
+  //  idx: 'cns00',
+   // src: '--- time ' + "testing time",
+  //});
 
   bal.slv({ tmeBit: { idx: 'test-time', src: 'testing-time' } });
 

@@ -49,9 +49,9 @@ export class PixelMenu implements Action {
   constructor(public bale: MenuBit) { }
 }
 
-export const FOCUS_MENU = "[Focus action] Focus Menu";
-export class FocusMenu implements Action {
-  readonly type = FOCUS_MENU;
+export const TIME_MENU = "[Menu action] Time Menu";
+export class TimeMenu implements Action {
+  readonly type = TIME_MENU;
   constructor(public bale: MenuBit) { }
 }
 
@@ -109,7 +109,7 @@ export class PrintMenu implements Action {
 
 export type Actions = InitMenu | UpdateMenu | TestMenu | CloseMenu
   | GithubMenu
-  | FocusMenu
+  | TimeMenu
   | CreateMenu
   | HexmapMenu
   | RenderMenu

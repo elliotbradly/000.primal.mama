@@ -7,4 +7,5 @@ export { printMenu  } from "./buz/00.menu.buzz";
 export { spaceMenu  } from "./buz/menu.space";
 export { pixelMenu  } from "./buz/menu.pixel";
 export { controlMenu  } from "./buz/menu.control";
+export { timeMenu  } from "./buz/menu.time";
 

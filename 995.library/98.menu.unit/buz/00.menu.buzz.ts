@@ -2,15 +2,6 @@ import * as ActMnu from "../menu.action";
 
 import * as ActLib from "../../00.library.unit/library.action";
 
-//import * as ActSrc from "../../05.search.unit/search.action";
-
-//import * as ActPmt from "../../12.prompt.unit/prompt.action";
-//import * as ActAut from "../../13.author.unit/author.action";
-//import * as ActGen from "../../14.genre.unit/genre.action";
-//import * as ActSet from "../../15.setting.unit/setting.action";
-
-//import * as ActEmo from "../../33.emotion.unit/emotion.action";
-
 import * as ActClc from "../../97.collect.unit/collect.action";
 
 import * as ActPut from "../../84.input.unit/input.action";
@@ -20,6 +11,18 @@ import * as ActChc from "../../85.choice.unit/choice.action";
 import * as ActGrd from "../../81.grid.unit/grid.action";
 import * as ActCvs from "../../82.canvas.unit/canvas.action";
 import * as ActCns from "../../83.console.unit/console.action";
+
+import { MenuModel } from "../menu.model";
+import MenuBit from "../fce/menu.bit";
+import State from "../../99.core/state";
+
+import * as Grid from '../../val/grid';
+import * as Align from '../../val/align'
+import * as Color from '../../val/console-color';
+
+import * as SHAPE from '../../val/shape'
+import * as FOCUS from "../../val/focus";
+import { list } from "995.library/BEE";
 
 var bit, lst, dex, idx, dat, src, val;
 
@@ -48,7 +51,7 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  lst = [ActMnu.CONTROL_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU]
+  lst = [ActMnu.CONTROL_MENU, ActMnu.TIME_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -63,6 +66,10 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
     case ActMnu.SPACE_MENU:
       bit = await ste.hunt(ActMnu.SPACE_MENU, {})
+      break;
+
+    case ActMnu.TIME_MENU:
+      bit = await ste.hunt(ActMnu.TIME_MENU, {})
       break;
 
     case ActMnu.PIXEL_MENU:
@@ -129,14 +136,4 @@ export const printMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 var patch = (ste, type, bale) => ste.dispatch({ type, bale });
 
-import { MenuModel } from "../menu.model";
-import MenuBit from "../fce/menu.bit";
-import State from "../../99.core/state";
 
-import * as Grid from '../../val/grid';
-import * as Align from '../../val/align'
-import * as Color from '../../val/console-color';
-
-import * as SHAPE from '../../val/shape'
-import * as FOCUS from "../../val/focus";
-import { list } from "995.library/BEE";
