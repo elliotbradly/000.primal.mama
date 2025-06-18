@@ -67,6 +67,7 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
     var output = []
 
     var direct = {}
+    var snowflake = {}
 
     function walkFunc(err, pathname, dirent) {
         if (err) {
@@ -127,8 +128,8 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
         if (a.includes('//')) return
         //if (a.includes('console.log')) return
         if (a.includes('returncpy')) return
-
         score.push(a)
+        if (snowflake[a] == null) snowflake[a] = 1
     })
 
     direct
@@ -144,7 +145,13 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
     now = now.replace(':', '-')
     now = S(now).slugify().s;
 
-    var line = fin + ' : ' + now
+    var pow = 0;
+
+    for ( var key in snowflake ){
+        pow += 1;
+    }
+
+    var line = fin + ' : ' + pow + ' : ' + now
 
     var list = FS.readFileSync('./data/line-log.txt').toString().split('\n')
 

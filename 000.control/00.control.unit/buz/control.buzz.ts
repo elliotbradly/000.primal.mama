@@ -21,6 +21,7 @@ var bit, val, idx, dex, lst, dat, src;
 export const initControl = async (cpy: ControlModel, bal: ControlBit, ste: State) => {
 
  
+  console.log(60)
 
   
   bal.slv({ intBit: { idx: "init-control" } });
