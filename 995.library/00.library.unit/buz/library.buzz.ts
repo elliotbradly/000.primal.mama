@@ -1,3 +1,7 @@
+import { LibraryModel } from "../library.model";
+import LibraryBit from "../fce/library.bit";
+import State from "../../99.core/state";
+
 import * as ActMnu from "../../98.menu.unit/menu.action";
 import * as ActBus from "../../99.bus.unit/bus.action";
 
@@ -7,6 +11,7 @@ import * as ActLib from "../library.action";
 import * as ActVrt from "../../act/vurt.action";
 import * as ActDsk from "../../act/disk.action";
 import * as ActPvt from "../../act/pivot.action";
+import { glob } from "fs";
 
 var bit, val, idx, dex, lst, dat;
 
@@ -23,7 +28,7 @@ export const initLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State
 export const testLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
 
     console.log('testing the library')
-    
+
     bal.slv({ libBit: { idx: "test-library" } });
     return cpy;
 };
@@ -31,8 +36,8 @@ export const testLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State
 export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
 
     var lstMsg = [];
-    
-    
+
+
     bit = await ste.bus(ActPvt.SHIP_PIVOT, { src: '995.library' })
     lstMsg = lstMsg.concat(bit.pvtBit.lst)
 
@@ -53,10 +58,50 @@ export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Sta
     return cpy;
 };
 
+export const countLibrary = (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
+
+    var obj = {
+        includes: [], // The directories and files that need to be included are all included by default
+        excludes: [], // All directories and files to be excluded are removed by default
+        defaultExcludes: [// Directory and files excluded by default
+            '.git',
+            '.vscode',
+            'node_modules',
+            'package.json',
+            'package-lock.json',
+            'yarn-lock.json',
+            'count.output.json',
+            'dist',
+            'data',
+            'public',
+            'modules'
+        ],
+        defaultExcludesFileType: [// File types excluded by default
+            '.json', '.zip', '.rar', '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.mp3', '.wma', '.wav', '.mp4', '.flv', '.mov', '.avi', '.wmv', '.rmvb', '.ogg', '.avi', '.ppt', '.pptx', '.doc', '.docx', '.xls', '.xlsx', '.psd', '.ttf', '.fon', '.exe', '.msi',
+        ],
+        output: 'count.output.json', // The default output result file
+        outputTrace: '', // Configure the file for outputting trace results, not output by default
+        encodings: [// Supported file encodings, will be ignored for unsupported files
+            'ascii',
+            'utf8',
+            'utf-8',
+            'unicode'
+        ],
+        ignoreEmptyLine: true,
+    }
+
+    const count = require('count-code-line');
+    count(obj);
+
+
+
+
+
+    bal.slv({ libBit: { idx: "count-library" } });
+    return cpy;
+};
+
 
 var patch = (ste, type, bale) => ste.dispatch({ type, bale });
 
 
-import { LibraryModel } from "../library.model";
-import LibraryBit from "../fce/library.bit";
-import State from "../../99.core/state";

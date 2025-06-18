@@ -41,8 +41,16 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   bit = await ste.hunt(ActCns.WRITE_CONSOLE, { idx: 'cns00', src: "", dat: { net: bit.grdBit.dat, src: "alligaor0" } })
 
   bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "-----------" })
-  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "Control PIVOT V0" })
+  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "Library PIVOT V0" })
   bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "-----------" })
+
+  var FS = require('fs-extra')
+  var dat = FS.readJsonSync('./count.output.json')
+
+  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "line count" })
+  var lines = dat.lines
+  bit = await ste.hunt(ActMnu.PRINT_MENU, {lines})
+  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "------------" })
 
   updateMenu(cpy, bal, ste);
 
@@ -51,7 +59,9 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  lst = [ActMnu.CONTROL_MENU, ActMnu.TIME_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU]
+
+
+  lst = [ActMnu.CONTROL_MENU, ActMnu.TIME_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU, ActLib.COUNT_LIBRARY]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -59,6 +69,18 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   src = bit.chcBit.src;
 
   switch (src) {
+
+    case ActLib.COUNT_LIBRARY:
+      var countBit = await ste.hunt(ActLib.COUNT_LIBRARY, {})
+      
+      setTimeout( async() => {
+        bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
+        bit = await ste.hunt(ActMnu.PRINT_MENU, countBit )  
+        updateMenu(cpy, bal, ste);
+    
+      }, 11)
+
+      break;
 
     case ActMnu.CONTROL_MENU:
       bit = await ste.hunt(ActMnu.CONTROL_MENU, {})

@@ -53,7 +53,8 @@
     "fs-extra": "^11.3.0",
     "i": "^0.3.7",
     "npm": "^11.4.2",
+    "terminal-kit": "^3.1.2",
     "typescript-ioc": "^3.2.2",
-    "terminal-kit": "^3.1.2"
+    "count-code-line": "^0.0.4"
   }
 }
