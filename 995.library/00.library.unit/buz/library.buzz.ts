@@ -93,11 +93,29 @@ export const countLibrary = (cpy: LibraryModel, bal: LibraryBit, ste: State) => 
     const count = require('count-code-line');
     count(obj);
 
+    const { DateTime } = require("luxon");
+    const dt = DateTime.local();
+    var now = dt.toLocaleString(DateTime.DATETIME_FULL);
+    var S = require('string')
+    now = now.replace(':', '-')
+    now = S(now).slugify().s;
 
+    var FS = require('fs-extra')
+    var dat = FS.readJsonSync('./count.output.json')
+    var line = dat.lines + ' : ' + now
 
+    var list = FS.readFileSync('./data/line-log.txt').toString().split('\n')
 
+    var past = list[0];
+    var last = Number(past.split(':')[0])
 
-    bal.slv({ libBit: { idx: "count-library" } });
+    if (last != dat.lines) {
+        list.unshift(line)
+        list
+        FS.writeFileSync('./data/line-log.txt', list.join(' \n '))
+    }
+
+    bal.slv({ libBit: { idx: "count-library", val:dat.lines } });
     return cpy;
 };
 

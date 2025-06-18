@@ -46,9 +46,10 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   var FS = require('fs-extra')
   var dat = FS.readJsonSync('./count.output.json')
+  var lines = dat.lines
 
   bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "line count" })
-  var lines = dat.lines
+  
   bit = await ste.hunt(ActMnu.PRINT_MENU, {lines})
   bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "------------" })
 
