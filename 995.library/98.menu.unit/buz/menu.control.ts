@@ -34,8 +34,8 @@ export const controlMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   await (async () => {
     try {
-      await new Promise<void>((resolve, reject) => exec('tsc -b 001.control', err => err ? reject(err) : resolve()));
-      if (CONTROL == null) CONTROL = require(path.resolve('./dist/001.control/hunt'));
+      await new Promise<void>((resolve, reject) => exec('tsc -b 000.control', err => err ? reject(err) : resolve()));
+      if (CONTROL == null) CONTROL = require(path.resolve('./dist/000.control/hunt'));
       bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "compiled control" });
     } catch (err) {
       console.error(`exec error: ${err}`);
