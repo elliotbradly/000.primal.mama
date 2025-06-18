@@ -45,7 +45,7 @@ export const pixelMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
     }
   })();
 
-  lst = [ActPxl.TEST_PIXEL, ActPxl.WRITE_PIXEL]
+  lst = [ActPxl.TEST_PIXEL, ActPxl.WRITE_PIXEL, ActMnu.UPDATE_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -61,6 +61,11 @@ export const pixelMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
     case ActPxl.TEST_PIXEL:
       bit = await PIXEL.hunt(ActPxl.TEST_PIXEL, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+      break;
+
+    case ActMnu.UPDATE_MENU:
+      bit = await ste.hunt(ActMnu.UPDATE_MENU, {})
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
