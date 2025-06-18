@@ -44,14 +44,6 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "Library PIVOT V0" })
   bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "-----------" })
 
-  var FS = require('fs-extra')
-  var dat = FS.readJsonSync('./count.output.json')
-  var lines = dat.lines
-
-  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "line count" })
-  
-  bit = await ste.hunt(ActMnu.PRINT_MENU, {lines})
-  bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "------------" })
 
   updateMenu(cpy, bal, ste);
 
@@ -73,14 +65,7 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
     case ActLib.COUNT_LIBRARY:
       var countBit = await ste.hunt(ActLib.COUNT_LIBRARY, {})
-      
-      setTimeout( async() => {
-        bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
-        bit = await ste.hunt(ActMnu.PRINT_MENU, countBit )  
-        updateMenu(cpy, bal, ste);
-    
-      }, 11)
-
+      bit = await ste.hunt(ActMnu.PRINT_MENU, countBit)
       break;
 
     case ActMnu.CONTROL_MENU:

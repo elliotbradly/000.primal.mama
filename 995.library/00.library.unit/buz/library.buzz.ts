@@ -66,6 +66,8 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
 
     var output = []
 
+    var direct = {}
+
     function walkFunc(err, pathname, dirent) {
         if (err) {
             // throw an error to stop walking
@@ -81,6 +83,7 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
         if (dirent.isDirectory() && dirent.name == 'modules') { return Promise.resolve(false) }
         if (dirent.isDirectory() && dirent.name == '.') { return Promise.resolve(false) }
 
+
         if (dirent.isDirectory() && dirent.name.startsWith(".")) {
             return Promise.resolve(false);
         }
@@ -88,6 +91,8 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
         if (dirent.isFile() && dirent.name.startsWith(".") == false) {
             var file = path.join(path.dirname(pathname), dirent.name);
             output.push(file)
+
+            if (direct[path.dirname(pathname)] == null) direct[path.dirname(pathname)] = ''
         }
 
         return Promise.resolve();
@@ -108,58 +113,30 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
 
     var out = []
 
-    paths.forEach( (a)=>{
+    paths.forEach((a) => {
         var lst = FS.readFileSync(a).toString().split('\n');
         out = out.concat(lst)
     })
 
     var score = []
 
-    out.forEach( (a)=>{
-        if ( a.length < 5 ) return
+    out.forEach((a) => {
+        if (a.length < 5) return
         a = a.replaceAll(' ', '')
-        if ( a.length <= 3 ) return
+        if (a.length <= 3) return
+        if (a.includes('//')) return
+        //if (a.includes('console.log')) return
+        if (a.includes('returncpy')) return
+
         score.push(a)
     })
 
+    direct
     score
 
-    debugger
+    var fin = score.length
 
-
-    var obj = {
-        includes: [], // The directories and files that need to be included are all included by default
-        excludes: [], // All directories and files to be excluded are removed by default
-        defaultExcludes: [// Directory and files excluded by default
-            '.git',
-            '.vscode',
-            'node_modules',
-            'package.json',
-            'package-lock.json',
-            'yarn-lock.json',
-            'count.output.json',
-            'dist',
-            'data',
-            'public',
-            'modules'
-        ],
-        defaultExcludesFileType: [// File types excluded by default
-            '.json', '.zip', '.rar', '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.mp3', '.wma', '.wav', '.mp4', '.flv', '.mov', '.avi', '.wmv', '.rmvb', '.ogg', '.avi', '.ppt', '.pptx', '.doc', '.docx', '.xls', '.xlsx', '.psd', '.ttf', '.fon', '.exe', '.msi',
-        ],
-        output: 'count.output.json', // The default output result file
-        outputTrace: '', // Configure the file for outputting trace results, not output by default
-        encodings: [// Supported file encodings, will be ignored for unsupported files
-            'ascii',
-            'utf8',
-            'utf-8',
-            'unicode'
-        ],
-        ignoreEmptyLine: false,
-    }
-
-    const count = require('count-code-line');
-    count(obj);
-
+    //FS.writeFileSync('./data/complete.txt', score.join('\n') )
     const { DateTime } = require("luxon");
     const dt = DateTime.local();
     var now = dt.toLocaleString(DateTime.DATETIME_FULL);
@@ -167,22 +144,20 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
     now = now.replace(':', '-')
     now = S(now).slugify().s;
 
-   
-    var dat = FS.readJsonSync('./count.output.json')
-    var line = dat.lines + ' : ' + now
+    var line = fin + ' : ' + now
 
     var list = FS.readFileSync('./data/line-log.txt').toString().split('\n')
 
     var past = list[0];
     var last = Number(past.split(':')[0])
 
-    if (last != dat.lines) {
+    if (last != fin) {
         list.unshift(line)
         list
-        FS.writeFileSync('./data/line-log.txt', list.join(' \n '))
+        FS.writeFileSync('./data/line-log.txt', list.join('\n'))
     }
 
-    bal.slv({ libBit: { idx: "count-library", val: dat.lines } });
+    bal.slv({ libBit: { idx: "count-library", val: fin } });
     return cpy;
 };
 
