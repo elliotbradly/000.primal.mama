@@ -41,7 +41,7 @@ export function useReadClock(idx) {
     })
 }
 
-export function useListClock(idx) {
+export function useListClock() {
     return useQuery({
         queryFn: async () => {
 

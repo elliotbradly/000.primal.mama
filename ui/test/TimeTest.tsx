@@ -4,6 +4,9 @@ import { Button } from '@mantine/core';
 import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
 import TimeInit from './timeTest/TimeInit'
+import ClockWrite from './timeTest/ClockWrite'
+import ClockRead from './timeTest/ClockRead'
+import ClockList from './timeTest/ClockList'
 
 export default function ContentsPage() {
 
@@ -31,6 +34,18 @@ export default function ContentsPage() {
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
             <TimeInit />
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <ClockWrite />
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <ClockRead />
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <ClockList />
           </Box>
 
         </Stack>
