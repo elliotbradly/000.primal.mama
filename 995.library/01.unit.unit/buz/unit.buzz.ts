@@ -1,9 +1,15 @@
 
+
 import { UnitModel } from "../unit.model";
 import UnitBit from "../fce/unit.bit";
 import State from "../../99.core/state";
 
 export const initUnit = (cpy: UnitModel, bal: UnitBit, ste: State) => {
+    debugger
+    return cpy;
+};
+
+export const createUnit = (cpy: UnitModel, bal: UnitBit, ste: State) => {
     debugger
     return cpy;
 };

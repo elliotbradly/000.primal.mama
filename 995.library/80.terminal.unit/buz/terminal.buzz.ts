@@ -118,6 +118,12 @@ export const optionTerminal = (cpy: TerminalModel, bal: TerminalBit, ste: State)
 
 export const inputTerminal = async (cpy: TerminalModel, bal: TerminalBit, ste: State) => {
 
+  
+
+  //bit = await ste.hunt( ActPut.OPEN_INPUT, {lst:bal.lst} ) 
+
+  
+
   bal.slv({ trmBit: { idx: "input-terminal" } });
 
   return cpy;

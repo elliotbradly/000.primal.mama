@@ -21,5 +21,12 @@ export const LIST_UNIT = "[List action] List Unit";
  constructor(public bale: UnitBit) {}
  }
  
+export const CREATE_UNIT = "[Create action] Create Unit";
+ export class CreateUnit implements Action {
+ readonly type = CREATE_UNIT;
+ constructor(public bale: UnitBit) {}
+ }
+ 
 export type Actions = | InitUnit | UpdateUnit 
 | ListUnit
+| CreateUnit
