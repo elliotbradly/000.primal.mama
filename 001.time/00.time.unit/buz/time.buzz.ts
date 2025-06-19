@@ -15,48 +15,22 @@ import * as ActBus from '../../99.bus.unit/bus.action';
 var bit, lst, dex, src, dat;
 
 export const initTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
-  bit = await ste.hunt(ActBus.INIT_BUS, {
-    idx: cpy.idx,
-    src: bal.src,
-    lst: [ActTme, ActClk],
-    dat: bal.dat,
-  });
+  
+  //bit = await ste.hunt(ActBus.INIT_BUS, {
+  //  idx: cpy.idx,
+  //  src: bal.src,
+  //  lst: [ActTme, ActClk],
+  //  dat: bal.dat,
+  //});
 
   //if (bal.val == 1) {
   //  bit = await ste.hunt(ActTrm.INIT_TERMINAL, {});
    // patch(ste, ActMnu.INIT_MENU, {});
  // }
 
-  const { exec } = require('child_process');
+     bal.slv({ intBit: { idx: 'init-time' } });
+    
 
-  exec('tsc -b 001.time', async (err, stdout, stderr) => {
-    if (err) {
-      console.error(`exec error: ${err}`);
-    }
-
-    lst = [];
-
-    bit = await ste.bus(ActPvt.BUNDLE_PIVOT, { src: '001.time' });
-    lst.push(bit);
-
-    bit = await ste.bus(ActDsk.READ_DISK, { src: './work/001.time.js' });
-    var blend = bit.dskBit.dat;
-
-    bit = await ste.bus(ActDsk.WRITE_DISK, {
-      src: './cloud/001.time.js',
-      dat: blend,
-    });
-    lst.push(bit);
-
-    setTimeout(async () => {
-      bit = await ste.bus(ActCns.UPDATE_CONSOLE, {
-        idx: 'cns00',
-        src: '--- time bundled',
-      });
-
-      if (bal.slv != null) bal.slv({ intBit: { idx: 'init-time' } });
-    }, 3);
-  });
 
   return cpy;
 };

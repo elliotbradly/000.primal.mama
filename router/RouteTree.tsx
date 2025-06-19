@@ -7,6 +7,7 @@ import TestBabylonPage from '../page/003.test/002.babylon-test/page';
 import TestPixelPage from '../page/003.test/003.pixel-test/page';
 import TestControlPage from '../page/003.test/004.control-test/page';
 import TestSpacePage from '../page/003.test/005.space-test/page';
+import TestTimePage from '../page/003.test/006.time-test/page';
 
 
 import {
@@ -113,6 +114,16 @@ const testSpaceRoute = createRoute({
     },
 });
 
+const testTimeRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/test/time",
+    component: function Lora() {
+        return (
+            <TestTimePage />
+        );
+    },
+});
+
 
 const testOpenBabylonRoute = createRoute({
     getParentRoute: () => rootRoute,
@@ -148,7 +159,8 @@ export var RouteTree = () => {
         testWriteShadeRoute, 
         testPixelRoute,
         testControlRoute,
-        testSpaceRoute
+        testSpaceRoute,
+        testTimeRoute
         
      ]);
      

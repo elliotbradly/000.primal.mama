@@ -19,6 +19,10 @@ export default function ContentsPage() {
     document.location.href = './test/space'
   }
 
+  var act03 = () => {
+    document.location.href = './test/time'
+  }
+
 
 
   return (
@@ -36,6 +40,10 @@ export default function ContentsPage() {
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
             <Button fullWidth variant="outline" color="black" onClick={act01} > OPEN CONTROL TEST </Button>
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <Button fullWidth variant="outline" color="black" onClick={act03} > OPEN TIME TEST </Button>
           </Box>
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
