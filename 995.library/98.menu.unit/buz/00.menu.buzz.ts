@@ -76,7 +76,10 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
       idx = bit.chcBit.src;
 
-      var countBit = await ste.hunt(ActUnt.UPDATE_UNIT, { idx, src })
+      bit = await ste.hunt(ActTrm.INPUT_TERMINAL, { lst: ["", "", "Input Verb"] });
+      var dat = bit.trmBit.src;
+
+      var countBit = await ste.hunt(ActUnt.UPDATE_UNIT, { idx, src, dat })
       bit = await ste.hunt(ActMnu.PRINT_MENU, countBit)
       break;
 
