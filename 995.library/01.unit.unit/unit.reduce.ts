@@ -19,6 +19,9 @@ case Act.LIST_UNIT:
 case Act.CREATE_UNIT:
  return Buzz.createUnit(clone(model), act.bale, state);
  
+case Act.TEST_UNIT:
+ return Buzz.testUnit(clone(model), act.bale, state);
+ 
  default:
  return model;
  }

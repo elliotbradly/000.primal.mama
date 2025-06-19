@@ -27,6 +27,13 @@ export const CREATE_UNIT = "[Create action] Create Unit";
  constructor(public bale: UnitBit) {}
  }
  
+export const TEST_UNIT = "[Test action] Test Unit";
+ export class TestUnit implements Action {
+ readonly type = TEST_UNIT;
+ constructor(public bale: UnitBit) {}
+ }
+ 
 export type Actions = | InitUnit | UpdateUnit 
 | ListUnit
 | CreateUnit
+| TestUnit

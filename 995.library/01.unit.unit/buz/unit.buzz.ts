@@ -1,5 +1,3 @@
-
-
 import * as ActCns from "../../83.console.unit/console.action";
 
 import { UnitModel } from "../unit.model";
@@ -12,6 +10,11 @@ export const initUnit = (cpy: UnitModel, bal: UnitBit, ste: State) => {
 };
 
 export const createUnit = (cpy: UnitModel, bal: UnitBit, ste: State) => {
+    debugger
+    return cpy;
+};
+
+export const testUnit = (cpy: UnitModel, bal: UnitBit, ste: State) => {
     debugger
     return cpy;
 };
@@ -182,10 +185,10 @@ export const updateUnit = async (cpy: UnitModel, bal: UnitBit, ste: State) => {
     ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'writing...' + buzzerFile })
     bit = await FS.writeFile(reduceFile, resultReduce.join('\n'));
     ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'writing...' + reduceFile })
-   
-    bit = await FS.writeFile(actionFile, resultAction.join('\n')); 
+
+    bit = await FS.writeFile(actionFile, resultAction.join('\n'));
     ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'writing...' + actionFile })
-   
+
     setTimeout(() => {
         if (bal.slv != null)
             bal.slv({ untBit: { idx: "update-unit", dat: bal } });
