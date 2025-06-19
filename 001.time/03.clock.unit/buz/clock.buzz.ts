@@ -29,7 +29,7 @@ export const updateClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
   if (now.mth == null) now.mth = 0
   if (now.day == null) now.day = 0
   if (now.hrs == null) now.hrs = 0
-  
+
   if (now.min == null) now.min = 0
   if (now.sec == null) now.sec = 0
   if (now.wek == null) now.wek = 0
@@ -165,6 +165,8 @@ export const removeClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
 
 export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
+
+
   if (bal.dat.clk == null) {
 
     var clkBit: TicBit = { idx: bal.idx }
@@ -180,13 +182,21 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
 
   var clk = bal.dat.clk;
 
+  for (var key in clk) {
+    if (clk[key] == '' || clk[key] == null) clk[key] = 0
+    clk[key] = Number(clk[key])
+  }
+
+  clk
+  
+
   var dateObject = {
-    day: null,
-    year: null,
-    hour: null,
-    month: null,
-    minute: null,
-    second: null,
+    day: 0,
+    year: 0,
+    hour: 0,
+    month: 0,
+    minute: 0,
+    second: 0,
   }
 
   if (clk.day != null) dateObject.day = clk.day;
@@ -196,6 +206,15 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
   if (clk.min != null) dateObject.minute = clk.min;
   if (clk.sec != null) dateObject.second = clk.sec;
 
+  dateObject
+
+  for ( var key in dateObject ){
+    var itm = dateObject[key]
+    if ( itm == 0 ) delete dateObject[ key ];
+  }
+
+  dateObject
+  
   var dt = DateTime.fromObject(dateObject)
 
   var dat: TicBit = { idx: bal.idx, src: null };
@@ -313,7 +332,7 @@ export const blockClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => 
 
         var dt1 = DateTime.fromSeconds(cpy.slotTime)
         var dt2 = DateTime.fromSeconds(rsp.time)
-        diff = dt1.diff(dt2, [ "seconds"])
+        diff = dt1.diff(dt2, ["seconds"])
 
         //console.log(diff.toObject())
         //we need to calculate a time difference 
@@ -323,8 +342,8 @@ export const blockClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => 
         cpy.slotTime = rsp.time
 
         var obj = diff.toObject();
-        
-        for ( var key in obj ){
+
+        for (var key in obj) {
           obj[key] *= -1
         }
 

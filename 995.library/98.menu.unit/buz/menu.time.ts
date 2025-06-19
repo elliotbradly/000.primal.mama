@@ -50,7 +50,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
     }
   })();
 
-  lst = [ ActClk.WRITE_CLOCK, ActClk.LIST_CLOCK,  ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
+  lst = [ActClk.WRITE_CLOCK, ActClk.LIST_CLOCK, ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -60,6 +60,44 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   switch (src) {
     case ActTme.TEST_TIME:
       bit = await TIME.hunt(ActTme.TEST_TIME, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+      break;
+
+    case ActClk.WRITE_CLOCK:
+
+      bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 2 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input verb', net: bit.grdBit.dat })
+      idx = bit.putBit.src;
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 2 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input day', net: bit.grdBit.dat })
+      var day = bit.putBit.src;
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 2 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input hour', net: bit.grdBit.dat })
+      var hrs = bit.putBit.src;
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 2 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input minute', net: bit.grdBit.dat })
+      var min = bit.putBit.src;
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 2 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input month', net: bit.grdBit.dat })
+      var mth = bit.putBit.src;
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 2 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input second', net: bit.grdBit.dat })
+      var sec = bit.putBit.src;
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 2 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input year', net: bit.grdBit.dat })
+      var yrs = bit.putBit.src;
+
+      bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
+
+      bit = await TIME.hunt(ActClk.WRITE_CLOCK, { idx, clk: { day, hrs, min, mth, sec, yrs } })
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
@@ -79,11 +117,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   }
 
 
-  setTimeout(async () => {
-
-    bit = await ste.hunt(ActMnu.SPACE_MENU, {})
-
-  }, 333)
+  setTimeout(async () => { bit = await ste.hunt(ActMnu.TIME_MENU, {}) }, 333)
 
 
   return cpy;
