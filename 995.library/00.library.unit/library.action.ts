@@ -27,5 +27,12 @@ export const COUNT_LIBRARY = "[Count action] Count Library";
  constructor(public bale: LibraryBit) {}
  }
  
+export const LIST_LIBRARY = "[List action] List Library";
+ export class ListLibrary implements Action {
+ readonly type = LIST_LIBRARY;
+ constructor(public bale: LibraryBit) {}
+ }
+ 
 export type Actions = | InitLibrary | UpdateLibrary | TestLibrary 
 | CountLibrary
+| ListLibrary

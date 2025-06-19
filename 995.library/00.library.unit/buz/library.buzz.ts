@@ -6,8 +6,6 @@ import * as ActMnu from "../../98.menu.unit/menu.action";
 import * as ActBus from "../../99.bus.unit/bus.action";
 
 import * as ActLib from "../library.action";
-
-
 import * as ActVrt from "../../act/vurt.action";
 import * as ActDsk from "../../act/disk.action";
 import * as ActPvt from "../../act/pivot.action";
@@ -25,6 +23,18 @@ export const initLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State
     return cpy;
 };
 
+export const listLibrary = (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
+
+    var FS = require('fs-extra')
+    var list = FS.readdirSync('./')
+
+    const pattern = /^\d{3}\.[a-zA-Z]+$/;
+    const newArray = list.filter(item => pattern.test(item));
+
+    bal.slv({ libBit: { idx: "list-library", lst: newArray } });
+    return cpy;
+};
+
 export const testLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
 
     console.log('testing the library')
@@ -35,26 +45,8 @@ export const testLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State
 
 export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
 
-    var lstMsg = [];
 
-
-    bit = await ste.bus(ActPvt.SHIP_PIVOT, { src: '995.library' })
-    lstMsg = lstMsg.concat(bit.pvtBit.lst)
-
-
-    idx = "../../011.sower/995.library/";
-    bit = await ste.bus(ActDsk.COPY_DISK, { src: './work/995.library/', idx });
-    lstMsg = lstMsg.concat(bit.pvtBit)
-
-    //idx = "../../333.depth/812.space/";
-    //bit = await ste.bus(ActDsk.COPY_DISK, { src: './812.space/', idx  });
-    //lstMsg = lstMsg.concat(bit.pvtBit)
-
-    //idx = "../../333.depth/814.being/";
-    //bit = await ste.bus(ActDsk.COPY_DISK, { src: './814.being/', idx  });
-    //lstMsg = lstMsg.concat(bit.pvtBit)
-
-    bal.slv({ libBit: { idx: "update-library", lst: lstMsg } });
+    bal.slv({ libBit: { idx: "update-library" } });
     return cpy;
 };
 
@@ -147,7 +139,7 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
 
     var pow = 0;
 
-    for ( var key in snowflake ){
+    for (var key in snowflake) {
         pow += 1;
     }
 

@@ -19,6 +19,9 @@ export function reducer(model: LibraryModel = new LibraryModel(), act: Act.Actio
 case Act.COUNT_LIBRARY:
  return Buzz.countLibrary(clone(model), act.bale, state);
  
+case Act.LIST_LIBRARY:
+ return Buzz.listLibrary(clone(model), act.bale, state);
+ 
  default:
  return model;
  }
