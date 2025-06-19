@@ -1,7 +1,7 @@
 import React from 'react'
 
-import State from "../../000.control/99.core/state";
-import * as Import from "../../000.control/BEE";
+import State from "../../001.time/99.core/state";
+import * as Import from "../../001.time/BEE";
 
 var once = false
 
@@ -43,7 +43,7 @@ export default function ControlBlock() {
 
     window
 
-    if ( window['CONTROL'] == null ) window['CONTROL'] = sim.hunt
+    if ( window['TIME'] == null ) window['TIME'] = sim.hunt
 
     //setTimeout(async () => {
     //    if (typeof window === 'undefined') {

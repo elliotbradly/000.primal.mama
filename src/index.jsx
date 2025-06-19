@@ -11,10 +11,11 @@ import  {RouteTree } from "../router/RouteTree"
 
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
-import BabylonBlock from '../base/space/block'
+import SpaceBlock from '../base/space/block'
 import ShadeBlock from '../base/shade/block'
 import PixelBlock from '../base/pixel/block'
 import ControlBlock from '../base/control/block'
+import TimeBlock from '../base/time/block'
 
 
 // Create a brutalist theme
@@ -192,7 +193,8 @@ const router = createRouter({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BabylonBlock/>
+    <TimeBlock/>
+    <SpaceBlock/>
     <ShadeBlock/>
     <PixelBlock/>
     <ControlBlock/>
