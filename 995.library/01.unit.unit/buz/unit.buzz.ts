@@ -1,5 +1,7 @@
 
 
+import * as ActCns from "../../83.console.unit/console.action";
+
 import { UnitModel } from "../unit.model";
 import UnitBit from "../fce/unit.bit";
 import State from "../../99.core/state";
@@ -173,13 +175,17 @@ export const updateUnit = async (cpy: UnitModel, bal: UnitBit, ste: State) => {
     resultActionUpper = resultActionUpper.slice(0, upperActionDex);
     var resultAction = resultActionUpper.concat(lowerActionList);
     bit = await FS.writeFile(buzzFile, resultBuzz.join('\n'));
-    console.log('writing...' + buzzFile);
+
+    ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'writing...' + buzzFile })
     bit = await FS.writeFile(buzzerFile, resultBuzzer.join('\n'));
-    console.log('writing...' + buzzerFile);
+
+    ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'writing...' + buzzerFile })
     bit = await FS.writeFile(reduceFile, resultReduce.join('\n'));
-    console.log('writing...' + reduceFile);
-    bit = await FS.writeFile(actionFile, resultAction.join('\n'));
-    console.log('writing...' + actionFile);
+    ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'writing...' + reduceFile })
+   
+    bit = await FS.writeFile(actionFile, resultAction.join('\n')); 
+    ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: 'writing...' + actionFile })
+   
     setTimeout(() => {
         if (bal.slv != null)
             bal.slv({ untBit: { idx: "update-unit", dat: bal } });
