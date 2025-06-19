@@ -23,7 +23,6 @@ import * as ActChc from "../../85.choice.unit/choice.action";
 import * as ActPut from "../../84.input.unit/input.action";
 
 import * as ActGrd from "../../81.grid.unit/grid.action";
-import * as ActCvs from "../../82.canvas.unit/canvas.action";
 import * as ActCns from "../../83.console.unit/console.action";
 
 var bit, lst, dex, idx, dat, src;

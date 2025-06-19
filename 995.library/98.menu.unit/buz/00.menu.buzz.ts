@@ -12,7 +12,7 @@ import * as ActTrm from "../../80.terminal.unit/terminal.action";
 import * as ActChc from "../../85.choice.unit/choice.action";
 
 import * as ActGrd from "../../81.grid.unit/grid.action";
-import * as ActCvs from "../../82.canvas.unit/canvas.action";
+//import * as ActCvs from "../../82.canvas.unit/canvas.action";
 import * as ActCns from "../../83.console.unit/console.action";
 
 import { MenuModel } from "../menu.model";
@@ -37,7 +37,7 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 4, y: 0, xSpan: 1, ySpan: 12 })
-  bit = await ste.hunt(ActCvs.WRITE_CANVAS, { idx: 'cvs1', dat: { clr: Color.CYAN, net: bit.grdBit.dat }, })
+  //bit = await ste.hunt(ActCvs.WRITE_CANVAS, { idx: 'cvs1', dat: { clr: Color.CYAN, net: bit.grdBit.dat }, })
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 4, y: 0, xSpan: 8, ySpan: 12 })
   bit = await ste.hunt(ActCns.WRITE_CONSOLE, { idx: 'cns00', src: "", dat: { net: bit.grdBit.dat, src: "alligaor0" } })
