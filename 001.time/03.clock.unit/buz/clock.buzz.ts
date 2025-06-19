@@ -1,3 +1,12 @@
+import { ClockModel } from "../clock.model";
+import ClockBit from "../fce/clock.bit";
+import State from "../../99.core/state";
+import TicBit from "../fce/tic.bit";
+import { DateTime } from "luxon";
+import { BlockBit } from "../fce/blockbit";
+
+//pnpm i --save-dev @types/luxon
+
 import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActClk from "../clock.action";
 
@@ -385,11 +394,3 @@ export const testClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
 
 
-import { ClockModel } from "../clock.model";
-import ClockBit from "../fce/clock.bit";
-import State from "../../99.core/state";
-import TicBit from "../fce/tic.bit";
-import { DateTime } from "luxon";
-import { BlockBit } from "../fce/blockbit";
-
-//pnpm i --save-dev @types/luxon

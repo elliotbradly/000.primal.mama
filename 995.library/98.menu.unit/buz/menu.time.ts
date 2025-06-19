@@ -7,6 +7,8 @@ import State from "../../99.core/state";
 
 
 import * as ActTme from "../../act/time.action";
+import * as ActClk from "../../act/clock.action";
+
 
 import * as Grid from '../../val/grid';
 import * as Align from '../../val/align'
@@ -28,6 +30,8 @@ import * as ActGrd from "../../81.grid.unit/grid.action";
 import * as ActCvs from "../../82.canvas.unit/canvas.action";
 import * as ActCns from "../../83.console.unit/console.action";
 
+
+
 var bit, lst, dex, idx, dat, src;
 
 var TIME;
@@ -47,7 +51,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
     }
   })();
 
-  lst = [ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
+  lst = [ ActClk.WRITE_CLOCK, ActClk.LIST_CLOCK,  ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -57,6 +61,11 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   switch (src) {
     case ActTme.TEST_TIME:
       bit = await TIME.hunt(ActTme.TEST_TIME, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+      break;
+
+    case ActClk.LIST_CLOCK:
+      bit = await TIME.hunt(ActClk.LIST_CLOCK, {})
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
