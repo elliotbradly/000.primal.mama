@@ -51,7 +51,7 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  lst = [ActMnu.CONTROL_MENU, ActMnu.TIME_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU, ActLib.COUNT_LIBRARY, ActUnt.UPDATE_UNIT, ActLib.UPDATE_LIBRARY, ActLib.LIST_LIBRARY]
+  lst = [ActMnu.CONTROL_MENU, ActMnu.TIME_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU, ActLib.COUNT_LIBRARY, ActUnt.UPDATE_UNIT, ActUnt.CREATE_UNIT,  ActLib.UPDATE_LIBRARY, ActLib.LIST_LIBRARY]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -84,6 +84,25 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
       var updateBit = await ste.hunt(ActUnt.UPDATE_UNIT, { idx, src, dat })
       bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, updateBit)
+      break;
+
+      case ActUnt.CREATE_UNIT:
+
+      bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 6 })
+      bit = await ste.hunt(ActPut.OPEN_INPUT, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, txt: 'input verb', net: bit.grdBit.dat })
+      idx = bit.putBit.src;
+     
+
+     
+
+
+      var updateBit = await ste.hunt(ActUnt.CREATE_UNIT, { idx })
+       
+      bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
+      
       bit = await ste.hunt(ActMnu.PRINT_MENU, updateBit)
       break;
 

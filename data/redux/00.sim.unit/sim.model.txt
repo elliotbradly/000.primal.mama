@@ -1,4 +1,4 @@
-import {{=it.title}} from "./fce/{{=it.title}}.interface";
+import {{=it.title}} from "./fce/{{=it.nom}}.interface";
 import {{=it.bitTitle}} from "./fce/{{=it.nom}}.interface";
 
 export class {{=it.title}}Model implements {{=it.title}} {
