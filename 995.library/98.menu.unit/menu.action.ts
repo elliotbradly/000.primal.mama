@@ -55,9 +55,9 @@ export class TimeMenu implements Action {
   constructor(public bale: MenuBit) { }
 }
 
-export const FOCUS_PLAY_MENU = "[Focus action] Focus Play Menu";
-export class FocusPlayMenu implements Action {
-  readonly type = FOCUS_PLAY_MENU;
+export const COLOR_MENU = "[Menu action] Color Menu";
+export class ColorMenu implements Action {
+  readonly type = COLOR_MENU;
   constructor(public bale: MenuBit) { }
 }
 
@@ -115,7 +115,7 @@ export type Actions = InitMenu | UpdateMenu | TestMenu | CloseMenu
   | RenderMenu
   | CreateHexmapMenu
   | YieldMenu
-  | FocusPlayMenu
+  | ColorMenu
   | UpdateFocusPlayMenu
   | PrintMenu
   | SpaceMenu

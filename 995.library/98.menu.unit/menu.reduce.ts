@@ -36,6 +36,9 @@ export function reducer(model: MenuModel = new MenuModel(), act: Act.Actions, st
     case Act.TIME_MENU:
       return Buzz.timeMenu(clone(model), act.bale, state);
 
+    case Act.COLOR_MENU:
+      return Buzz.colorMenu(clone(model), act.bale, state);
+
 
     default:
       return model;
