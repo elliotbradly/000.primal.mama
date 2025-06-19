@@ -78,9 +78,8 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
 
       src = bit.chcBit.src;
-      
 
-      var bit = await ste.hunt(ActLib.UPDATE_LIBRARY, {src})
+      var bit = await ste.hunt(ActLib.UPDATE_LIBRARY, { src })
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 

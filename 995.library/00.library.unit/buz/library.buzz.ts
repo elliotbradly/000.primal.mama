@@ -45,6 +45,8 @@ export const testLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State
 
 export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
 
+    debugger
+
 
     bal.slv({ libBit: { idx: "update-library" } });
     return cpy;
