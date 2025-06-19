@@ -15,4 +15,11 @@ export class UpdateUnit implements Action {
  constructor(public bale: UnitBit) {}
 }
 
-export type Actions = | InitUnit | UpdateUnit ;
+export const LIST_UNIT = "[List action] List Unit";
+ export class ListUnit implements Action {
+ readonly type = LIST_UNIT;
+ constructor(public bale: UnitBit) {}
+ }
+ 
+export type Actions = | InitUnit | UpdateUnit 
+| ListUnit

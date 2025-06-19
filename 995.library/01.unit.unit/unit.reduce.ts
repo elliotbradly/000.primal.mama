@@ -13,6 +13,9 @@ export function reducer(model: UnitModel = new UnitModel(), act: Act.Actions,  s
  case Act.INIT_UNIT:
  return Buzz.initUnit(clone(model), act.bale, state);
 
+case Act.LIST_UNIT:
+ return Buzz.listUnit(clone(model), act.bale, state);
+ 
  default:
  return model;
  }

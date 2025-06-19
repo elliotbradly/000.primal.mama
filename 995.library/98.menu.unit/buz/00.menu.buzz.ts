@@ -1,6 +1,7 @@
 import * as ActMnu from "../menu.action";
 
 import * as ActLib from "../../00.library.unit/library.action";
+import * as ActUnt from "../../01.unit.unit/unit.action";
 
 import * as ActClc from "../../97.collect.unit/collect.action";
 
@@ -50,7 +51,7 @@ export const initMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
 export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
-  lst = [ActMnu.CONTROL_MENU, ActMnu.TIME_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU, ActLib.COUNT_LIBRARY, ActLib.UPDATE_LIBRARY, ActLib.LIST_LIBRARY]
+  lst = [ActMnu.CONTROL_MENU, ActMnu.TIME_MENU, ActMnu.SPACE_MENU, ActMnu.PIXEL_MENU, ActLib.COUNT_LIBRARY, ActUnt.UPDATE_UNIT, ActLib.UPDATE_LIBRARY, ActLib.LIST_LIBRARY]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -59,9 +60,29 @@ export const updateMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
 
   switch (src) {
 
-    case ActLib.COUNT_LIBRARY:
-      var countBit = await ste.hunt(ActLib.COUNT_LIBRARY, {})
+    case ActUnt.UPDATE_UNIT:
+
+      bit = await ste.hunt(ActLib.LIST_LIBRARY, {})
+      lst = bit.libBit.lst
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
+      bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
+      src = bit.chcBit.src;
+
+      bit = await ste.hunt(ActUnt.LIST_UNIT, { src })
+      lst = bit.untBit.lst
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
+      bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
+      idx = bit.chcBit.src;
+
+      var countBit = await ste.hunt(ActUnt.UPDATE_UNIT, { idx, src })
       bit = await ste.hunt(ActMnu.PRINT_MENU, countBit)
+      break;
+
+    case ActLib.LIST_LIBRARY:
+      var bit = await ste.hunt(ActLib.LIST_LIBRARY, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
     case ActLib.LIST_LIBRARY:
