@@ -9,6 +9,8 @@ import * as ActLib from "../library.action";
 import * as ActVrt from "../../act/vurt.action";
 import * as ActDsk from "../../act/disk.action";
 import * as ActPvt from "../../act/pivot.action";
+import * as ActCns from "../../83.console.unit/console.action";
+
 import { glob } from "fs";
 
 var bit, val, idx, dex, lst, dat;
@@ -45,9 +47,149 @@ export const testLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State
 
 export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
 
-    debugger
+    var FS = require("fs-extra");
+    var doT = require("dot");
+    var S = require("string");
 
+    var title = "995.library";
+    var file = "./data/redux/BEE.txt";
+    var fileFin = "./data/redux/BEE.ts";
 
+    title = bal.src
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    var list = FS.readdirSync("./" + title);
+    var lineList = FS.readFileSync(file).toString().split("\n");
+
+    var out = [];
+    var dirList = [];
+
+    var itemList = [];
+
+    list.forEach(async (a, b) => {
+        list[b] = "./" + title + "/" + a;
+
+        if (FS.lstatSync(list[b]).isDirectory()) {
+            if (S(list[b]).contains("unit") == false) return;
+
+            var directory = list[b] + "/";
+            var element = a.split(".")[1];
+
+         
+
+            var unitName = capitalizeFirstLetter(element);
+
+            var unitImportSrc = "./" + a + "/" + element + ".unit";
+            var unitImportSte = "import " + unitName + 'Unit from "' + unitImportSrc + '";';
+
+            var faceImportSrc = "./" + a + "/fce/" + element + ".interface";
+            var faceImportSte = "import " + unitName + ' from "' + faceImportSrc + '";';
+
+            var modlImportSrc = "./" + a + "/" + element + ".model";
+            var modlImportSte = "import { " + unitName + 'Model } from "' + modlImportSrc + '";';
+
+            var redcImportSrc = "./" + a + "/" + element + ".reduce";
+            var redcImportSte = "import * as reduceFrom" + unitName + ' from "' + redcImportSrc + '";';
+
+            var reduced = element + " : reduceFrom" + unitName + ".reducer";
+            var model = element + " : " + unitName + " = new " + unitName + "Model();";
+
+            var item = {
+                model,
+                reduced,
+                redcI: redcImportSte,
+                modlI: modlImportSte,
+                facI: faceImportSte,
+                untI: unitImportSte,
+                unitName,
+                element,
+            };
+
+            itemList.push(item);
+        }
+    });
+
+    var unitImports = "";
+    itemList.forEach((a) => {
+        unitImports += a.untI + "\n";
+    });
+
+    var faceImports = "";
+    itemList.forEach((a) => {
+        faceImports += a.facI + "\n";
+        faceImports += a.modlI + "\n";
+    });
+
+    var unitListNom = [];
+    itemList.forEach((a) => {
+        unitListNom.push(a.unitName + "Unit");
+    });
+
+    var unitList = JSON.stringify(unitListNom) + ";";
+    unitList = S(unitList).replaceAll('"', "");
+
+    var reduceImports = "";
+    itemList.forEach((a) => {
+        reduceImports += a.redcI + "\n";
+    });
+
+    var reduceList = "";
+    itemList.forEach((a, b) => {
+        //if (b == reduceList.length - 1) return;
+        reduceList += a.reduced + ", \n";
+    });
+
+    //reduceList += itemList[itemList.length - 1].reduced + "\n";
+
+    var modelList = "";
+    itemList.forEach((a, b) => {
+        modelList += a.model + "\n";
+    });
+
+    var gel = {
+        unitImports,
+        faceImports,
+        unitList,
+        reduceImports,
+        reduceList,
+        modelList,
+    };
+
+    var writeLine = [];
+
+    lineList.forEach(async(a, b) => {
+        
+  
+        if (S(a).contains("//")) return;
+
+        var doTCompiled = doT.template(a);
+        var outLine = doTCompiled(gel);
+        
+        writeLine.push(outLine);
+    });
+
+    writeLine.forEach( async (a) => {
+        bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "line : " + a })
+    });
+
+    var finFile = writeLine.join("\n");
+
+    FS.ensureFileSync(fileFin);
+
+    var endLoc = "./" + title + "/BEE.ts";
+
+    
+    finFile
+    
+
+    FS.writeFileSync(endLoc, finFile);
+
+    bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "writing " + endLoc })
+
+    
     bal.slv({ libBit: { idx: "update-library" } });
     return cpy;
 };

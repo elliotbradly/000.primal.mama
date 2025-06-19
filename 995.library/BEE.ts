@@ -1,6 +1,7 @@
 import Model from "./99.core/interface/model.interface";
 
 import LibraryUnit from "./00.library.unit/library.unit";
+import UnitUnit from "./01.unit.unit/unit.unit";
 import TerminalUnit from "./80.terminal.unit/terminal.unit";
 import GridUnit from "./81.grid.unit/grid.unit";
 import CanvasUnit from "./82.canvas.unit/canvas.unit";
@@ -19,6 +20,8 @@ import BusUnit from "./99.bus.unit/bus.unit";
 
 import Library from "./00.library.unit/fce/library.interface";
 import { LibraryModel } from "./00.library.unit/library.model";
+import Unit from "./01.unit.unit/fce/unit.interface";
+import { UnitModel } from "./01.unit.unit/unit.model";
 import Terminal from "./80.terminal.unit/fce/terminal.interface";
 import { TerminalModel } from "./80.terminal.unit/terminal.model";
 import Grid from "./81.grid.unit/fce/grid.interface";
@@ -49,9 +52,10 @@ import Bus from "./99.bus.unit/fce/bus.interface";
 import { BusModel } from "./99.bus.unit/bus.model";
 
 
-export const list: Array<any> = [LibraryUnit,TerminalUnit,GridUnit,CanvasUnit,ConsoleUnit,InputUnit,ChoiceUnit,ContainerUnit,GraphicUnit,HexagonUnit,SpriteUnit,TextUnit,CollectUnit,MenuUnit,BusUnit];
+export const list: Array<any> = [LibraryUnit,UnitUnit,TerminalUnit,GridUnit,CanvasUnit,ConsoleUnit,InputUnit,ChoiceUnit,ContainerUnit,GraphicUnit,HexagonUnit,SpriteUnit,TextUnit,CollectUnit,MenuUnit,BusUnit];
 
 import * as reduceFromLibrary from "./00.library.unit/library.reduce";
+import * as reduceFromUnit from "./01.unit.unit/unit.reduce";
 import * as reduceFromTerminal from "./80.terminal.unit/terminal.reduce";
 import * as reduceFromGrid from "./81.grid.unit/grid.reduce";
 import * as reduceFromCanvas from "./82.canvas.unit/canvas.reduce";
@@ -70,6 +74,7 @@ import * as reduceFromBus from "./99.bus.unit/bus.reduce";
 
 export const reducer: any = {
  library : reduceFromLibrary.reducer, 
+unit : reduceFromUnit.reducer, 
 terminal : reduceFromTerminal.reducer, 
 grid : reduceFromGrid.reducer, 
 canvas : reduceFromCanvas.reducer, 
@@ -90,6 +95,7 @@ bus : reduceFromBus.reducer,
 export default class UnitData implements Model {
  
  library : Library = new LibraryModel();
+unit : Unit = new UnitModel();
 terminal : Terminal = new TerminalModel();
 grid : Grid = new GridModel();
 canvas : Canvas = new CanvasModel();

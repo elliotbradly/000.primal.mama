@@ -22,7 +22,6 @@ import * as Color from '../../val/console-color';
 
 import * as SHAPE from '../../val/shape'
 import * as FOCUS from "../../val/focus";
-import { list } from "995.library/BEE";
 
 var bit, lst, dex, idx, dat, src, val;
 
