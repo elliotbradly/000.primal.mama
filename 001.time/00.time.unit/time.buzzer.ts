@@ -1,10 +1,3 @@
 export { initTime } from "./buz/time.buzz";
 export { updateTime } from "./buz/time.buzz";
-export { nowTime } from "./buz/time.buzz";
-export { formatTime } from "./buz/time.buzz";
-export { readTime  } from "./buz/time.buzz";
-export { writeTime  } from "./buz/time.buzz";
-export { createTime  } from "./buz/time.buzz";
-export { compareTime  } from "./buz/time.buzz";
-export { reduceTime  } from "./buz/time.buzz";
 export { testTime  } from "./buz/time.buzz";

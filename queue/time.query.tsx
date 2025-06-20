@@ -29,7 +29,9 @@ export function useWriteClock(idx, clk) {
     })
 }
 
-export function useReadClock(idx) {
+export async function useReadClock(idx, delay) {
+
+    
     return useQuery({
         queryFn: async () => {
 

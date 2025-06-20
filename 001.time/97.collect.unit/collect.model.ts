@@ -3,7 +3,7 @@ import Collect from "./fce/collect.interface";
 import CollectBit from "./fce/collect.interface";
 
 export class CollectModel implements Collect {
- idx:string = '23.11.14';
+ idx:string;
  caboodleBitList: CaboodleBit[] = [];
  caboodleBits: any = {};
 }

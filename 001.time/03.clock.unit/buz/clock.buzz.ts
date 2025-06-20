@@ -124,15 +124,21 @@ export const updateClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
 
 export const readClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
+  
   var slv = bal.slv;
   if (bal.idx == null) bal.idx = "hex00";
   bit = await ste.hunt(ActCol.READ_COLLECT, { idx: bal.idx, src: bal.src, bit: ActClk.CREATE_CLOCK });
+  debugger
+
+
   if (slv != null) slv({ clkBit: { idx: "read-clock", dat: bit.clcBit.dat } });
 
   return cpy;
 };
 
 export const writeClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
+
+  debugger
 
   if (bal.dat != null) {
     bit = await ste.hunt(ActClk.UPDATE_CLOCK, { idx: bal.idx, dat: bal.dat });

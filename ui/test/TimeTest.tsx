@@ -5,19 +5,20 @@ import { Box, Title, Text, Stack, Container } from '@mantine/core';
 
 import TimeInit from './timeTest/TimeInit'
 import ClockWrite from './timeTest/ClockWrite'
-import ClockRead from './timeTest/ClockRead'
 import ClockList from './timeTest/ClockList'
+import ClockReadDisplay from './timeTest/ClockReadDisplay'
+
+import * as ActClk from "../../001.time/03.clock.unit/clock.action";
 
 export default function ContentsPage() {
 
 
-  var act00 = () => {
-    document.location.href = './shade/surface-test'
+  var act00 = async () => {
+    var bit = await window['TIME'](ActClk.READ_CLOCK, { idx:'clk00' })
+    alert( JSON.stringify(bit))
   }
 
-  var act01 = () => {
-    document.location.href = './solid/open-babylon'
-  }
+ 
 
 
 
@@ -41,7 +42,7 @@ export default function ContentsPage() {
           </Box>
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <ClockRead />
+            <ClockReadDisplay />
           </Box>
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
