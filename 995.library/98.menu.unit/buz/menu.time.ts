@@ -48,7 +48,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
     }
   })();
 
-  lst = [ActClk.WRITE_CLOCK, ActClk.READ_CLOCK, ActClk.LIST_CLOCK, ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
+  lst = [ActClk.WRITE_CLOCK, ActClk.READ_CLOCK, ActClk.LIST_CLOCK, ActTme.RANDOM_TIME,  ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -59,6 +59,11 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       bit = await TIME.hunt(ActTme.TEST_TIME, {})
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
+
+      case ActTme.RANDOM_TIME:
+        bit = await TIME.hunt( ActTme.RANDOM_TIME, {})
+        bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+        break;
 
     case ActClk.WRITE_CLOCK:
 

@@ -22,4 +22,11 @@ export class UpdateTime implements Action {
  constructor(public bale: TimeBit) {}
  }
  
+export const RANDOM_TIME = "[Random action] Random Time";
+ export class RandomTime implements Action {
+ readonly type = RANDOM_TIME;
+ constructor(public bale: TimeBit) {}
+ }
+ 
 export type Actions = InitTime| UpdateTime | TestTime
+| RandomTime

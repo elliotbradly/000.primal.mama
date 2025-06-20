@@ -18,6 +18,9 @@ export function reducer(model: TimeModel = new TimeModel(), act: Act.Actions, st
       return Buzz.testTime(clone(model), act.bale, state);
 
 
+case Act.RANDOM_TIME:
+ return Buzz.randomTime(clone(model), act.bale, state);
+ 
     default:
       return model;
   }

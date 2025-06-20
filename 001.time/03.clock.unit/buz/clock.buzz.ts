@@ -128,7 +128,7 @@ export const readClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
   var slv = bal.slv;
   if (bal.idx == null) bal.idx = "hex00";
   bit = await ste.hunt(ActCol.READ_COLLECT, { idx: bal.idx, src: bal.src, bit: ActClk.CREATE_CLOCK });
-  debugger
+  
 
 
   if (slv != null) slv({ clkBit: { idx: "read-clock", dat: bit.clcBit.dat } });
@@ -138,7 +138,7 @@ export const readClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
 export const writeClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
-  debugger
+  
 
   if (bal.dat != null) {
     bit = await ste.hunt(ActClk.UPDATE_CLOCK, { idx: bal.idx, dat: bal.dat });
@@ -172,6 +172,7 @@ export const removeClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
 export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
 
+  if ( bal.dat == null ) bal.dat = {}
 
   if (bal.dat.clk == null) {
 
@@ -184,6 +185,8 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
     clkBit.yrs = 3033;
 
     bal.dat.clk = clkBit
+
+    
   }
 
   var clk = bal.dat.clk;
