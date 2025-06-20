@@ -29,8 +29,6 @@ import * as ActPut from "../../84.input.unit/input.action";
 import * as ActGrd from "../../81.grid.unit/grid.action";
 import * as ActCns from "../../83.console.unit/console.action";
 
-
-
 var bit, lst, dex, idx, dat, src;
 
 var TIME;
@@ -50,11 +48,10 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
     }
   })();
 
-  lst = [ActClk.WRITE_CLOCK, ActClk.LIST_CLOCK, ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
+  lst = [ActClk.WRITE_CLOCK, ActClk.READ_CLOCK, ActClk.LIST_CLOCK, ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
-
   src = bit.chcBit.src;
 
   switch (src) {
@@ -98,6 +95,23 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       bit = await ste.hunt(ActTrm.CLEAR_TERMINAL, {})
 
       bit = await TIME.hunt(ActClk.WRITE_CLOCK, { idx, clk: { day, hrs, min, mth, sec, yrs } })
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+      break;
+
+    case ActClk.READ_CLOCK:
+      bit = await TIME.hunt(ActClk.LIST_CLOCK, {})
+      lst = bit.clkBit.lst
+
+      if (lst.length == 0) {
+        bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---no clock present" })
+        break
+      }
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
+      bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
+      src = bit.chcBit.src;
+
+      bit = await TIME.hunt(ActClk.READ_CLOCK, { idx: src })
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
