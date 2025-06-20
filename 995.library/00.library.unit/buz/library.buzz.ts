@@ -79,7 +79,7 @@ export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Sta
             var directory = list[b] + "/";
             var element = a.split(".")[1];
 
-         
+
 
             var unitName = capitalizeFirstLetter(element);
 
@@ -161,18 +161,18 @@ export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Sta
 
     var writeLine = [];
 
-    lineList.forEach(async(a, b) => {
-        
-  
+    lineList.forEach(async (a, b) => {
+
+
         if (S(a).contains("//")) return;
 
         var doTCompiled = doT.template(a);
         var outLine = doTCompiled(gel);
-        
+
         writeLine.push(outLine);
     });
 
-    writeLine.forEach( async (a) => {
+    writeLine.forEach(async (a) => {
         bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "line : " + a })
     });
 
@@ -182,15 +182,15 @@ export const updateLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Sta
 
     var endLoc = "./" + title + "/BEE.ts";
 
-    
+
     finFile
-    
+
 
     FS.writeFileSync(endLoc, finFile);
 
     bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "writing " + endLoc })
 
-    
+
     bal.slv({ libBit: { idx: "update-library" } });
     return cpy;
 };
@@ -240,7 +240,7 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
 
     output
 
-    const allowedExtensions = new Set(['.ts', '.js', '.mjs', '.cjs']);
+    const allowedExtensions = new Set(['.ts', '.js', '.mjs', '.cjs', '.tsx']);
 
     const paths = output.filter(filePath => {
         const extension = path.extname(filePath).toLowerCase(); // Ensure case-insensitivity for extension

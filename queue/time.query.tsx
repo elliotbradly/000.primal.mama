@@ -16,6 +16,18 @@ export function useInitTime() {
     })
 }
 
+export function useRandomTime(idx) {
+
+    return useQuery({
+        queryFn: async () => {
+
+            var bit = await window['TIME'](ActTme.RANDOM_TIME, { idx })
+            return bit
+
+        },
+        queryKey: ['randomTime']
+    })
+}
 
 export function useWriteClock(idx, clk) {
     return useQuery({
@@ -29,9 +41,8 @@ export function useWriteClock(idx, clk) {
     })
 }
 
-export async function useReadClock(idx, delay) {
+export async function useReadClock(idx) {
 
-    
     return useQuery({
         queryFn: async () => {
 
@@ -42,6 +53,8 @@ export async function useReadClock(idx, delay) {
         queryKey: ['readClock']
     })
 }
+
+
 
 export function useListClock() {
     return useQuery({
