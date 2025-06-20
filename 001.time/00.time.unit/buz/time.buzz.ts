@@ -27,14 +27,14 @@ export const updateTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
 
 export const randomTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
 
-  if ( bal.idx == null ) bal.idx = 'clk00';
+  if (bal.idx == null) bal.idx = 'clk00';
 
-  bit = await ste.hunt( ClkAct.READ_CLOCK, {idx:bal.idx} )
+  bit = await ste.hunt(ClkAct.READ_CLOCK, { idx: bal.idx })
 
   var data = bit.clkBit.dat
 
   var year = data.yrs;
-  if ( year == null ) year = 1978;
+  if (year == null) year = 1978;
 
   if (typeof year !== 'number' || isNaN(year) || year < 1 || year > 9999) {
     // console.error("Invalid year provided. Please provide a valid four-digit year.");
@@ -77,6 +77,12 @@ export const randomTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
   var itm = chance.pickone(sundaysInYear);
   var now = itm.c;
 
+  bit = await ste.hunt(ClkAct.ADAPT_CLOCK, { dat: now })
+
+  var clk = bit.clkBit.dat;
+  
+
+  bit = await ste.hunt(ClkAct.WRITE_CLOCK, { idx:bal.idx, dat: {clk} })
   debugger
 
   bal.slv({ tmeBit: { idx: 'update-time', dat: itm } });

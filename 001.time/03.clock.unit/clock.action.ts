@@ -63,6 +63,12 @@ export const TEST_CLOCK = "[Test action] Test Clock";
  constructor(public bale: ClockBit) {}
  }
  
+export const ADAPT_CLOCK = "[Adapt action] Adapt Clock";
+ export class AdaptClock implements Action {
+ readonly type = ADAPT_CLOCK;
+ constructor(public bale: ClockBit) {}
+ }
+ 
 export type Actions = | InitClock | UpdateClock 
 | ReadClock
 | WriteClock
@@ -72,3 +78,4 @@ export type Actions = | InitClock | UpdateClock
 | BlockClock
 | ListClock
 | TestClock
+| AdaptClock

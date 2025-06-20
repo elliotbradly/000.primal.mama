@@ -8,3 +8,4 @@ export { deleteClock  } from "./buz/clock.buzz";
 export { blockClock  } from "./buz/clock.buzz";
 export { listClock  } from "./buz/clock.buzz";
 export { testClock  } from "./buz/clock.buzz";
+export { adaptClock  } from "./buz/clock.buzz";
