@@ -8,6 +8,19 @@ export const initCollect = (cpy: CollectModel, bal: CollectBit, ste: State) => {
 };
 
 export const updateCollect = (cpy: CollectModel, bal: CollectBit, ste: State) => {
+
+      var type = bal.bit.split(' ').slice(-1).pop().toLowerCase();
+
+      if (cpy.caboodleBits[type] == null) createCollect(cpy, { idx: type }, ste)
+
+      if ((bal.bit == null)) bal.slv({ rskBit: { idx: "write-collect-err", src: 'no-bit' } });
+
+      var cabBit: CaboodleBit = cpy.caboodleBitList[cpy.caboodleBits[type]]
+      dex = cabBit.bits['clk00']
+      cabBit.bitList[dex] = bal.dat
+
+      bal.slv({ clcBit: { idx: "update-collect", dat: cabBit.bitList[dex] } });
+
       return cpy;
 };
 

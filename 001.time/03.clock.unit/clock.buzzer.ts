@@ -9,3 +9,4 @@ export { blockClock  } from "./buz/clock.buzz";
 export { listClock  } from "./buz/clock.buzz";
 export { testClock  } from "./buz/clock.buzz";
 export { adaptClock  } from "./buz/clock.buzz";
+export { refreshClock  } from "./buz/clock.buzz";

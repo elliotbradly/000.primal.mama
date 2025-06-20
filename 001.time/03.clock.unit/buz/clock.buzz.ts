@@ -6,7 +6,6 @@ import { DateTime } from "luxon";
 import { BlockBit } from "../fce/blockbit";
 
 //pnpm i --save-dev @types/luxon
-
 import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActClk from "../clock.action";
 
@@ -16,6 +15,60 @@ export const initClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
   debugger
   return cpy;
 };
+
+export const refreshClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
+
+  var clk = bal.dat.clk;
+
+  var dateObject = {
+    day: 0,
+    year: 0,
+    hour: 0,
+    month: 0,
+    minute: 0,
+    second: 0,
+  }
+
+  if (clk.day != null) dateObject.day = clk.day;
+  if (clk.yrs != null) dateObject.year = clk.yrs;
+  if (clk.hrs != null) dateObject.hour = clk.hrs;
+  if (clk.mth != null) dateObject.month = clk.mth;
+  if (clk.min != null) dateObject.minute = clk.min;
+  if (clk.sec != null) dateObject.second = clk.sec;
+
+  dateObject
+
+  for (var key in dateObject) {
+    var itm = dateObject[key]
+    if (itm == 0) delete dateObject[key];
+  }
+
+  dateObject
+
+  var dt = DateTime.fromObject(dateObject)
+
+  var dat: TicBit = { idx: clk.idx, src: null };
+  dat.bit = dt;
+
+  dat.src = dt.toISO()
+  dat.qtr = dt.quarter;
+  dat.yrs = dt.year;
+  dat.mth = dt.month;
+  dat.wek = dt.weekNumber;
+  dat.day = dt.day;
+  dat.sec = dt.second;
+  dat.min = dt.minute;
+
+  dat.frm = dt.toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+
+  dat.now = dt.valueOf();
+  dat.val = 0;
+  dat.pst = 0;
+
+  bal.slv({ clkBit: { idx: "refresh-clock", dat } });
+  return cpy;
+};
+
 
 export const updateClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
@@ -34,7 +87,16 @@ export const updateClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
 
   now
 
-  debugger
+  bit = await ste.hunt(ActClk.REFRESH_CLOCK, { dat: { clk: now } })
+  dat = bit.clkBit.dat
+
+  //bit = await ste.hunt(ActCol.UPDATE_COLLECT, { idx: bal.idx, dat, bit: ActClk.CREATE_CLOCK });
+  //var data = bit.clcBit.dat
+
+  bal.slv({ clkBit: { idx: "update-clock", dat: dat } });
+
+
+
 
   //var ticDat: TicBit = bit.clkBit.dat
   //var dt = ticDat.bit;
@@ -77,7 +139,7 @@ export const updateClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
   // ticDat.now = dt.valueOf();
   // ticDat.bit = dt;
 
-  bal.slv({ clkBit: { idx: "update-clock", dat: {} } });
+
 
   //if (dat != null) {
 
@@ -149,8 +211,6 @@ export const readClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
 export const writeClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
-
-
   if (bal.dat != null) {
     bit = await ste.hunt(ActClk.UPDATE_CLOCK, { idx: bal.idx, dat: bal.dat });
     bal.dat = bit.clkBit.dat
@@ -201,8 +261,12 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
   }
 
   var clk = bal.dat.clk;
+  clk.idx = bal.idx
 
   for (var key in clk) {
+
+    if (key == 'idx') continue
+
     if (clk[key] == '' || clk[key] == null) clk[key] = 0
     clk[key] = Number(clk[key])
   }
@@ -210,51 +274,13 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
   clk
 
 
-  var dateObject = {
-    day: 0,
-    year: 0,
-    hour: 0,
-    month: 0,
-    minute: 0,
-    second: 0,
-  }
 
-  if (clk.day != null) dateObject.day = clk.day;
-  if (clk.yrs != null) dateObject.year = clk.yrs;
-  if (clk.hrs != null) dateObject.hour = clk.hrs;
-  if (clk.mth != null) dateObject.month = clk.mth;
-  if (clk.min != null) dateObject.minute = clk.min;
-  if (clk.sec != null) dateObject.second = clk.sec;
+  bit = await ste.hunt(ActClk.REFRESH_CLOCK, { dat: { clk } })
 
-  dateObject
+  dat = bit.clkBit.dat
 
-  for (var key in dateObject) {
-    var itm = dateObject[key]
-    if (itm == 0) delete dateObject[key];
-  }
 
-  dateObject
-
-  var dt = DateTime.fromObject(dateObject)
-
-  var dat: TicBit = { idx: bal.idx, src: null };
-  dat.bit = dt;
-
-  dat.src = dt.toISO()
-  dat.qtr = dt.quarter;
-  dat.yrs = dt.year;
-  dat.mth = dt.month;
-  dat.wek = dt.weekNumber;
-  dat.day = dt.day;
-  dat.sec = dt.second;
-  dat.min = dt.minute;
-
-  dat.frm = dt.toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
-
-  dat.now = dt.valueOf();
-  dat.val = 0;
-  dat.pst = 0;
-
+  bal.slv({ clkBit: { idx: "create-clock", dat: dat } });
 
   //for (var key in bal.dat) {
   //  if (key == 'dat') continue
@@ -300,7 +326,7 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
 
   //dat.src = date.toFormat("MM-dd-yyyy, hh:mm:ss a");
 
-  bal.slv({ clkBit: { idx: "create-clock", dat: dat } });
+
   return cpy;
 };
 

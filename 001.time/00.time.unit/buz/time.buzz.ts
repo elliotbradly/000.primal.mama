@@ -2,9 +2,7 @@ import { TimeModel } from '../time.model';
 import TimeBit from '../fce/time.bit';
 import State from '../../99.core/state';
 
-
 import * as ClkAct from '../../03.clock.unit/clock.action';
-
 
 import { DateTime } from 'luxon';
 
@@ -81,11 +79,9 @@ export const randomTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
 
   var clk = bit.clkBit.dat;
   
-
   bit = await ste.hunt(ClkAct.WRITE_CLOCK, { idx:bal.idx, dat: {clk} })
-  debugger
-
-  bal.slv({ tmeBit: { idx: 'update-time', dat: itm } });
+  
+  bal.slv({ tmeBit: { idx: 'random-time', dat: bit.clkBit.dat } });
   return cpy;
 };
 

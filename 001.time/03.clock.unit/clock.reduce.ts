@@ -40,6 +40,9 @@ case Act.TEST_CLOCK:
 case Act.ADAPT_CLOCK:
  return Buzz.adaptClock(clone(model), act.bale, state);
  
+case Act.REFRESH_CLOCK:
+ return Buzz.refreshClock(clone(model), act.bale, state);
+ 
  default:
  return model;
  }

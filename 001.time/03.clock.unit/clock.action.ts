@@ -69,6 +69,12 @@ export const ADAPT_CLOCK = "[Adapt action] Adapt Clock";
  constructor(public bale: ClockBit) {}
  }
  
+export const REFRESH_CLOCK = "[Refresh action] Refresh Clock";
+ export class RefreshClock implements Action {
+ readonly type = REFRESH_CLOCK;
+ constructor(public bale: ClockBit) {}
+ }
+ 
 export type Actions = | InitClock | UpdateClock 
 | ReadClock
 | WriteClock
@@ -79,3 +85,4 @@ export type Actions = | InitClock | UpdateClock
 | ListClock
 | TestClock
 | AdaptClock
+| RefreshClock
