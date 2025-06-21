@@ -11,12 +11,16 @@ import * as ActVrt from "../../act/vurt.action";
 import * as ActDsk from "../../act/disk.action";
 import * as ActPvt from "../../act/pivot.action";
 
-
-import { glob } from "fs";
-
 var bit, val, idx, dex, lst, dat;
 
 export const initLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
+
+    global.CONTROL = null 
+    global.TIME = null
+    global.SPACE = null
+    global.SHADE = null 
+    global.SOLID = null  
+    global.PIXEL = null
 
     //if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActLib, ActOlm, ActPmt] , dat: bal.dat, src: bal.src })
     //if (bal.val == 1) patch(ste, ActMnu.INIT_MENU, bal);

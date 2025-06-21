@@ -19,6 +19,9 @@ case Act.OPEN_TURN:
 case Act.READ_TURN:
  return Buzz.readTurn(clone(model), act.bale, state);
  
+case Act.START_TURN:
+ return Buzz.startTurn(clone(model), act.bale, state);
+ 
  default:
  return model;
  }

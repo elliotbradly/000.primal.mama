@@ -1,4 +1,8 @@
 
+import { TurnModel } from "../turn.model";
+import TurnBit from "../fce/turn.bit";
+import State from "../../99.core/state";
+
 
 import * as ActTrn from "../../01.turn.unit/turn.action";
 
@@ -29,9 +33,9 @@ export const updateTurn = async (cpy: TurnModel, bal: TurnBit, ste: State) => {
 
   var diff = bit.blkBit.dat.diff
 
-  if ( diff == 0 ){
+  if (diff == 0) {
 
-    bal.slv({ trnBit: { idx: "update-turn", dat:bit } });
+    bal.slv({ trnBit: { idx: "update-turn", dat: bit } });
     return cpy
   }
 
@@ -39,33 +43,31 @@ export const updateTurn = async (cpy: TurnModel, bal: TurnBit, ste: State) => {
 
   //autho code to maniuplate
 
-  bal.slv({ trnBit: { idx: "update-turn", dat:bit } });
+  bal.slv({ trnBit: { idx: "update-turn", dat: bit } });
   return cpy;
 };
 
 
 
-export const openTurn = async (cpy: TurnModel, bal:TurnBit, ste: State) => {
+export const openTurn = async (cpy: TurnModel, bal: TurnBit, ste: State) => {
 
-
-
-  bit = await ste.bus(ActBlk.OPEN_BLOCK, { idx: 'blk00' })
-
-
-  bal.slv({ trnBit: { idx: "open-turn", dat:bit } });
+  bal.slv({ trnBit: { idx: "open-turn", dat: bit } });
 
   return cpy;
-  };
+};
 
 
 
 
-export const readTurn = (cpy: TurnModel, bal:TurnBit, ste: State) => {
- debugger
- return cpy;
- };
+export const readTurn = (cpy: TurnModel, bal: TurnBit, ste: State) => {
+  debugger
+  return cpy;
+};
 
 
-import { TurnModel } from "../turn.model";
-import TurnBit from "../fce/turn.bit";
-import State from "../../99.core/state";
+export const startTurn = (cpy: TurnModel, bal: TurnBit, ste: State) => {
+
+  bal.slv({ trnBit: { idx: "start-turn", dat: bit } });
+
+  return cpy;
+};

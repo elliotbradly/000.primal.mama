@@ -27,6 +27,13 @@ export const READ_TURN = "[Read action] Read Turn";
  constructor(public bale: TurnBit) {}
  }
  
+export const START_TURN = "[Start action] Start Turn";
+ export class StartTurn implements Action {
+ readonly type = START_TURN;
+ constructor(public bale: TurnBit) {}
+ }
+ 
 export type Actions = | InitTurn | UpdateTurn 
 | OpenTurn
 | ReadTurn
+| StartTurn
