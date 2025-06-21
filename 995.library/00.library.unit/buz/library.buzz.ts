@@ -1,3 +1,4 @@
+
 import { LibraryModel } from "../library.model";
 import LibraryBit from "../fce/library.bit";
 import State from "../../99.core/state";
@@ -13,13 +14,16 @@ import * as ActPvt from "../../act/pivot.action";
 
 var bit, val, idx, dex, lst, dat;
 
+var exec = require('child_process').exec;
+
+
 export const initLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
 
-    global.CONTROL = null 
+    global.CONTROL = null
     global.TIME = null
     global.SPACE = null
-    global.SHADE = null 
-    global.SOLID = null  
+    global.SHADE = null
+    global.SOLID = null
     global.PIXEL = null
 
     //if (bal.dat != null) bit = await ste.hunt(ActBus.INIT_BUS, { idx: cpy.idx, lst: [ActLib, ActOlm, ActPmt] , dat: bal.dat, src: bal.src })
@@ -306,6 +310,39 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
     }
 
     bal.slv({ libBit: { idx: "count-library", val: fin } });
+    return cpy;
+};
+
+export const devLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State) => {
+
+    var focus = `powershell -NoProfile -Command "$proc = Get-Process -Name 'chrome' | Where-Object {$_.MainWindowHandle -ne 0} | Select-Object -First 1; if ($proc) { $sig = '[DllImport(\"user32.dll\")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow); [DllImport(\"user32.dll\")] public static extern bool SetForegroundWindow(IntPtr hWnd);'; Add-Type -MemberDefinition $sig -Name NativeMethods -Namespace Win32; [Win32.NativeMethods]::ShowWindowAsync($proc.MainWindowHandle, 9) | Out-Null; [Win32.NativeMethods]::SetForegroundWindow($proc.MainWindowHandle) | Out-Null; Write-Host 'Chrome brought to front.' } else { Write-Host 'Chrome process not found or no main window.' }"`
+
+    exec('npm run dev', async (err, stdout, stderr) => {
+        if (err) {
+            console.error(`exec error: ${err}`);
+        }
+
+        ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "--" + stdout })
+
+    })
+
+    setTimeout(async () => {
+
+        await (async () => {
+            try {
+                await new Promise<void>((resolve, reject) => exec(focus, err => err ? reject(err) : resolve()));
+
+                bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "dev library" });
+            } catch (err) {
+                console.error(`exec error: ${err}`);
+                throw err;
+            }
+        })();
+
+    }, 3333)
+
+
+    bal.slv({ libBit: { idx: "dev-library", val: 0 } });
     return cpy;
 };
 

@@ -22,6 +22,9 @@ case Act.COUNT_LIBRARY:
 case Act.LIST_LIBRARY:
  return Buzz.listLibrary(clone(model), act.bale, state);
  
+case Act.DEV_LIBRARY:
+ return Buzz.devLibrary(clone(model), act.bale, state);
+ 
  default:
  return model;
  }

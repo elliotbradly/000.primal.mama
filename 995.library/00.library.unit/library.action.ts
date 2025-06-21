@@ -33,6 +33,13 @@ export const LIST_LIBRARY = "[List action] List Library";
  constructor(public bale: LibraryBit) {}
  }
  
+export const DEV_LIBRARY = "[Dev action] Dev Library";
+ export class DevLibrary implements Action {
+ readonly type = DEV_LIBRARY;
+ constructor(public bale: LibraryBit) {}
+ }
+ 
 export type Actions = | InitLibrary | UpdateLibrary | TestLibrary 
 | CountLibrary
 | ListLibrary
+| DevLibrary

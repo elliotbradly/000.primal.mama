@@ -1,7 +1,7 @@
 import * as ActMnu from "../menu.action";
 const path = require('path');
-//import * as ActOai from "../../02.openai.unit/openai.action";
 var exec = require('child_process').exec;
+
 import * as ActPxl from "../../act/pixel.action";
 
 //import * as ActFoc from "../../01.focus.unit/focus.action";
