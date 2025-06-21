@@ -7,7 +7,6 @@ export default interface CollectBit {
  dat?:any;
  bit?:any;
  slv?:Function;
- lst?:any;
 }
 
 

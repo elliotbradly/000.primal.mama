@@ -14,4 +14,3 @@ export { formatCollect  } from "./buz/collect.buzz";
 export { dotCollect  } from "./buz/collect.buzz";
 export { listCollect  } from "./buz/collect.buzz";
 export { hashCollect  } from "./buz/collect.buzz";
-export { selectCollect  } from "./buz/collect.buzz";

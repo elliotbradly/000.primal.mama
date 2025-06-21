@@ -100,12 +100,6 @@ export const HASH_COLLECT = "[Hash action] Hash Collect";
  readonly type = HASH_COLLECT;
  constructor(public bale: CollectBit) {}
  }
-
- export const SELECT_COLLECT = "[Hash action] Select Collect";
- export class SelectCollect implements Action {
- readonly type = SELECT_COLLECT;
- constructor(public bale: CollectBit) {}
- }
  
 export type Actions = | InitCollect | UpdateCollect 
 | ReadCollect
@@ -122,4 +116,3 @@ export type Actions = | InitCollect | UpdateCollect
 | DotCollect
 | ListCollect
 | HashCollect
-| SelectCollect

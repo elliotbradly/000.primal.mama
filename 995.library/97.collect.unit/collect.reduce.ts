@@ -49,15 +49,12 @@ export function reducer(model: CollectModel = new CollectModel(), act: Act.Actio
       case Act.DOT_COLLECT:
          return Buzz.dotCollect(clone(model), act.bale, state);
 
-      case Act.LIST_COLLECT:
-         return Buzz.listCollect(clone(model), act.bale, state);
-
-      case Act.HASH_COLLECT:
-         return Buzz.hashCollect(clone(model), act.bale, state);
-
-      case Act.SELECT_COLLECT:
-         return Buzz.selectCollect(clone(model), act.bale, state);
-
+case Act.LIST_COLLECT:
+ return Buzz.listCollect(clone(model), act.bale, state);
+ 
+case Act.HASH_COLLECT:
+ return Buzz.hashCollect(clone(model), act.bale, state);
+ 
       default:
          return model;
    }
