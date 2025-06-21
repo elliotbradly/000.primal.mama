@@ -122,7 +122,7 @@ export const writeCollect = async (
     cabBit.bitList[cabBit.bits[bal.idx]] = cabDat;
     dat = cabDat;
 
-    debugger
+    
 
     //!!! SUPER IMPORTANT
   }

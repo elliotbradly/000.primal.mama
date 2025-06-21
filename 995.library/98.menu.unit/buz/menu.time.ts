@@ -91,6 +91,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       src = bit.chcBit.src;
 
       bit = await TIME.hunt(ActPrg.UPDATE_PROGRESS, { idx, src })
+      debugger
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
