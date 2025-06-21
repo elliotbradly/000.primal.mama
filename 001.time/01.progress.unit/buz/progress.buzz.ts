@@ -9,6 +9,8 @@ export const initProgress = (cpy: ProgressModel, bal: ProgressBit, ste: State) =
 
 export const updateProgress = (cpy: ProgressModel, bal: ProgressBit, ste: State) => {
 
+    
+
     debugger
     return cpy;
 };

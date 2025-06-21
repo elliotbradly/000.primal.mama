@@ -8,6 +8,7 @@ import State from "../../99.core/state";
 
 import * as ActTme from "../../act/time.action";
 import * as ActClk from "../../act/clock.action";
+import * as ActPrg from "../../act/progress.action";
 
 
 import * as Grid from '../../val/grid';
@@ -48,7 +49,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
     }
   })();
 
-  lst = [ActClk.WRITE_CLOCK, ActClk.READ_CLOCK, ActClk.LIST_CLOCK, ActTme.RANDOM_TIME,  ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
+  lst = [ActClk.WRITE_CLOCK, ActClk.READ_CLOCK, ActPrg.UPDATE_PROGRESS, ActClk.LIST_CLOCK, ActTme.RANDOM_TIME, ActTme.TEST_TIME, ActMnu.UPDATE_MENU]
 
   bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
   bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -60,10 +61,43 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 
-      case ActTme.RANDOM_TIME:
-        bit = await TIME.hunt( ActTme.RANDOM_TIME, {})
-        bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
-        break;
+    case ActTme.RANDOM_TIME:
+      bit = await TIME.hunt(ActTme.RANDOM_TIME, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+      break;
+
+    case ActPrg.UPDATE_PROGRESS:
+      bit = await TIME.hunt(ActClk.LIST_CLOCK, {})
+      lst = bit.clkBit.lst
+
+      if (lst.length == 0) {
+        bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---no clock present" })
+        break
+      }
+
+      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---choose the progress amount" })
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
+      bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
+      idx = bit.chcBit.src;
+
+      bit = await TIME.hunt(ActClk.LIST_CLOCK, {})
+      lst = bit.clkBit.lst
+
+      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---choose the progress target" })
+
+      bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
+      bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
+      src = bit.chcBit.src;
+
+
+
+
+      debugger
+
+      bit = await TIME.hunt(ActPrg.UPDATE_PROGRESS, {})
+      bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
+      break;
 
     case ActClk.WRITE_CLOCK:
 
