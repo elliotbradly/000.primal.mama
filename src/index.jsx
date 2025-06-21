@@ -11,8 +11,9 @@ import  {RouteTree } from "../router/RouteTree"
 
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
-import SpaceBlock from '../base/space/block'
 import ShadeBlock from '../base/shade/block'
+import SolidBlock from '../base/solid/block'
+import SpaceBlock from '../base/space/block'
 import PixelBlock from '../base/pixel/block'
 import ControlBlock from '../base/control/block'
 import TimeBlock from '../base/time/block'
@@ -100,83 +101,7 @@ const brutalistTheme = createTheme({
     right: 3 * 2,
     minWidth: 280,
     zIndex: 5,
-  },
-  menuButton: {
-    backgroundColor: 'rgba(30, 35, 25, 0.7)',
-    backdropFilter: 'blur(4px)',
-    color: '#e8e6d7',
-    border: `1px solid ${'#50663f'}`,
-    '&:hover': {
-      backgroundColor: 'rgba(40, 45, 35, 0.8)',
-    },
-    transition: 'all 0.3s ease',
-    borderRadius: 0,
-    boxShadow: '3px 3px 10px rgba(0,0,0,0.4)',
-    justifyContent: 'flex-start',
-    padding: 1,
-    fontFamily: 'Georgia, serif',
-    letterSpacing: 1,
-  },
-  activeButton: {
-    backgroundColor: 'rgba(50, 55, 45, 0.9)',
-    borderColor: '#d1cfbf',
-    color: '#efedde',
-  },
-  swampCharacter: {
-    position: 'absolute',
-    left: '10%',
-    bottom: 0,
-    width: '40%',
-    height: '80%',
-    backgroundImage: 'linear-gradient(to bottom, transparent, rgba(26, 30, 20, 0.9))',
-    zIndex: 2,
-  },
-  characterSilhouette: {
-    position: 'absolute',
-    bottom: '5%',
-    left: '15%',
-    width: '25%',
-    height: '70%',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-    clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%)',
-    zIndex: 3,
-  },
-  deadTree: {
-    position: 'absolute',
-    right: '30%',
-    bottom: 0,
-    width: '15%',
-    height: '60%',
-    backgroundImage: 'linear-gradient(to top, rgba(26, 30, 20, 0.9), transparent)',
-    clipPath: 'polygon(50% 0%, 30% 20%, 60% 40%, 40% 60%, 70% 80%, 50% 100%, 100% 100%, 100% 0%)',
-    zIndex: 2,
-  },
-  swampWater: {
-    position: 'absolute',
-    left: 0,
-    bottom: 0,
-    width: '100%',
-    height: '30%',
-    background: 'linear-gradient(to bottom, rgba(26, 30, 20, 0.1), rgba(26, 30, 20, 0.8))',
-    backdropFilter: 'blur(2px)',
-    zIndex: 1,
-  },
-  vintageVignette: {
-    position: 'absolute',
-    inset: 0,
-    background: 'radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.7) 100%)',
-    pointerEvents: 'none',
-    zIndex: 9,
-  },
-  scratches: {
-    position: 'absolute',
-    inset: 0,
-    backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'scratchFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.1\' numOctaves=\'1\' stitchTiles=\'stitch\'/%3E%3CfeColorMatrix type=\'saturate\' values=\'0\'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type=\'discrete\' tableValues=\'0 1\'/%3E%3CfeFuncG type=\'discrete\' tableValues=\'0 1\'/%3E%3CfeFuncB type=\'discrete\' tableValues=\'0 1\'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23scratchFilter)\'/%3E%3C/svg%3E")',
-    opacity: 0.03,
-    mixBlendMode: 'screen',
-    zIndex: 11,
-    pointerEvents: 'none',
-  },
+  } 
 })
 
 
@@ -197,6 +122,7 @@ root.render(
     <TimeBlock/>
     <SpaceBlock/>
     <ShadeBlock/>
+    <SolidBlock/>
     <PixelBlock/>
     <ControlBlock/>
     <QueryClientProvider client={queryClient}>

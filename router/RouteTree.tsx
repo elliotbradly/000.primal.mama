@@ -3,8 +3,8 @@ import TitlePage from '../page/001.title/page';
 import ScenePage from '../page/002.scene/page';
 
 import TestPage from '../page/003.test/000.index/page';
-import TestSurfacePage from '../page/003.test/001.surface-test/page';
-import TestBabylonPage from '../page/003.test/002.babylon-test/page';
+import TestShadePage from '../page/003.test/001.shade-test/page';
+import TestSolidPage from '../page/003.test/002.solid-test/page';
 import TestPixelPage from '../page/003.test/003.pixel-test/page';
 import TestControlPage from '../page/003.test/004.control-test/page';
 import TestSpacePage from '../page/003.test/005.space-test/page';
@@ -86,6 +86,17 @@ const testRoute = createRoute({
     },
 });
 
+const testShadeRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/test/shade",
+    component: function Lora() {
+        return (
+            <TestShadePage />
+        );
+    },
+});
+
+
 
 const testPixelRoute = createRoute({
     getParentRoute: () => rootRoute,
@@ -129,25 +140,17 @@ const testTimeRoute = createRoute({
 });
 
 
-const testOpenBabylonRoute = createRoute({
+const testSolidRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: "/solid/open-babylon",
+    path: "/test/solid",
     component: function Lora() {
         return (
-            <TestBabylonPage />
+            <TestSolidPage />
         );
     },
 });
 
-const testWriteShadeRoute = createRoute({
-    getParentRoute: () => rootRoute,
-    path: "/shade/surface-test",
-    component: function Lora() {
-        return (
-            <TestSurfacePage />
-        );
-    },
-});
+
 
 const playRoute = createRoute({
     getParentRoute: () => rootRoute,
@@ -169,11 +172,11 @@ export var RouteTree = () => {
         titleRoute,  
         sceneRoute, 
         testRoute, 
-        testOpenBabylonRoute, 
-        testWriteShadeRoute, 
+        testSolidRoute,
         testPixelRoute,
         testControlRoute,
         testSpaceRoute,
+        testShadeRoute,
         testTimeRoute,
         playRoute
         

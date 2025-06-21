@@ -1,5 +1,5 @@
 import React from 'react'
-import SurfaceTest from "../../../ui/test/SurfaceTest"
+import ShadeTest from "../../../ui/test/ShadeTest"
 
 /**
  * The main page component that renders the HomePage component.
@@ -8,7 +8,7 @@ import SurfaceTest from "../../../ui/test/SurfaceTest"
  */
 const Page = () => {
     
-    return <SurfaceTest />;
+    return <ShadeTest />;
 };
 
 export default Page;

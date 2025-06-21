@@ -1,14 +1,12 @@
 
 import React from 'react'
 
-import State from "../../002.space/99.core/state";
-import * as Import from "../../002.space/BEE";
-
-import * as ActSpc from "../../002.space/00.space.unit/space.action";
+import State from "../../111.solid/99.core/state";
+import * as Import from "../../111.solid/BEE";
 
 var once = false
 
-export default function HexagonCanvas({ setBus }) {
+export default function SolidCanvas() {
 
 
     let sim = {
@@ -16,7 +14,7 @@ export default function HexagonCanvas({ setBus }) {
         state: null
     };
 
-    setBus(sim)
+    //setBus(sim)
 
     sim.hunt = (typ, obj) => { return host(obj, typ) }
 
@@ -44,25 +42,28 @@ export default function HexagonCanvas({ setBus }) {
 
     var bit;
 
-    setTimeout(async () => {
-        if (typeof window === 'undefined') {
-            return
-        }
+    window
 
-        if (once == false) {
-            once = true
-            bit = await sim.hunt( ActSpc.OPEN_SPACE, { src:"surface00" })
-            alert( JSON.stringify(bit))
-            
-            return
-        }
+    if ( window['SOLID'] == null ) window['SOLID'] = sim.hunt
 
-    }, 3)
+    //setTimeout(async () => {
+    //    if (typeof window === 'undefined') {
+    //        return
+    //    }
+
+    //    if (once == false) {
+    //        once = true
+    //        bit = await sim.hunt( ActFce.CREATE_SURFACE , { src:"surface00" })
+
+    //        return
+    //    }
+
+    //}, 333 )
 
 
     return (
         <>
-            
+
         </>
     )
 

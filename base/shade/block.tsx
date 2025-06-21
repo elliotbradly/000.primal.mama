@@ -6,11 +6,9 @@ import * as Import from "../../110.shade/BEE";
 
 import * as ActFce from "../../110.shade/02.surface.unit/surface.action";
 
-
 var once = false
 
 export default function PixiCanvas() {
-
 
     let sim = {
         hunt: (a, b) => { },

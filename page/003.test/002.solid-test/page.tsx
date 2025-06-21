@@ -1,5 +1,5 @@
 import React from 'react'
-import OpenBabylonTest from "../../../ui/test/OpenBabylonTest"
+import SolidTest from "../../../ui/test/SolidTest"
 
 /**
  * The main page component that renders the HomePage component.
@@ -8,7 +8,7 @@ import OpenBabylonTest from "../../../ui/test/OpenBabylonTest"
  */
 const Page = () => {
     
-    return <OpenBabylonTest />;
+    return <SolidTest />;
 };
 
 export default Page;
