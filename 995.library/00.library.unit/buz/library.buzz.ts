@@ -12,6 +12,8 @@ import * as ActVrt from "../../act/vurt.action";
 import * as ActDsk from "../../act/disk.action";
 import * as ActPvt from "../../act/pivot.action";
 
+import openEditor from 'open-editor';
+
 var bit, val, idx, dex, lst, dat;
 
 var exec = require('child_process').exec;
@@ -307,6 +309,31 @@ export const countLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: Stat
         list.unshift(line)
         list
         FS.writeFileSync('./data/line-log.txt', list.join('\n'))
+
+        const fileToOpen = './data/line-log.txt'; // Replace with your file path
+
+        try {
+            //console.log(`Attempting to open ${fileToOpen}...`);
+            const output = await openFileInVSCode(fileToOpen);
+            //console.log(`Successfully attempted to open ${fileToOpen} in VS Code.`);
+            if (output) {
+                // console.log(`VS Code STDOUT: ${output}`);
+            }
+            // If you resolved with { stdout, stderr }:
+            // if (output.stdout) console.log(`VS Code STDOUT: ${output.stdout}`);
+            // if (output.stderr) console.warn(`VS Code STDERR: ${output.stderr}`);
+
+        } catch (error) {
+            //console.error(`Operation failed: ${error.message}`);
+            //if (error.hint) {
+            //    console.error(`Hint: ${error.hint}`);
+            // }
+            if (error.stderr) { // stderr attached to our custom error
+                // console.error(`STDERR content during failure: ${error.stderr}`);
+            }
+            // console.error("Full error object:", error);
+        }
+
     }
 
     bal.slv({ libBit: { idx: "count-library", val: fin } });
@@ -348,5 +375,42 @@ export const devLibrary = async (cpy: LibraryModel, bal: LibraryBit, ste: State)
 
 
 var patch = (ste, type, bale) => ste.dispatch({ type, bale });
+
+function openFileInVSCode(filePath) {
+
+    const { exec } = require('child_process');
+    const path = require('path');
+
+    return new Promise((resolve, reject) => {
+        const absoluteFilePath = path.resolve(filePath);
+        const vscodeCommand = process.platform === 'win32' ? 'code.cmd' : 'code';
+        const command = `${vscodeCommand} "${absoluteFilePath}"`;
+
+        //console.log(`Executing: ${command}`);
+
+        exec(command, (error, stdout, stderr) => {
+            if (error) {
+                // Construct a more informative error object
+                const errDetails = new Error(`Error opening file with VS Code: ${error.message}`);
+                // errDetails.originalError = error; // Optionally attach original error
+                //errDetails.stdout = stdout;
+                //errDetails.stderr = stderr; // stderr from exec might be useful even on error
+
+                //if (error.message.includes('not found') || error.message.includes('is not recognized')) {
+                //  errDetails.hint = "Ensure 'code' (or 'code.cmd' on Windows) is in your system's PATH. " +
+                "Run 'Shell Command: Install \"code\" command in PATH' from VS Code's command palette.";
+                // }
+                reject(errDetails);
+                return;
+            }
+
+            // Even on success, VS Code might output to stderr (e.g., warnings)
+            // We can pass stdout and stderr along for the caller to inspect.
+            // For simplicity, just resolving with stdout here.
+            // Or resolve({ stdout, stderr }) if both are needed.
+            resolve(stdout); // Or resolve({ stdout, stderr })
+        });
+    });
+}
 
 
