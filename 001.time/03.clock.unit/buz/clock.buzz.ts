@@ -432,18 +432,18 @@ export const listClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
   dat = null
 
-  bit = await ste.hunt(ActCol.FETCH_COLLECT, { val: 0, bit: ActClk.CREATE_CLOCK })
+  bit = await ste.hunt(ActCol.LIST_COLLECT, { val: 0, bit: ActClk.CREATE_CLOCK })
+  lst = bit.clcBit.lst
 
-  if (bit.clcBit.dat == null) lst = []
-  else dat = bit.clcBit.dat;
+  //if (bit.clcBit.dat == null) lst = []
+  //else dat = bit.clcBit.dat;
 
-  if (dat != null) {
-    dat.bitList.forEach((a) => {
-      lst = []
-      lst.push((a.idx))
-    })
-  }
-
+  //if (dat != null) {
+  //  dat.bitList.forEach((a) => {
+  //    lst = []
+  //    lst.push((a.idx))
+  //  })
+  // }
 
   bal.slv({ clkBit: { idx: 'list-clock', lst } });
 

@@ -75,7 +75,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
         break
       }
 
-      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---choose the progress amount" })
+      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---choose the progress increment" })
 
       bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
       bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
@@ -84,18 +84,13 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       bit = await TIME.hunt(ActClk.LIST_CLOCK, {})
       lst = bit.clkBit.lst
 
-      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---choose the progress target" })
+      bit = await ste.hunt(ActCns.UPDATE_CONSOLE, { idx: 'cns00', src: "---choose the progress source" })
 
       bit = await ste.hunt(ActGrd.UPDATE_GRID, { x: 0, y: 4, xSpan: 4, ySpan: 12 })
       bit = await ste.hunt(ActChc.OPEN_CHOICE, { dat: { clr0: Color.BLACK, clr1: Color.YELLOW }, src: Align.VERTICAL, lst, net: bit.grdBit.dat })
       src = bit.chcBit.src;
 
-
-
-
-      debugger
-
-      bit = await TIME.hunt(ActPrg.UPDATE_PROGRESS, {})
+      bit = await TIME.hunt(ActPrg.UPDATE_PROGRESS, { idx, src })
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 

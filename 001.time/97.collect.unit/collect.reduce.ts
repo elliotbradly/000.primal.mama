@@ -1,13 +1,10 @@
+import * as clone from "clone-deep";
 import * as Act from "./collect.action";
 import { CollectModel } from "./collect.model";
 import * as Buzz from "./collect.buzzer";
 import State from "../99.core/state";
 
-
 export function reducer(model: CollectModel = new CollectModel(), act: Act.Actions, state?: State) {
-  
-   var clone = require('clone-deep');
-
    switch (act.type) {
 
       case Act.UPDATE_COLLECT:
