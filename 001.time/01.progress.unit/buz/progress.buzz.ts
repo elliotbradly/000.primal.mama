@@ -33,9 +33,8 @@ export const updateProgress = async (cpy: ProgressModel, bal: ProgressBit, ste: 
 
     var now =  bit.clkBit.dat
     
-
-    bit = await ste.hunt(ActClk.WRITE_CLOCK, { idx:bal.src, dat: now })
-    debugger
+    bit = await ste.hunt(ActClk.WRITE_CLOCK, { idx:bal.src, dat: {clk: now } })
+    
 
     bal.slv({ prgBit: { idx: 'update-progress', dat:bit.clkBit.dat } });
     return cpy;

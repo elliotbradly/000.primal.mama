@@ -41,8 +41,10 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
   await (async () => {
     try {
       await new Promise<void>((resolve, reject) => exec('tsc -b 001.time', err => err ? reject(err) : resolve()));
+      
+      if (TIME == null) ste.hunt(ActMnu.PRINT_MENU, { src: "compiled time" });
       if (TIME == null) TIME = require(path.resolve('./dist/001.time/hunt'));
-      bit = await ste.hunt(ActMnu.PRINT_MENU, { src: "compiled time" });
+      
     } catch (err) {
       console.error(`exec error: ${err}`);
       throw err;
@@ -91,7 +93,7 @@ export const timeMenu = async (cpy: MenuModel, bal: MenuBit, ste: State) => {
       src = bit.chcBit.src;
 
       bit = await TIME.hunt(ActPrg.UPDATE_PROGRESS, { idx, src })
-      debugger
+      
       bit = await ste.hunt(ActMnu.PRINT_MENU, bit)
       break;
 

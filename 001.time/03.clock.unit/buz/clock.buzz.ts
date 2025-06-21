@@ -73,7 +73,7 @@ export const refreshClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
 export const updateClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
   //var now: TicBit = bal.dat
-  debugger
+  
 
   bit = await ste.hunt(ActClk.READ_CLOCK, { idx: bal.idx })
 
