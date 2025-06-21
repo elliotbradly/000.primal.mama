@@ -1,6 +1,7 @@
 import IndexPage from '../page/000.index/page';
 import TitlePage from '../page/001.title/page';
 import ScenePage from '../page/002.scene/page';
+
 import TestPage from '../page/003.test/000.index/page';
 import TestSurfacePage from '../page/003.test/001.surface-test/page';
 import TestBabylonPage from '../page/003.test/002.babylon-test/page';
@@ -8,6 +9,9 @@ import TestPixelPage from '../page/003.test/003.pixel-test/page';
 import TestControlPage from '../page/003.test/004.control-test/page';
 import TestSpacePage from '../page/003.test/005.space-test/page';
 import TestTimePage from '../page/003.test/006.time-test/page';
+
+import PlayPage from '../page/004.play/000.index/page';
+
 
 
 import {
@@ -145,6 +149,16 @@ const testWriteShadeRoute = createRoute({
     },
 });
 
+const playRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/play",
+    component: function Lora() {
+        return (
+            <PlayPage />
+        );
+    },
+});
+
 
 
 
@@ -160,7 +174,8 @@ export var RouteTree = () => {
         testPixelRoute,
         testControlRoute,
         testSpaceRoute,
-        testTimeRoute
+        testTimeRoute,
+        playRoute
         
      ]);
      

@@ -34,7 +34,7 @@ export default function Component() {
     const [flickerOpacity, setFlickerOpacity] = useState(1);
 
     var act00 = () => {
-        document.location.href = '/scene'
+        document.location.href = '/play'
     }
 
     var act01 = () => {
@@ -88,7 +88,7 @@ export default function Component() {
                     fullWidth
                     style={{ height: '33px', width: '1000px' }}
                 >
-                    LOG-IN
+                    PLAY
                 </Button>
 
 
@@ -101,7 +101,7 @@ export default function Component() {
                     style={{ height: '33px', width: '1000px' }}
                     onClick={act01}
                 >
-                    TESTING
+                    TEST
 
                 </Button>
 
