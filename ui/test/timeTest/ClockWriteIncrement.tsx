@@ -2,12 +2,12 @@
 import { Text,  Divider } from '@mantine/core'
 
 import React from 'react'
-import { useWriteClock } from '../../../queue/time.query'
+import { useWriteClockIncrement } from '../../../queue/time.query'
 
 const Test = () => {
 
   //const data = {}
-  const { data, error, fetchStatus } = useWriteClock('clock0', {yrs:1978, mth:4, day:11})
+  const { data, error, fetchStatus } = useWriteClockIncrement('increment0', {day:1 })
 
   //if (error) return (<div> ERROR: {data['error']} </div>)
   if (data) {
@@ -15,10 +15,8 @@ const Test = () => {
     return (<div>
       
       <Text c="dark" size="md" style={{ lineHeight: 1.6 }}>
-        Write Clock
+        Write Clock Increment
       </Text>
-
-
 
       <Text c='green' size="md" style={{ lineHeight: 1.6 }}>
         {JSON.stringify(data)}

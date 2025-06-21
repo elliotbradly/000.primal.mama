@@ -6,12 +6,15 @@ import { Box, Title, Text, Stack, Container } from '@mantine/core';
 import TimeInit from './timeTest/TimeInit'
 import TimeRandom from './timeTest/TimeRandom'
 import ClockWrite from './timeTest/ClockWrite'
+import ClockWriteIncrement from './timeTest/ClockWriteIncrement'
 import ClockList from './timeTest/ClockList'
 import ClockReadDisplay from './timeTest/ClockReadDisplay'
 
 import * as ActClk from "../../001.time/03.clock.unit/clock.action";
 
 export default function ContentsPage() {
+
+  document.body.style.overflow = 'visible';
 
 
   var act00 = async () => {
@@ -39,11 +42,15 @@ export default function ContentsPage() {
           </Box>
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <TimeRandom />
+            <ClockWrite />
           </Box>
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <ClockWrite />
+            <ClockWriteIncrement />
+          </Box>
+
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <TimeRandom />
           </Box>
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>

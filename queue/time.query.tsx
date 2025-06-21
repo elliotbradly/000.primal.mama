@@ -41,6 +41,21 @@ export function useWriteClock(idx, clk) {
     })
 }
 
+export function useWriteClockIncrement(idx, clk) {
+
+    clk.yrs =0;
+
+    return useQuery({
+        queryFn: async () => {
+
+            var bit = await window['TIME'](ActClk.WRITE_CLOCK, { idx, clk })
+            return bit
+
+        },
+        queryKey: ['writeClockIncrement']
+    })
+}
+
 export async function useReadClock(idx) {
 
     return useQuery({
