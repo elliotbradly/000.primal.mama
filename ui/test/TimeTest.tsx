@@ -9,6 +9,7 @@ import ClockWrite from './timeTest/ClockWrite'
 import ClockWriteIncrement from './timeTest/ClockWriteIncrement'
 import ClockList from './timeTest/ClockList'
 import ClockReadDisplay from './timeTest/ClockReadDisplay'
+import ClockProgressDisplay from './timeTest/ClockProgressDisplay'
 
 import * as ActClk from "../../001.time/03.clock.unit/clock.action";
 
@@ -18,11 +19,11 @@ export default function ContentsPage() {
 
 
   var act00 = async () => {
-    var bit = await window['TIME'](ActClk.READ_CLOCK, { idx:'clk00' })
-    alert( JSON.stringify(bit))
+    var bit = await window['TIME'](ActClk.READ_CLOCK, { idx: 'clk00' })
+    alert(JSON.stringify(bit))
   }
 
- 
+
 
 
 
@@ -38,7 +39,7 @@ export default function ContentsPage() {
         <Stack >
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <TimeInit />
+            <ClockProgressDisplay />
           </Box>
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
@@ -61,9 +62,11 @@ export default function ContentsPage() {
             <ClockList />
           </Box>
 
+          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
+            <TimeInit />
+          </Box>
+
         </Stack>
-
-
 
       </Box>
     </Container>
