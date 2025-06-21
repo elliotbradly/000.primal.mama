@@ -86,10 +86,10 @@ export const randomTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
 export const testTime = async (cpy: TimeModel, bal: TimeBit, ste: State) => {
 
   var clk = { day: 0, hrs: 0, min: 0, mth: 0, sec: 0, yrs: 1978 }
-  bit = await ste.hunt(ClkAct.WRITE_CLOCK, { idx:'clk00', dat: {clk} })
+  bit = await ste.hunt(ClkAct.WRITE_CLOCK, { idx:'clk00', clk })
 
-  clk = { day: 0, hrs: 3, min: 0, mth: 0, sec: 0, yrs: 0 }
-  bit = await ste.hunt(ClkAct.WRITE_CLOCK, { idx:'inc00', dat: {clk} })
+  clk = { day: 0, hrs: 3, min: 0, mth: 0, sec: 0, yrs: 0  }
+  bit = await ste.hunt(ClkAct.WRITE_CLOCK, { idx:'inc00', clk })
 
   bal.slv({ tmeBit: { idx: 'test-time', src: 'testing-time' } });
   return cpy;

@@ -18,6 +18,17 @@ export const initClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
 export const refreshClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
+  
+
+  var increment = false;
+  var day = 0;
+
+  if ( bal.dat.clk.yrs != null && bal.dat.clk.yrs == 0) {
+    increment = true
+    day = bal.dat.clk.day
+  }
+
+
   var clk = bal.dat.clk;
 
   var dateObject = {
@@ -66,6 +77,17 @@ export const refreshClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
   dat.val = 0;
   dat.pst = 0;
 
+  if (increment == true) {
+    dat.yrs = 0;
+    dat.mth = 0;
+    dat.day = day;
+    dat.wek = 0;
+    dat.qtr = 0;
+    dat.src = 'increment'
+    dat.frm = 'increment'
+    dat.now = 0;
+  }
+
   bal.slv({ clkBit: { idx: "refresh-clock", dat } });
   return cpy;
 };
@@ -74,7 +96,7 @@ export const refreshClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
 export const updateClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
   //var now: TicBit = bal.dat
-  
+
 
   bit = await ste.hunt(ActClk.READ_CLOCK, { idx: bal.idx })
 
@@ -212,6 +234,8 @@ export const readClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
 export const writeClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
 
+
+
   if (bal.dat != null) {
     bit = await ste.hunt(ActClk.UPDATE_CLOCK, { idx: bal.idx, dat: bal.dat });
     bal.dat = bit.clkBit.dat
@@ -242,6 +266,8 @@ export const removeClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
 };
 
 export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) => {
+
+
 
 
   if (bal.dat == null) bal.dat = {}
@@ -275,12 +301,13 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
   clk
 
 
-
-  bit = await ste.hunt(ActClk.REFRESH_CLOCK, { dat: { clk } })
+  bit = await ste.hunt(ActClk.REFRESH_CLOCK, { val, dat: { clk } })
 
   dat = bit.clkBit.dat
 
   
+
+
 
 
   bal.slv({ clkBit: { idx: "create-clock", dat: dat } });

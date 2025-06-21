@@ -18,7 +18,7 @@ export const updateProgress = async (cpy: ProgressModel, bal: ProgressBit, ste: 
 
     var obj = { hours: 0, minutes: 0, days: 0, seconds: 0 }
 
-    //obj.hours = increment.hrs;
+    obj.hours = increment.hrs;
     obj.minutes = increment.min;
     obj.days = increment.day;
     obj.seconds = increment.sec;
