@@ -55,6 +55,7 @@ export const refreshClock = (cpy: ClockModel, bal: ClockBit, ste: State) => {
   dat.yrs = dt.year;
   dat.mth = dt.month;
   dat.wek = dt.weekNumber;
+  dat.hrs = dt.hour;
   dat.day = dt.day;
   dat.sec = dt.second;
   dat.min = dt.minute;
@@ -278,6 +279,8 @@ export const createClock = async (cpy: ClockModel, bal: ClockBit, ste: State) =>
   bit = await ste.hunt(ActClk.REFRESH_CLOCK, { dat: { clk } })
 
   dat = bit.clkBit.dat
+
+  
 
 
   bal.slv({ clkBit: { idx: "create-clock", dat: dat } });
