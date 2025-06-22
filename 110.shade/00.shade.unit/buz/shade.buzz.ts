@@ -20,8 +20,6 @@ import * as ActDsk from "../../act/disk.action";
 
 import * as ActCns from "../../act/console.action";
 
-
-
 var bit, val, idx, dex, lst, dat, src;
 
 var once = false

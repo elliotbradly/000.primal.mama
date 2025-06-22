@@ -103,9 +103,9 @@ export const createMiku = async (cpy: MikuModel, bal: MikuBit, ste: State) => {
 
     const mmdModel = modBab.mmdRuntime.createMmdModel(modelMesh);
 
-    mmdModel.addAnimation(modBab.motion);
-    mmdModel.setAnimation("motion");
-    modBab.mmdRuntime.playAnimation();
+    //mmdModel.addAnimation(modBab.motion);
+    //mmdModel.setAnimation("motion");
+    //modBab.mmdRuntime.playAnimation();
 
     dat.bit = modelMesh
 

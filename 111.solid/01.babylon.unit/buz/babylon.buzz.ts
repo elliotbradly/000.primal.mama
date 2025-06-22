@@ -10,7 +10,7 @@ import * as ActScr from "../../08.screen.unit/screen.action"
 
 
 
-declare const BABYLONMMD: any;
+//declare var BABYLONMMD: any;
 
 import * as ActBby from "../../01.babylon.unit/babylon.action";
 //import * as ActFce from "../../02.surface.unit/surface.action";
@@ -88,39 +88,41 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
 
     globalThis.HK = await getInitializedHavok()
 
-    await new Promise((resolve) => {
-        const babylonMmdScript = document.createElement("script");
-        babylonMmdScript.src = "./babylon.mmd.min.js";
-        document.head.appendChild(babylonMmdScript);
-        babylonMmdScript.onload = resolve;
-    });
 
-    BABYLONMMD.SdefInjector.OverrideEngineCreateEffect(engine);
+    global.BABYLONMMD = require('../../../public/babylon.mmd.min.js')
+    
+    
+
+    //await new Promise((resolve) => {
+    //    const babylonMmdScript = document.createElement("script");
+    //    babylonMmdScript.src = "./babylon.mmd.min.js";
+    //    document.head.appendChild(babylonMmdScript);
+    //    babylonMmdScript.onload = resolve;
+    //});
+
+    
+
+    global.BABYLONMMD.SdefInjector.OverrideEngineCreateEffect(engine);
 
     const havokPlugin = new BABYLON.HavokPlugin();
 
     scene.enablePhysics(new BABYLON.Vector3(0, -98, 0), havokPlugin);
-
-
     
     bit = await ste.hunt(ActScr.WRITE_SCREEN, { idx: 'src00' })
-    debugger
+    
 
-
-
-
-    const mmdRuntime = new BABYLONMMD.MmdRuntime(scene, new BABYLONMMD.MmdPhysics(scene));
+    const mmdRuntime = new global.BABYLONMMD.MmdRuntime(scene, new global.BABYLONMMD.MmdPhysics(scene));
     mmdRuntime.register(scene);
 
     cpy.mmdRuntime = mmdRuntime
 
-    const mmdCamera = new BABYLONMMD.MmdCamera("MmdCamera", new BABYLON.Vector3(0, 10, 0), scene);
+    const mmdCamera = new global.BABYLONMMD.MmdCamera("MmdCamera", new BABYLON.Vector3(0, 10, 0), scene);
     mmdCamera.maxZ = 5000;
 
-    const vmdLoader = new BABYLONMMD.VmdLoader(scene);
-    const motion = await vmdLoader.loadAsync("motion", "./Motion.vmd")
+    //const vmdLoader = new global.BABYLONMMD.VmdLoader(scene);
+    //const motion = await vmdLoader.loadAsync("motion", "./Motion.vmd")
 
-    cpy.motion = motion;
+    //cpy.motion = motion;
         
     mmdRuntime.setCamera(mmdCamera);
     //mmdCamera.addAnimation( motion );

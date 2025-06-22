@@ -1,5 +1,4 @@
 
-import { Button, FancyButton } from '@pixi/ui';
 import { SurfaceModel } from "../surface.model";
 import SurfaceBit from "../fce/surface.bit";
 import State from "../../99.core/state";
@@ -109,7 +108,7 @@ export const createSurface = async (cpy: SurfaceModel, bal: SurfaceBit, ste: Sta
     //app.stage.addChild( button)
     //button.onPress.connect(() => console.log('Button pressed!'));
 
-    bal.slv({ fceBit: { idx: "create-surface", dat:{bit:app} } });
+    bal.slv({ fceBit: { idx: "create-surface", dat:{bit:  dat.bit } } });
 
     return cpy;
 };
