@@ -6,6 +6,7 @@ import * as ActCol from "../../97.collect.unit/collect.action";
 import * as ActScr from "../screen.action";
 
 import SeeBit from "../fce/see.bit";
+
 import * as ActFce from '../../act/surface.action'
 
 import { BabylonModel } from "../../01.babylon.unit/babylon.model";
@@ -89,6 +90,7 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     console.log("fce: " + idx)
     bit = await window['SHADE'](ActFce.WRITE_SURFACE, { idx })
 
+    
 
 
     const app = bit.fceBit.dat.bit
@@ -104,9 +106,9 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     const outMat = new BABYLON.StandardMaterial('outMat', scene)
     out.material = outMat
     out.isVisible = true
-    out.position.z = 130;
-    out.position.y = 10;
-    out.position.x = -10;
+    out.position.z = 50;
+    out.position.y = 8;
+    out.position.x = -15;
     const pixiDt = new BABYLON.DynamicTexture('pixi-extract', { width: stageSize.x, height: stageSize.y }, scene, false)
     const pCtx = pixiDt.getContext()
     outMat.emissiveTexture = pixiDt
