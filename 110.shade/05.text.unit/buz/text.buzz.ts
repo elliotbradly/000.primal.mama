@@ -91,6 +91,7 @@ export const createText = async (cpy: TextModel, bal: TextBit, ste: State) => {
   if (dat.a == null) dat.a = 1;
   if (dat.clr == null) dat.clr = 0x000000;
   if (dat.aln == null) dat.aln = "right";
+  if (dat.sze == null) dat.sze = 30;
 
   try {
     dat.bit = new PIXI.Text(dat.txt);

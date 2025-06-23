@@ -9,6 +9,7 @@ import SeeBit from "../fce/see.bit";
 
 import * as ActFce from '../../act/surface.action'
 import * as ActSpr from '../../act/sprite.action'
+import * as ActTxt from '../../act/text.action'
 
 import { BabylonModel } from "../../01.babylon.unit/babylon.model";
 
@@ -91,16 +92,33 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     console.log("fce: " + idx)
     bit = await window['SHADE'](ActFce.WRITE_SURFACE, { idx })
 
-    
-    //bit = await window['SHADE']( ActSpr.WRITE_SPRITE, { idx:'spr00' })
-
-    
-
-
     const app = bit.fceBit.dat.bit
     //const app = new PIXI.Application();
     await app.init({ background: '#ff00ff', resizeTo: window });
 
+
+    var container = app.stage
+
+    
+
+
+
+    
+    //bit = await window['SHADE']( ActSpr.WRITE_SPRITE, { idx:'spr00' })
+
+    bit = await window['SHADE']( ActTxt.WRITE_TEXT, { idx:'txt00', dat:{txt:'alligator'}  })
+
+    var text = bit.txtBit.dat.bit
+    text.x = 300;
+    text.y = 300;
+    container.addChild(text)
+
+    
+
+    
+
+
+    
 
     const stageSize = new BABYLON.Vector2(1280, 720)
     const out = BABYLON.MeshBuilder.CreateGround('out', { width: 1, height: 1 }, scene)
@@ -110,7 +128,7 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     const outMat = new BABYLON.StandardMaterial('outMat', scene)
     out.material = outMat
     out.isVisible = true
-    out.position.z = 50;
+    out.position.z = 55;
     out.position.y = 8;
     out.position.x = -15;
     const pixiDt = new BABYLON.DynamicTexture('pixi-extract', { width: stageSize.x, height: stageSize.y }, scene, false)
