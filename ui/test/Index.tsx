@@ -28,7 +28,7 @@ export default function ContentsPage() {
   }
 
   var act05 = () => {
-    document.location.href = './test/solid'
+    document.location.href = './play'
   }
 
 
@@ -50,9 +50,7 @@ export default function ContentsPage() {
 
         <Stack >
 
-          <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
-            <Button fullWidth variant="outline" color="black" onClick={act04} > OPEN SHADE TEST </Button>
-          </Box>
+          
 
           <Box style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #000' }}>
             <Button fullWidth variant="outline" color="black" onClick={act05} > OPEN SOLID TEST </Button>

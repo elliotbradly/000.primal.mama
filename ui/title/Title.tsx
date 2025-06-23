@@ -88,7 +88,7 @@ export default function Component() {
                     fullWidth
                     style={{ height: '33px', width: '1000px' }}
                 >
-                    LOG-IN
+                    PLAY
                 </Button>
 
 
@@ -101,7 +101,7 @@ export default function Component() {
                     style={{ height: '33px', width: '1000px' }}
                     onClick={act01}
                 >
-                    TESTING
+                    TEST
 
                 </Button>
 
@@ -111,14 +111,6 @@ export default function Component() {
 
 
 
-            <div className={'characterSilhouette'} />
-            <div className={'swampCharacter'} />
-            <div className={'deadTree'} />
-            <div className={'swampWater'} />
-
-            <div className={'vintageVignette'} />
-            <div className={'filmGrain'} />
-            <div className={'scratches'} />
         </Box>
 
     );
