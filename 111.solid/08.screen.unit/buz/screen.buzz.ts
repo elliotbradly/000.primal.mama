@@ -83,8 +83,6 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
 
     }
 
-    
-
 
     bit = await window['SHADE'](ActFce.LIST_SURFACE, {})
     var dex = bit.fceBit.lst.length
@@ -96,14 +94,8 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     //const app = new PIXI.Application();
     await app.init({ background: '#ff00ff', resizeTo: window });
 
-
     var container = app.stage
 
-    
-
-
-
-    
     //bit = await window['SHADE']( ActSpr.WRITE_SPRITE, { idx:'spr00' })
 
     bit = await window['SHADE']( ActTxt.WRITE_TEXT, { idx:'txt00', dat:{txt:'alligator'}  })
@@ -113,14 +105,7 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     text.y = 300;
     container.addChild(text)
 
-    
-
-    
-
-
-    
-
-    const stageSize = new BABYLON.Vector2(1280, 720)
+    const stageSize = new BABYLON.Vector2(960, 540)
     const out = BABYLON.MeshBuilder.CreateGround('out', { width: 1, height: 1 }, scene)
     const baseOutScale = stageSize.clone().scale(0.05)
     out.scaling.set(baseOutScale.x, 1, baseOutScale.y)
@@ -128,9 +113,9 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     const outMat = new BABYLON.StandardMaterial('outMat', scene)
     out.material = outMat
     out.isVisible = true
-    out.position.z = 55;
-    out.position.y = 8;
-    out.position.x = -15;
+    out.position.z = 100;
+    out.position.y = 30;
+    out.position.x = -40;
     const pixiDt = new BABYLON.DynamicTexture('pixi-extract', { width: stageSize.x, height: stageSize.y }, scene, false)
     const pCtx = pixiDt.getContext()
     outMat.emissiveTexture = pixiDt

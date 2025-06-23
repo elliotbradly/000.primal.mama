@@ -101,13 +101,9 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
 
     scene.enablePhysics(new BABYLON.Vector3(0, -98, 0), havokPlugin);
 
-
     
     bit = await ste.hunt(ActScr.WRITE_SCREEN, { idx: 'src00' })
     debugger
-
-
-
 
     const mmdRuntime = new BABYLONMMD.MmdRuntime(scene, new BABYLONMMD.MmdPhysics(scene));
     mmdRuntime.register(scene);
