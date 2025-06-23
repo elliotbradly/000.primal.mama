@@ -81,10 +81,19 @@ export const createSprite = async (cpy: SpriteModel, bal: SpriteBit, ste: State)
   if (dat.a == null) dat.a = 1;
   if (dat.src == null) dat.src = './img/000.png'
 
+  Assets
+  debugger
  
   try {
+    
     const texture = await Assets.load( dat.src );
+
+    debugger
+
     dat.bit = new Sprite(texture);
+
+    debugger
+
   } catch (e) {
     dat.dat = {};
   }

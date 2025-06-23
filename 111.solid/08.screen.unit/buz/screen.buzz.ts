@@ -8,6 +8,7 @@ import * as ActScr from "../screen.action";
 import SeeBit from "../fce/see.bit";
 
 import * as ActFce from '../../act/surface.action'
+import * as ActSpr from '../../act/sprite.action'
 
 import { BabylonModel } from "../../01.babylon.unit/babylon.model";
 
@@ -89,6 +90,9 @@ export const createScreen = async (cpy: ScreenModel, bal: ScreenBit, ste: State)
     var idx = 'fce' + dex;
     console.log("fce: " + idx)
     bit = await window['SHADE'](ActFce.WRITE_SURFACE, { idx })
+
+    
+    //bit = await window['SHADE']( ActSpr.WRITE_SPRITE, { idx:'spr00' })
 
     
 
