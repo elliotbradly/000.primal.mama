@@ -16,6 +16,7 @@
     "@mantine/hooks": "^7.17.1",
     "@root/walk": "^1.1.0",
     "@rsbuild/plugin-node-polyfill": "^1.3.0",
+    "@tabler/icons-react": "^3.34.0",
     "@tanstack/react-query": "^5.66.11",
     "@tanstack/react-router": "^1.112.11",
     "babylon-mmd": "^0.62.0",

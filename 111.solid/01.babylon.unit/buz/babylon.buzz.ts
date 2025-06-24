@@ -32,7 +32,7 @@ var recorder;
 
 export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State) => {
 
-    if ( opened == true ){
+    if (opened == true) {
         return
     }
 
@@ -43,7 +43,6 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
     }
 
     const canvas = document.getElementById(bal.src);
-
 
     const engine = new BABYLON.Engine(canvas, true);
     const scene = new BABYLON.Scene(engine);
@@ -59,10 +58,10 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
     cpy.engine = engine
 
     const camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(0, 0, -10), scene);
-    
-    const v0 = new BABYLON.Vector3( 0, 0, 0 )
 
-    camera.setTarget( v0 );
+    const v0 = new BABYLON.Vector3(0, 0, 0)
+
+    camera.setTarget(v0);
     camera.attachControl(canvas, true);
 
     //var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 0, -10), scene);
@@ -82,8 +81,6 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
     //camera.cameraAcceleration = 0.005;
     //camera.maxCameraSpeed = 10;
     //camera.attachControl(canvas, true);
-
-
     recorder = new BABYLON.VideoRecorder(cpy.engine);
 
     globalThis.HK = await getInitializedHavok()
@@ -101,7 +98,7 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
 
     scene.enablePhysics(new BABYLON.Vector3(0, -98, 0), havokPlugin);
 
-    
+
     bit = await ste.hunt(ActScr.WRITE_SCREEN, { idx: 'src00' })
     debugger
 
@@ -117,7 +114,7 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
     const motion = await vmdLoader.loadAsync("motion", "./Motion.vmd")
 
     cpy.motion = motion;
-        
+
     mmdRuntime.setCamera(mmdCamera);
     //mmdCamera.addAnimation( motion );
     //mmdCamera.setAnimation("motion");
@@ -138,34 +135,34 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
     //camera.target = modelMesh; // version 2.4 and earlier
     //camera.lockedTarget = modelMesh; //ver
 
-    bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku00a', src:'greasi/00.pmx', dat: { position:{z:-7}} })
-    bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku00a', dat: { position:{z:40}} })
+    bit = await ste.hunt(ActMku.WRITE_MIKU, { idx: 'mku00a', src: 'greasi/00.pmx', dat: { position: { z: -7 } } })
+    bit = await ste.hunt(ActMku.WRITE_MIKU, { idx: 'mku00a', dat: { position: { z: 40, x: -15 } } })
 
     //bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku01b', src:'mickey/00.pmx', dat: { position:{z:-7}} })
     //bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku01b', dat: { position:{x:-10,z:40}} })
 
     //for ( var i = 0; i < 100; i++){
 
-      //  bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku' + i, src:'mickey/00.pmx', dat: { position:{z:-7}} })
-      //  bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku' + i, dat: { position:{x: i * -1  ,z:40}} })
-     
+    //  bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku' + i, src:'mickey/00.pmx', dat: { position:{z:-7}} })
+    //  bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku' + i, dat: { position:{x: i * -1  ,z:40}} })
+
     //}
 
 
 
-   // bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku01', src:'orbie/00.pmx', dat: { position:{z:-7}} })
-   // bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku01', dat: { position:{x:-10, z:100}} })
+    // bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku01', src:'orbie/00.pmx', dat: { position:{z:-7}} })
+    // bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku01', dat: { position:{x:-10, z:100}} })
 
     //bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku02', src:'orbie/00.pmx', dat: { position:{z:-7}} })
     //bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku02', dat: { position:{x:-20, z:100}} })
 
-    
+
     //bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku03', src:'orbie/01.pmx', dat: { position:{z:-7}} })
     //bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku03', dat: { position:{x:-30, z:100}} })
 
 
-    
-    
+
+
 
     var value = 100;
 
@@ -175,14 +172,14 @@ export const openBabylon = async (cpy: BabylonModel, bal: BabylonBit, ste: State
     //    bit = await ste.hunt( ActMku.WRITE_MIKU, { idx:'mku00', dat: { position:{z:value}} })
 
 
-   // }, 111 )
-
-
-    
+    // }, 111 )
 
 
 
-    
+
+
+
+
     //const plane = BABYLON.MeshBuilder.CreatePlane("plane", { width: 1080, height: 720 }, scene);
 
     // Create a material and texture

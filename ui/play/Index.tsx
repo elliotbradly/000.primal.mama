@@ -3,9 +3,21 @@ import { useState, useEffect } from 'react';
 import { Box, Divider, ScrollArea } from '@mantine/core';
 import { Title, Text, Stack, Container } from '@mantine/core';
 
+import Slider from './Slider'
+
 import * as ActBab from '../../111.solid/01.babylon.unit/babylon.action'
 
+
+  
 export default function Component() {
+
+    const [sliderValue, setSliderValue] = useState(40);
+
+    const handleSliderChange = (newValue: number) => {
+        setSliderValue(newValue);
+        // You can perform other actions in the parent when the slider value changes
+        console.log("Parent received new slider value:", newValue);
+    };
 
     setTimeout(() => {
         window['SOLID'](ActBab.OPEN_BABYLON, { src: 'surface00' })
@@ -33,6 +45,10 @@ export default function Component() {
 
                         </Box>
                     </Box>
+
+                    <Slider value={sliderValue} onChange={handleSliderChange}/>
+
+                  
 
                 </Stack>
 
