@@ -1,4 +1,4 @@
-import clone from "clone-deep";
+import * as clone from "clone-deep";
 import * as Act from "./collect.action";
 import { CollectModel } from "./collect.model";
 import * as Buzz from "./collect.buzzer";
