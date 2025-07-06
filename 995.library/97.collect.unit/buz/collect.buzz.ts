@@ -1,5 +1,13 @@
 import * as ActCol from '../../97.collect.unit/collect.action';
 
+import { CollectModel } from '../collect.model';
+import CollectBit from '../fce/collect.bit';
+import State from '../../99.core/state';
+import CaboodleBit from '../fce/caboodle.bit';
+import S from 'string';
+
+import * as doT from 'dot';
+
 var bit, lst, dat, idx, val, src, dex;
 
 export const initCollect = (cpy: CollectModel, bal: CollectBit, ste: State) => {
@@ -333,10 +341,4 @@ export const hashCollect = (cpy: CollectModel, bal: CollectBit, ste: State) => {
   return cpy;
 };
 
-import { CollectModel } from '../collect.model';
-import CollectBit from '../fce/collect.bit';
-import State from '../../99.core/state';
-import CaboodleBit from '../fce/caboodle.bit';
-import * as S from 'string';
 
-import * as doT from 'dot';
