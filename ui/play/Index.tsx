@@ -20,8 +20,7 @@ export default function Component() {
     };
 
     var action = () => {
-
-
+        window.location.href = "test/pixel"
     }
 
     setTimeout(() => {
@@ -57,7 +56,7 @@ export default function Component() {
 
 
                         <Button onClick={action} size="lg" fullWidth>
-                            Record Description
+                            Pixel Test
                         </Button>
 
 
